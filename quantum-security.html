@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Security — Y2Q</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav-bar">
+            <a href="index.html" class="logo">Y2Q</a>
+            <ul class="nav-links">
+                <li><a href="quantum-security.html" class="active">Quantum Security</a></li>
+                <li><a href="c-bom.html">C-BOM</a></li>
+                <li><a href="philosophy.html">Philosophy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="page-icon">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Represents encryption, time, and quantum uncertainty -->
+                    <!-- Lock symbol -->
+                    <rect x="70" y="80" width="60" height="50" rx="5" fill="none" stroke="#cc3333" stroke-width="2"/>
+                    <path d="M 80 80 Q 80 60 100 60 Q 120 60 120 80" fill="none" stroke="#cc3333" stroke-width="2"/>
+                    <!-- Time indicator (arrow) -->
+                    <path d="M 140 120 L 160 120" stroke="#b0b0b0" stroke-width="2" marker-end="url(#arrowhead)"/>
+                    <!-- Quantum uncertainty (dots) -->
+                    <circle cx="170" cy="110" r="2" fill="#b0b0b0"/>
+                    <circle cx="175" cy="120" r="2" fill="#b0b0b0"/>
+                    <circle cx="170" cy="130" r="2" fill="#b0b0b0"/>
+                    <!-- Arrow marker definition -->
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+                            <polygon points="0 0, 10 5, 0 10" fill="#b0b0b0"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+            <h1>Quantum Security</h1>
+            <p class="page-intro">How quantum computing challenges cryptographic assumptions embedded in security systems deployed today.</p>
+        </section>
+
+        <article class="research-article">
+            <h2>The Problem Space</h2>
+            <p>
+                Quantum computing is not simply "faster cryptography breaking." It is a fundamental shift in computational capability that renders certain mathematical assumptions invalid. Systems built on the assumption that certain problems are computationally infeasible will face a change in their threat model.
+            </p>
+            <p>
+                The question is not whether quantum computing will exist. It will. The question is when, with what capabilities, against what targets, and with what consequences for systems built with today's cryptographic assumptions.
+            </p>
+            <p>
+                This is inherently a problem of time. The security properties of many systems today depend on assumptions that have a finite lifetime. Quantum computing is not the only way those assumptions can break, but it is a well-understood, predictable way they eventually will.
+            </p>
+        </article>
+
+        <article class="research-article">
+            <h2>Cryptographic Assumptions Over Long Time Horizons</h2>
+            <p>
+                Modern cryptographic systems are designed with assumptions about computational difficulty. These assumptions are:
+            </p>
+            <ul class="research-list">
+                <li><strong>Historically valid.</strong> The mathematical problems we rely on have been tested and are believed to be hard to solve.</li>
+                <li><strong>Temporally contingent.</strong> They remain valid only as long as no computational capability breaks them.</li>
+                <li><strong>Largely untested at scale.</strong> We have not run these systems for 50 or 100 years. We do not fully know what failure modes emerge at long timescales.</li>
+            </ul>
+            <p>
+                When we encrypt data today with the assumption that it will remain confidential for decades, we are making a bet about the future of computation. That bet may fail.
+            </p>
+        </article>
+
+        <article class="research-article">
+            <h2>Harvest Now, Decrypt Later</h2>
+            <p>
+                One concrete threat is "harvest now, decrypt later"—the practice of collecting encrypted data today, knowing that future computational capability (quantum or otherwise) may make it decryptable.
+            </p>
+            <p>
+                This threat is significant for data with a long-term confidentiality requirement:
+            </p>
+            <ul class="research-list">
+                <li><strong>State secrets</strong> — Information valuable to state actors for decades</li>
+                <li><strong>Medical records</strong> — Sensitive health information with a lifetime of relevance</li>
+                <li><strong>Financial and legal records</strong> — Information with multi-decade compliance requirements</li>
+                <li><strong>Intellectual property</strong> — Trade secrets and proprietary designs</li>
+                <li><strong>Personal data</strong> — Information that retains sensitivity over a lifetime or longer</li>
+            </ul>
+            <p>
+                The attacker does not need to break the encryption today. They only need to preserve the encrypted data and wait.
+            </p>
+            <p class="uncertainty-note">
+                <strong>Uncertainty:</strong> We do not know with precision when quantum computers of relevant capability will exist. We do not know which data has been harvested. We do not know the actual value or risk of historical encrypted data.
+            </p>
+        </article>
+
+        <article class="research-article">
+            <h2>Silent and Delayed Failure</h2>
+            <p>
+                Cryptographic failure in quantum security scenarios often involves silent failure—the system appears to work, but its security properties have been compromised without detection.
+            </p>
+            <p>
+                This differs from many other security failures, which are often noisy and visible. When an attacker succeeds in decrypting harvested data decades later, the original encrypted transmission is long forgotten. The failure is delayed, invisible, and only becomes apparent if discovered during forensic investigation.
+            </p>
+            <p>
+                Silent failure is particularly dangerous because:
+            </p>
+            <ul class="research-list">
+                <li>Detection may occur only by accident</li>
+                <li>The compromise may remain unknown indefinitely</li>
+                <li>Remediation is impossible—the data was exposed years ago</li>
+                <li>Systems and organizations may not exist to respond</li>
+            </ul>
+            <p class="uncertainty-note">
+                <strong>Uncertainty:</strong> How many systems have failed silently? How would we know? Cryptographic failures may go undiscovered for decades or indefinitely.
+            </p>
+        </article>
+
+        <article class="research-article">
+            <h2>Long-Lived Data and Responsibility</h2>
+            <p>
+                The quantum security problem is fundamentally a problem of long-lived data. If data needs to remain confidential for only 5 years, the quantum threat is less pressing. If it needs to remain confidential for 50 years, the problem becomes critical.
+            </p>
+            <p>
+                This creates a responsibility problem: Who is responsible for data encrypted today that may be exposed decades later?
+            </p>
+            <ul class="research-list">
+                <li><strong>The encryptor</strong> — Should have used algorithms expected to remain secure</li>
+                <li><strong>The organization</strong> — Should have maintained and migrated systems as threats evolved</li>
+                <li><strong>The standard-setter</strong> — Should have anticipated quantum threats and issued guidance</li>
+                <li><strong>The user/subject</strong> — Whose data was encrypted, but may have no control over how long it remains protected</li>
+            </ul>
+            <p>
+                The mismatch between the lifetime of encrypted data and the lifetime of organizations that created it is itself a risk.
+            </p>
+        </article>
+
+        <article class="research-article">
+            <h2>Post-Quantum Cryptography and Uncertainty</h2>
+            <p>
+                The response to quantum threats is "post-quantum cryptography"—algorithms believed to resist quantum attacks. But this solution carries its own uncertainties:
+            </p>
+            <ul class="research-list">
+                <li><strong>Unproven at scale.</strong> New algorithms have not been tested in real systems for decades.</li>
+                <li><strong>Potential future breaks.</strong> New mathematical techniques could break algorithms we think are safe.</li>
+                <li><strong>Implementation risk.</strong> New algorithms introduce new software and hardware dependencies that may themselves fail.</li>
+                <li><strong>Migration risk.</strong> Transitioning billions of systems to new cryptography is complex and error-prone.</li>
+                <li><strong>Backward compatibility.</strong> Older systems and data remain vulnerable during transition periods.</li>
+            </ul>
+            <p>
+                Post-quantum cryptography is necessary but not a complete solution. It shifts the timeline and the nature of the threat, but does not eliminate uncertainty about long-term security.
+            </p>
+            <p class="uncertainty-note">
+                <strong>Uncertainty:</strong> We do not know if post-quantum algorithms will remain secure. We do not know the full cost or timeline of migration. We do not know how many systems will fail to migrate. We do not know what threats we are not yet aware of.
+            </p>
+        </article>
+
+        <article class="research-article">
+            <h2>The Broader Question</h2>
+            <p>
+                Quantum security is not just about quantum computers. It is about a broader pattern: security assumptions have expiration dates. We build systems with assumptions that are valid today but may become invalid over long time horizons.
+            </p>
+            <p>
+                Quantum computing is simply one well-understood example of an assumption breaking. Other examples exist and will continue to emerge: hardware vulnerabilities, protocol weaknesses, supply chain compromises, knowledge loss, organizational failure.
+            </p>
+            <p>
+                The question quantum security raises is: How do we design systems that survive when their core assumptions break?
+            </p>
+        </article>
+
+        <section class="research-status">
+            <p>
+                <strong>Note:</strong> Quantum security research is active and evolving. This page captures current thinking but is not comprehensive. The field moves quickly, and understanding improves constantly. Uncertainty here is intentional and honest.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; Y2Q Research. This work is unfinished and uncertain.</p>
+    </footer>
+</body>
+</html>

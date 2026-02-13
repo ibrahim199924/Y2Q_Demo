@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Y2Q — Year to Quantum</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav-bar">
+            <a href="index.html" class="logo">Y2Q</a>
+            <ul class="nav-links">
+                <li><a href="quantum-security.html">Quantum Security</a></li>
+                <li><a href="c-bom.html">C-BOM</a></li>
+                <li><a href="philosophy.html">Philosophy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-visual">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="hero-icon">
+                    <!-- Timeline with branching paths representing time and uncertainty -->
+                    <line x1="20" y1="100" x2="180" y2="100" stroke="#cc3333" stroke-width="2"/>
+                    <circle cx="40" cy="100" r="3" fill="#e8e8e8"/>
+                    <circle cx="100" cy="100" r="3" fill="#e8e8e8"/>
+                    <circle cx="160" cy="100" r="3" fill="#e8e8e8"/>
+                    <!-- Branching uncertainty paths -->
+                    <path d="M 100 100 L 85 60" stroke="#b0b0b0" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+                    <path d="M 100 100 L 115 60" stroke="#b0b0b0" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+                    <path d="M 100 100 L 100 140" stroke="#b0b0b0" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
+                    <!-- Nodes at end of uncertainty paths -->
+                    <circle cx="85" cy="60" r="2" fill="#b0b0b0"/>
+                    <circle cx="115" cy="60" r="2" fill="#b0b0b0"/>
+                    <circle cx="100" cy="140" r="2" fill="#b0b0b0"/>
+                </svg>
+            </div>
+            <h1>Y2Q</h1>
+            <p class="subtitle">Year → Quantum</p>
+        </section>
+
+        <section class="intro">
+            <p class="intro-text">
+                Y2Q explores how security systems survive long enough for their underlying assumptions to fail. It is a research project concerned with long-horizon risk, systemic failure, hidden dependencies, and time-based degradation—not with tools, trends, or quick fixes.
+            </p>
+            <p class="intro-text">
+                Y2Q studies uncertainty, survivability, and failure modes. It examines what breaks, why it breaks, and how failure cascades through interconnected systems. The research spans three domains: the core concept of Y2Q itself, the long-term implications of quantum computing on cryptographic assumptions, and the systemic risks embedded in complex software supply chains.
+            </p>
+            <p class="intro-text">
+                This site is in a research and synthesis phase. The work is intentionally unfinished.
+            </p>
+        </section>
+
+        <section class="themes">
+            <h2>Core Research Themes</h2>
+            <div class="themes-grid">
+                <div class="theme-card">
+                    <h3>Time as a Security Threat</h3>
+                    <p>Security systems degrade over time. Cryptographic assumptions age. Dependencies rot. What protects today may expose tomorrow. Time is a threat that traditional security thinking does not adequately address.</p>
+                </div>
+                <div class="theme-card">
+                    <h3>Assumption Failure</h3>
+                    <p>Every system encodes assumptions about threats, capabilities, hardware, and time. When assumptions fail—and they do—systems fail. We study which assumptions are most fragile and why.</p>
+                </div>
+                <div class="theme-card">
+                    <h3>Systemic & Cascading Failure</h3>
+                    <p>Failures do not occur in isolation. Dependencies create chains of collapse. A single weak point can trigger cascades that bring down systems across an entire supply chain or infrastructure layer.</p>
+                </div>
+                <div class="theme-card">
+                    <h3>Visibility Gaps and Hidden Dependencies</h3>
+                    <p>We cannot see all components, all dependencies, or all risks. Blind spots exist by design, accident, and complexity. What we cannot see, we cannot defend.</p>
+                </div>
+                <div class="theme-card">
+                    <h3>Decision-Making Under Uncertainty</h3>
+                    <p>Perfect information is impossible. Threat models are always incomplete. We study how to decide, build, and survive without full knowledge.</p>
+                </div>
+                <div class="theme-card">
+                    <h3>Survivability Over Prevention</h3>
+                    <p>Prevention alone is insufficient. Systems must be designed to survive failure, not just prevent it. Survivability means resilience, recovery, and adaptation over time.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="research-domains">
+            <h2>Research Domains</h2>
+            <p class="domains-intro">
+                Y2Q research spans three interconnected domains. Each examines a different aspect of how security systems fail over time.
+            </p>
+            <div class="domains-grid">
+                <div class="domain-card">
+                    <h3><a href="quantum-security.html">Quantum Security</a></h3>
+                    <p>Explores how quantum computing challenges cryptographic assumptions built into systems deployed today. Focuses on long-horizon risk, harvest-now-decrypt-later threats, and the responsibility of securing long-lived data.</p>
+                </div>
+                <div class="domain-card">
+                    <h3><a href="c-bom.html">C-BOM (Component Bill of Materials)</a></h3>
+                    <p>Examines how component dependencies, supply chains, and hidden relationships create systemic risk. Focuses on visibility, trust relationships, and how failures propagate through interconnected systems.</p>
+                </div>
+                <div class="domain-card">
+                    <h3><a href="philosophy.html">Philosophy & Principles</a></h3>
+                    <p>Documents the core thinking behind Y2Q. Articulates what Y2Q refuses to do and why hype-driven security thinking is insufficient for long-horizon problems.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="status">
+            <p class="status-text">
+                <strong>Status:</strong> Research in synthesis phase. This work documents questions and frameworks, not solutions. It is intentionally unfinished because the problems it addresses are not solved.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; Y2Q Research. This work is unfinished and uncertain.</p>
+    </footer>
+</body>
+</html>

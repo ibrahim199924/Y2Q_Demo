@@ -1,0 +1,557 @@
+/* Y2Q — Minimalist Dark Research Website */
+
+:root {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #1a1a1a;
+    --text-primary: #e8e8e8;
+    --text-secondary: #b0b0b0;
+    --accent: #cc3333;
+    --border: #333333;
+    --font-serif: 'Georgia', 'Garamond', serif;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+/* Typography */
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    letter-spacing: -2px;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-serif);
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    margin-bottom: 1.5rem;
+    margin-top: 2.5rem;
+    font-family: var(--font-serif);
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.3px;
+}
+
+p {
+    margin-bottom: 1.2rem;
+    color: var(--text-primary);
+}
+
+strong {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+em {
+    font-style: italic;
+    color: var(--text-secondary);
+}
+
+a {
+    color: var(--text-primary);
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+/* Header & Navigation */
+
+.site-header {
+    border-bottom: 1px solid var(--border);
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    background-color: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+.nav-bar {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: var(--text-primary);
+}
+
+.logo:hover {
+    color: var(--accent);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-size: 0.95rem;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 4px;
+    transition: border-color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    border-bottom-color: var(--accent);
+    color: var(--accent);
+}
+
+/* Main Layout */
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Hero Section */
+
+.hero {
+    padding: 4rem 0 3rem 0;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 3rem;
+}
+
+.hero-visual {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-icon {
+    width: 120px;
+    height: 120px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.hero:hover .hero-icon {
+    opacity: 1;
+}
+
+.hero h1 {
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    color: var(--text-secondary);
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* Intro Section */
+
+.intro {
+    max-width: 700px;
+    margin: 0 auto 4rem;
+    padding: 2rem 0;
+    border: 1px solid var(--border);
+    padding: 2rem;
+    background-color: var(--bg-secondary);
+}
+
+.intro-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+}
+
+.intro-text:last-child {
+    margin-bottom: 0;
+}
+
+/* Themes and Research Domains */
+
+.themes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.theme-card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    padding: 2rem;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.theme-card:hover {
+    border-color: var(--accent);
+    background-color: rgba(204, 51, 51, 0.05);
+}
+
+.theme-card h3 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.theme-card p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.research-domains {
+    margin-bottom: 4rem;
+}
+
+.domains-intro {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.domains-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.domain-card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    padding: 2rem;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.domain-card:hover {
+    border-color: var(--accent);
+    background-color: rgba(204, 51, 51, 0.05);
+}
+
+.domain-card h3 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.domain-card h3 a {
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.domain-card h3 a:hover {
+    border-bottom-color: var(--accent);
+    color: var(--accent);
+}
+
+.domain-card p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Research Articles */
+
+.research-article {
+    margin-bottom: 3.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.research-article:last-of-type {
+    border-bottom: none;
+}
+
+.research-article h2 {
+    margin-top: 0;
+}
+
+.research-article p {
+    color: var(--text-primary);
+    line-height: 1.8;
+    margin-bottom: 1.3rem;
+}
+
+.uncertainty-note {
+    margin-top: 1.5rem;
+    padding: 1rem 1.5rem;
+    border-left: 3px solid var(--accent);
+    background-color: rgba(204, 51, 51, 0.05);
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+.uncertainty-note strong {
+    color: var(--accent);
+}
+
+/* Philosophy Articles */
+
+.philosophy-article {
+    margin-bottom: 3.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.philosophy-article:last-of-type {
+    border-bottom: none;
+}
+
+.philosophy-article h2 {
+    margin-top: 0;
+}
+
+.refuses-list,
+.philosophy-reasons {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.refuses-list li,
+.philosophy-reasons li {
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    line-height: 1.7;
+}
+
+.refuses-list li strong {
+    color: var(--text-primary);
+}
+
+.research-list {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    list-style-position: outside;
+}
+
+.research-list li {
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    line-height: 1.7;
+}
+
+.research-list li strong {
+    color: var(--text-primary);
+}
+
+.philosophy-list {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.philosophy-list li {
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    line-height: 1.8;
+}
+
+.philosophy-list li strong {
+    color: var(--text-primary);
+}
+
+/* Page Headers */
+
+.page-header {
+    padding: 3rem 0 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 3rem;
+}
+
+.page-icon {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.page-icon svg {
+    width: 100px;
+    height: 100px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.page-header:hover .page-icon svg {
+    opacity: 0.9;
+}
+
+.page-header h1 {
+    margin-bottom: 0.8rem;
+}
+
+.page-intro {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* Status Sections */
+
+.status,
+.research-status,
+.philosophy-closing {
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+}
+
+.status-text {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.research-status p,
+.philosophy-closing p {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+/* Footer */
+
+.site-footer {
+    border-top: 1px solid var(--border);
+    padding: 3rem 2rem;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-top: 4rem;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
+    .hero {
+        padding: 2.5rem 0 2rem 0;
+        margin-bottom: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+    }
+
+    .themes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .intro {
+        max-width: 100%;
+    }
+
+    main {
+        padding: 0 1.5rem;
+    }
+
+    .nav-bar {
+        padding: 0 1.5rem;
+    }
+
+    .site-footer {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .nav-links {
+        gap: 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    body {
+        font-size: 15px;
+    }
+
+    main {
+        padding: 0 1rem;
+    }
+
+    .nav-bar {
+        padding: 0 1rem;
+    }
+}
+
+/* Print Styles */
+
+@media print {
+    .site-header {
+        border-bottom: 2px solid #000;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .site-footer {
+        border-top: 2px solid #000;
+    }
+}

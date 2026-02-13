@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-BOM — Y2Q</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav-bar">
+            <a href="index.html" class="logo">Y2Q</a>
+            <ul class="nav-links">
+                <li><a href="quantum-security.html">Quantum Security</a></li>
+                <li><a href="c-bom.html" class="active">C-BOM</a></li>
+                <li><a href="philosophy.html">Philosophy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="page-icon">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Represents interconnected components and dependencies -->
+                    <!-- Central node -->
+                    <circle cx="100" cy="100" r="8" fill="#cc3333"/>
+                    <!-- Connected nodes -->
+                    <circle cx="60" cy="70" r="5" fill="#b0b0b0"/>
+                    <circle cx="140" cy="70" r="5" fill="#b0b0b0"/>
+                    <circle cx="60" cy="130" r="5" fill="#b0b0b0"/>
+                    <circle cx="140" cy="130" r="5" fill="#b0b0b0"/>
+                    <!-- Dependency lines -->
+                    <line x1="100" y1="100" x2="60" y2="70" stroke="#666" stroke-width="1.5"/>
+                    <line x1="100" y1="100" x2="140" y2="70" stroke="#666" stroke-width="1.5"/>
+                    <line x1="100" y1="100" x2="60" y2="130" stroke="#666" stroke-width="1.5"/>
+                    <line x1="100" y1="100" x2="140" y2="130" stroke="#666" stroke-width="1.5"/>
+                    <!-- Hidden/dashed dependency (cascade risk) -->
+                    <line x1="60" y1="70" x2="140" y2="70" stroke="#b0b0b0" stroke-width="1" stroke-dasharray="3,3"/>
+                </svg>
+            </div>
+            <h1>C-BOM</h1>
+            <p class="page-intro">Component Bill of Materials — the study of how system dependencies, supply chains, and hidden relationships create systemic risk.</p>
+        </section>
+
+        <article class="research-article">
+            <h2>What is a C-BOM?</h2>
+            <p>
+                A Bill of Materials (BOM) is an inventory: a list of components and their quantities. A C-BOM (Component Bill of Materials) extends this idea to software and systems. It asks: What are all the components, libraries, dependencies, and suppliers that make up a system?
+            </p>
+            <p>
+                But C-BOM research is not about creating perfect inventories. It is about understanding the relationships, trust chains, and hidden dependencies that create risk in complex systems.
+            </p>
+            <p>
+                The core insight is simple: you cannot defend what you cannot see. A system is only as secure as its weakest dependency, and most organizations do not know their weakest dependencies because they do not know what they are.
+            </p>
+        </article>
+
+        <article class="research-article">
+            <h2>Visibility and Hidden Dependencies</h2>
+            <p>
+                Modern software systems are built in layers. A single application may depend on dozens of libraries, which depend on other libraries, which depend on hardware drivers and system calls. The full dependency tree is often invisible to the developers and organizations that use the software.
+            </p>
+            <p>
+                Some dependencies are explicit (declared in package managers). Many are implicit:
+            </p>
+            <ul class="research-list">
+                <li><strong>Transitive dependencies</strong> — A library depends on another library, but the developer doesn't know about it</li>
+                <li><strong>System dependencies</strong> — Code relies on specific OS behavior or hardware properties</li>
+                <li><strong>Supply chain dependencies</strong> — Components come from vendors, who depend on other vendors</li>
+                <li><strong>Undocumented relationships</strong> — Code patterns that work by accident, not design</li>
+                <li><strong>Organizational dependencies</strong> — Systems depend on knowledge, expertise, or people who may no longer be available</li>
+            </ul>
+            <p>
+                Each hidden dependency is a potential failure point. The larger the system, the more dependencies, the greater the blindness.
+            </p>
+            <p class="uncertainty-note">
+                <strong>Uncertainty:</strong> No organization fully understands its own supply chain. Hidden dependencies exist by definition—if you knew about them, they would not be hidden. We do not know what we don't know.
+            </p>
+        </article>
+
+        <article class="research-article">
+            <h2>Single Points of Failure</h2>
+            <p>
+                In a complex system, certain components are more critical than others. A single point of failure (SPOF) is a component whose failure brings down the entire system.
+            </p>
+            <p>
+                Classic examples include:
+            </p>
+            <ul class="research-list">
+                <li><strong>OpenSSL</strong> — A security library used by millions of systems, maintained by a small team with limited funding</li>
+                <li><strong>The internet backbone</strong> — A handful of carriers control critical infrastructure</li>
+                <li><strong>Certificate authorities</strong> — A small number of trusted entities that validate the entire HTTPS ecosystem</li>
+                <li><strong>Cloud providers</strong> — Large portions of the internet depend on a few infrastructure companies</li>
+                <li><strong>Individual maintainers</strong> — Critical open-source libraries are often maintained by one or two people</li>
+            </ul>
+            <p>
+                Single points of failure are often invisible until they fail. When they do, the impact is systemic.
+            </p>
+        </article>
+
+        <article class="research-article">
+            <h2>Vendor and Trust-Chain Risk</h2>
+            <p>
+                Every component in a system has an origin—a vendor, maintainer, or author. Trust in that origin is a risk.
+            </p>
+            <p>
+                Trust-chain risks include:
+            </p>
+            <ul class="research-list">
+                <li><strong>Vendor compromise</strong> — A vendor's infrastructure or source code is compromised, affecting all downstream users</li>
+                <li><strong>Vendor abandonment</strong> — A vendor stops maintaining a library, leaving users with unpatched vulnerabilities</li>
+                <li><strong>Vendor incentives</strong> — A vendor prioritizes business goals over security</li>
+                <li><strong>Supply chain attacks</strong> — An attacker infiltrates a vendor to compromise many downstream users at once</li>
+                <li><strong>Nation-state involvement</strong> — Governments pressure vendors or develop backdoors</li>
+                <li><strong>Transitivity of trust</strong> — You trust a library, which trusts another library, which trusts a third party. You have no direct control over that third party.</li>
+            </ul>
+            <p>
+                The more dependencies a system has, the larger the trust chain, the more ways trust can be broken.
+            </p>
+            <p class="uncertainty-note">
+                <strong>Uncertainty:</strong> We cannot fully audit all our dependencies. We do not know which vendors are compromised. We do not know the true security posture of our supply chain. Trust is managed through blind faith and incomplete information.
+            </p>
+        </article>
+
+        <article class="research-article">
+            <h2>How Failures Cascade</h2>
+            <p>
+                In a densely connected system, a failure in one component often causes failures in others. This cascading effect is one of the most dangerous patterns in systems security.
+            </p>
+            <p>
+                A cascade begins when:
+            </p>
+            <ul class="research-list">
+                <li><strong>A critical component fails</strong> (due to vulnerability, bug, or compromise)</li>
+                <li><strong>Dependent systems are suddenly deprived of functionality</strong> they relied on</li>
+                <li><strong>Those systems fail</strong>, which causes systems that depend on them to fail</li>
+                <li><strong>The failure spreads</strong> through the dependency chain, potentially affecting large swaths of infrastructure</li>
+            </ul>
+            <p>
+                Historical examples include:
+            </p>
+            <ul class="research-list">
+                <li><strong>Heartbleed</strong> — A vulnerability in OpenSSL, affecting millions of systems globally</li>
+                <li><strong>Log4Shell</strong> — A vulnerability in a logging library that affected nearly every Java application</li>
+                <li><strong>Cloudflare outages</strong> — When a major infrastructure provider fails, entire sections of the internet become unavailable</li>
+                <li><strong>BGP hijacks</strong> — When routing infrastructure is compromised, traffic can be diverted or blocked</li>
+            </ul>
+            <p>
+                Cascading failures are hard to predict and hard to contain. The interconnectedness of modern systems amplifies risk.
+            </p>
+        </article>
+
+        <article class="research-article">
+            <h2>Component Relationships and Trust Networks</h2>
+            <p>
+                C-BOM is fundamentally about understanding relationships, not just inventories. The question is not "what components do we have?" but "how do these components depend on and trust each other?"
+            </p>
+            <p>
+                A trust network in a system includes:
+            </p>
+            <ul class="research-list">
+                <li><strong>Direct dependencies</strong> — Code that a system calls directly</li>
+                <li><strong>Indirect dependencies</strong> — Code that dependencies call on behalf of your system</li>
+                <li><strong>Implicit trust</strong> — Components that are assumed to be safe or trustworthy without active verification</li>
+                <li><strong>Lateral trust</strong> — Components that do not directly depend on each other but share underlying infrastructure</li>
+                <li><strong>Organizational trust</strong> — Teams and people who maintain or operate systems</li>
+            </ul>
+            <p>
+                The topology of this trust network determines how resilient the system is to failure, compromise, or degradation.
+            </p>
+        </article>
+
+        <article class="research-article">
+            <h2>From Inventory to Understanding</h2>
+            <p>
+                Creating a C-BOM inventory (listing all components) is a start. But the real value comes from understanding:
+            </p>
+            <ul class="research-list">
+                <li>Which components are critical?</li>
+                <li>What happens if each component fails?</li>
+                <li>Which components have single points of failure?</li>
+                <li>How would a failure cascade through the system?</li>
+                <li>Where are the trust boundaries?</li>
+                <li>Where is visibility lacking?</li>
+                <li>How do organizational constraints affect system security?</li>
+            </ul>
+            <p>
+                This understanding allows for better decision-making about risk management, mitigation, and survivability.
+            </p>
+            <p class="uncertainty-note">
+                <strong>Uncertainty:</strong> Complete understanding of a complex system is not possible. Emergent behaviors appear at scale. Interdependencies are discovered incrementally. The map is never complete.
+            </p>
+        </article>
+
+        <article class="research-article">
+            <h2>C-BOM as a Living Document</h2>
+            <p>
+                A C-BOM is not a one-time artifact. Systems change constantly. Dependencies are updated, removed, or added. New vulnerabilities are discovered. Vendors change. Organizations restructure.
+            </p>
+            <p>
+                A static C-BOM becomes obsolete immediately. A living C-BOM requires:
+            </p>
+            <ul class="research-list">
+                <li>Continuous monitoring and updating</li>
+                <li>Regular review and re-assessment</li>
+                <li>Integration with development and operational practices</li>
+                <li>Visibility into changes and their implications</li>
+                <li>Documentation of why decisions were made</li>
+            </ul>
+            <p>
+                The effort required to maintain a true understanding of system dependencies is substantial and ongoing.
+            </p>
+        </article>
+
+        <section class="research-status">
+            <p>
+                <strong>Note:</strong> C-BOM research is still emerging. There is no universal standard or methodology. Organizations are learning how to do this well. The work is incomplete because the problem is complex and evolving.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; Y2Q Research. This work is unfinished and uncertain.</p>
+    </footer>
+</body>
+</html>
