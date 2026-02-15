@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Threat Modeling — Y2Q</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav-bar">
+            <a href="index.html" class="logo">Y2Q</a>
+            <ul class="nav-links">
+                <li><a href="index.html#about">ABOUT</a></li>
+                <li><a href="index.html#services">SERVICES</a></li>
+                <li><a href="index.html#maturity">MATURITY MODEL</a></li>
+                <li><a href="index.html#engage" class="cta-link">ENGAGE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Threat Modeling</h1>
+            <p class="page-intro">Think like attackers think. Understand attack surfaces, failure modes, and gaps in your assumptions about how threats evolve.</p>
+        </section>
+
+        <article class="research-article">
+            <h2>What is Threat Modeling?</h2>
+            <p>
+                Threat modeling is the systematic process of identifying, analyzing, and prioritizing potential threats to a system. It answers a fundamental question: what could go wrong, and what would an adversary do about it?
+            </p>
+            <p>
+                Unlike vulnerability scanning (which looks for known flaws), threat modeling examines the system holistically. It considers the adversary's goals, capabilities, and constraints. It maps attack paths. It identifies assumptions that could be broken.
+            </p>
+            <p>
+                Good threat modeling is not about defending against everything. It is about understanding where risk concentrates and where defenses matter most.
+            </p>
+        </article>
+
+        <article class="research-article">
+            <h2>Attack Surfaces</h2>
+            <p>
+                An attack surface is the set of ways an adversary can interact with and potentially compromise a system. It includes:
+            </p>
+            <ul class="research-list">
+                <li><strong>Network interfaces</strong> — Ports, protocols, and services exposed to networks</li>
+                <li><strong>Authentication mechanisms</strong> — How users and systems prove identity (credentials, tokens, keys)</li>
+                <li><strong>APIs and integrations</strong> — Connections to external systems and services</li>
+                <li><strong>Data storage</strong> — Databases, files, and caches containing sensitive information</li>
+                <li><strong>Supply chain dependencies</strong> — Third-party libraries, services, and vendors</li>
+                <li><strong>Human interactions</strong> — Social engineering, phishing, insider threats</li>
+                <li><strong>Physical access</strong> — Servers, networks, and hardware that can be physically accessed</li>
+                <li><strong>Implicit trust relationships</strong> — Undocumented connections and assumptions</li>
+            </ul>
+            <p>
+                Most organizations do not understand their full attack surface. Hidden dependencies and implicit trust create blind spots.
+            </p>
+        </article>
+
+        <article class="research-article">
+            <h2>Adversary Models</h2>
+            <p>
+                Threat modeling requires understanding who might attack you and what they want. Different adversaries have different capabilities and goals:
+            </p>
+            <ul class="research-list">
+                <li><strong>Script kiddies</strong> — Limited technical skill, using publicly available tools, opportunistic targets</li>
+                <li><strong>Organized cybercriminals</strong> — Sophisticated, profit-motivated, targeting valuable assets</li>
+                <li><strong>Hacktivists</strong> — Ideologically motivated, targeting specific organizations or industries</li>
+                <li><strong>Nation-state actors</strong> — High resources, advanced capabilities, long-term persistence, geopolitical motivations</li>
+                <li><strong>Insider threats</strong> — Legitimate access, intimate knowledge of systems, varied motivations (revenge, profit, espionage)</li>
+                <li><strong>Competitors</strong> — Motivated by intellectual property and market advantage</li>
+            </ul>
+            <p>
+                The adversary model determines what threats are credible and what defenses matter. Defending against script kiddies is different from defending against nation-state attackers.
+            </p>
+        </article>
+
+        <article class="research-article">
+            <h2>STRIDE and Other Frameworks</h2>
+            <p>
+                Several frameworks help structure threat modeling:
+            </p>
+            <ul class="research-list">
+                <li><strong>STRIDE</strong> — Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege</li>
+                <li><strong>PASTA</strong> — Process for Attack Simulation and Threat Analysis</li>
+                <li><strong>Trike</strong> — Focuses on risk and compliance</li>
+                <li><strong>CVSS</strong> — Common Vulnerability Scoring System (for prioritizing known vulnerabilities)</li>
+                <li><strong>Attack trees</strong> — Visual representation of how attacks can combine to achieve a goal</li>
+                <li><strong>Kill chain analysis</strong> — Understanding attacker progression from initial compromise to objective</li>
+            </ul>
+            <p>
+                No single framework is perfect. Effective threat modeling often combines multiple approaches.
+            </p>
+        </article>
+
+        <article class="research-article">
+            <h2>Failure Modes and Assumptions</h2>
+            <p>
+                Threat modeling often reveals false assumptions. Examples include:
+            </p>
+            <ul class="research-list">
+                <li><strong>"Our encryption is secure"</strong> — What if cryptographic algorithms are broken? What if keys are compromised? What if implementation is flawed?</li>
+                <li><strong>"Our vendor is trustworthy"</strong> — What if the vendor is compromised? What if their supply chain is attacked? What if they go out of business?</li>
+                <li><strong>"Our employees won't betray us"</strong> — What if an employee is compromised, blackmailed, or disgruntled? What if credentials are stolen?</li>
+                <li><strong>"Our network is isolated"</strong> — What if isolation assumptions are wrong? What if someone gains physical access? What if supply chain introduces backdoors?</li>
+                <li><strong>"We can detect all attacks"</strong> — What if attackers are more sophisticated than anticipated? What if they evade detection mechanisms?</li>
+            </ul>
+            <p>
+                Good threat modeling makes these assumptions explicit and tests them.
+            </p>
+        </article>
+
+        <article class="research-article">
+            <h2>Threat Modeling as a Practice</h2>
+            <p>
+                Effective threat modeling is not a one-time exercise. It should be:
+            </p>
+            <ul class="research-list">
+                <li><strong>Continuous</strong> — As systems change, new threats emerge</li>
+                <li><strong>Collaborative</strong> — Threat modeling should involve architects, developers, security specialists, and operations teams</li>
+                <li><strong>Grounded in reality</strong> — Threat models should be tested against real incidents and evolving attacker capabilities</li>
+                <li><strong>Prioritized</strong> — Not all threats are equal. Focus on the ones that matter most</li>
+                <li><strong>Actionable</strong> — Threat modeling should lead to concrete security decisions and mitigations</li>
+                <li><strong>Living</strong> — Models should be updated as understanding improves</li>
+            </ul>
+        </article>
+
+        <article class="research-article">
+            <h2>The Limits of Threat Modeling</h2>
+            <p>
+                Threat modeling is powerful but incomplete. It has limitations:
+            </p>
+            <ul class="research-list">
+                <li><strong>Incomplete knowledge</strong> — You cannot anticipate all threats, especially novel attacks</li>
+                <li><strong>Assumption brittleness</strong> — Models are only as good as the assumptions they embed</li>
+                <li><strong>Resource constraints</strong> — Perfect defense is impossible. Trade-offs must be made</li>
+                <li><strong>Evolving threats</strong> — The threat landscape changes constantly. Models become stale</li>
+                <li><strong>Complexity</strong> — Large systems have complex threat models that are difficult to fully understand</li>
+            </ul>
+            <p>
+                Threat modeling does not provide certainty. It provides clarity about where risk exists and where defenses matter most.
+            </p>
+        </article>
+
+        <article class="research-article">
+            <h2>Threat Modeling and Survivability</h2>
+            <p>
+                Threat modeling informs survivability design. It answers questions like:
+            </p>
+            <ul class="research-list">
+                <li>If this component fails or is compromised, what is the impact?</li>
+                <li>How can we detect this attack?</li>
+                <li>How can we respond and recover?</li>
+                <li>What assumptions can we not afford to have broken?</li>
+                <li>Where should we invest in redundancy and defense?</li>
+            </ul>
+            <p>
+                Survivability is not about preventing all attacks. It is about understanding which attacks matter most and designing systems to survive them.
+            </p>
+        </article>
+
+        <section class="research-status">
+            <p>
+                <strong>Note:</strong> Threat modeling is both art and science. There is no perfect methodology. Effective threat modeling requires experience, creativity, and deep understanding of how systems work and how attackers think. This is an evolving field.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; Y2Q Research. Systems survive through understanding failure.</p>
+    </footer>
+</body>
+</html>

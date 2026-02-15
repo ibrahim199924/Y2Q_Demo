@@ -11,108 +11,262 @@
         <nav class="nav-bar">
             <a href="index.html" class="logo">Y2Q</a>
             <ul class="nav-links">
-                <li><a href="quantum-security.html">Quantum Security</a></li>
-                <li><a href="c-bom.html">C-BOM</a></li>
-                <li><a href="philosophy.html">Philosophy</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#maturity">MATURITY MODEL</a></li>
+                <li><a href="#engage" class="cta-link">ENGAGE</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section class="hero">
-            <div class="hero-visual">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="hero-icon">
-                    <!-- Timeline with branching paths representing time and uncertainty -->
-                    <line x1="20" y1="100" x2="180" y2="100" stroke="#cc3333" stroke-width="2"/>
-                    <circle cx="40" cy="100" r="3" fill="#e8e8e8"/>
-                    <circle cx="100" cy="100" r="3" fill="#e8e8e8"/>
-                    <circle cx="160" cy="100" r="3" fill="#e8e8e8"/>
-                    <!-- Branching uncertainty paths -->
-                    <path d="M 100 100 L 85 60" stroke="#b0b0b0" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
-                    <path d="M 100 100 L 115 60" stroke="#b0b0b0" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
-                    <path d="M 100 100 L 100 140" stroke="#b0b0b0" stroke-width="1.5" stroke-dasharray="3,3" fill="none"/>
-                    <!-- Nodes at end of uncertainty paths -->
-                    <circle cx="85" cy="60" r="2" fill="#b0b0b0"/>
-                    <circle cx="115" cy="60" r="2" fill="#b0b0b0"/>
-                    <circle cx="100" cy="140" r="2" fill="#b0b0b0"/>
-                </svg>
-            </div>
-            <h1>Y2Q</h1>
-            <p class="subtitle">Year → Quantum</p>
-        </section>
-
-        <section class="intro">
-            <p class="intro-text">
-                Y2Q explores how security systems survive long enough for their underlying assumptions to fail. It is a research project concerned with long-horizon risk, systemic failure, hidden dependencies, and time-based degradation—not with tools, trends, or quick fixes.
-            </p>
-            <p class="intro-text">
-                Y2Q studies uncertainty, survivability, and failure modes. It examines what breaks, why it breaks, and how failure cascades through interconnected systems. The research spans three domains: the core concept of Y2Q itself, the long-term implications of quantum computing on cryptographic assumptions, and the systemic risks embedded in complex software supply chains.
-            </p>
-            <p class="intro-text">
-                This site is in a research and synthesis phase. The work is intentionally unfinished.
-            </p>
-        </section>
-
-        <section class="themes">
-            <h2>Core Research Themes</h2>
-            <div class="themes-grid">
-                <div class="theme-card">
-                    <h3>Time as a Security Threat</h3>
-                    <p>Security systems degrade over time. Cryptographic assumptions age. Dependencies rot. What protects today may expose tomorrow. Time is a threat that traditional security thinking does not adequately address.</p>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-tagline">BUILT FOR BREACH. DESIGNED FOR THE FUTURE.</p>
+                    <h1>Systems survive through understanding failure.</h1>
+                    <p class="hero-subtitle">YEAR — ZERO TRUST — QUANTUM</p>
+                    <p class="hero-description">
+                        Security systems fail predictably. Dependencies break. Assumptions become invalid. Time amplifies risk. 
+                        Y2Q research explores how systems survive long enough for their foundational assumptions to fail.
+                    </p>
+                    <p class="hero-challenge">
+                        <span class="highlight">Will your systems survive?</span>
+                    </p>
                 </div>
-                <div class="theme-card">
-                    <h3>Assumption Failure</h3>
-                    <p>Every system encodes assumptions about threats, capabilities, hardware, and time. When assumptions fail—and they do—systems fail. We study which assumptions are most fragile and why.</p>
-                </div>
-                <div class="theme-card">
-                    <h3>Systemic & Cascading Failure</h3>
-                    <p>Failures do not occur in isolation. Dependencies create chains of collapse. A single weak point can trigger cascades that bring down systems across an entire supply chain or infrastructure layer.</p>
-                </div>
-                <div class="theme-card">
-                    <h3>Visibility Gaps and Hidden Dependencies</h3>
-                    <p>We cannot see all components, all dependencies, or all risks. Blind spots exist by design, accident, and complexity. What we cannot see, we cannot defend.</p>
-                </div>
-                <div class="theme-card">
-                    <h3>Decision-Making Under Uncertainty</h3>
-                    <p>Perfect information is impossible. Threat models are always incomplete. We study how to decide, build, and survive without full knowledge.</p>
-                </div>
-                <div class="theme-card">
-                    <h3>Survivability Over Prevention</h3>
-                    <p>Prevention alone is insufficient. Systems must be designed to survive failure, not just prevent it. Survivability means resilience, recovery, and adaptation over time.</p>
+                <div class="hero-visual">
+                    <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" class="hero-graphic">
+                        <defs>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                            <radialGradient id="gradRed" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" style="stop-color:#ff4444;stop-opacity:0.8"/>
+                                <stop offset="100%" style="stop-color:#cc3333;stop-opacity:0"/>
+                            </radialGradient>
+                        </defs>
+                        
+                        <!-- Central node -->
+                        <circle cx="200" cy="200" r="20" fill="#cc3333" filter="url(#glow)" opacity="0.9"/>
+                        
+                        <!-- Network nodes -->
+                        <circle cx="120" cy="140" r="8" fill="#4da6ff" filter="url(#glow)" opacity="0.7"/>
+                        <circle cx="280" cy="140" r="8" fill="#4da6ff" filter="url(#glow)" opacity="0.7"/>
+                        <circle cx="100" cy="260" r="8" fill="#ff6b6b" filter="url(#glow)" opacity="0.6"/>
+                        <circle cx="300" cy="260" r="8" fill="#ff6b6b" filter="url(#glow)" opacity="0.6"/>
+                        <circle cx="200" cy="320" r="8" fill="#4da6ff" filter="url(#glow)" opacity="0.5"/>
+                        
+                        <!-- Connection lines -->
+                        <line x1="200" y1="200" x2="120" y2="140" stroke="#666" stroke-width="2" opacity="0.5"/>
+                        <line x1="200" y1="200" x2="280" y2="140" stroke="#666" stroke-width="2" opacity="0.5"/>
+                        <line x1="200" y1="200" x2="100" y2="260" stroke="#cc3333" stroke-width="2" opacity="0.6"/>
+                        <line x1="200" y1="200" x2="300" y2="260" stroke="#cc3333" stroke-width="2" opacity="0.6"/>
+                        <line x1="200" y1="200" x2="200" y2="320" stroke="#666" stroke-width="2" opacity="0.5"/>
+                        
+                        <!-- Cascade indicators -->
+                        <circle cx="100" cy="260" r="15" fill="none" stroke="#ff6b6b" stroke-width="2" filter="url(#glow)" opacity="0.6">
+                            <animate attributeName="r" from="15" to="25" dur="2s" repeatCount="indefinite"/>
+                            <animate attributeName="opacity" from="0.6" to="0" dur="2s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="300" cy="260" r="15" fill="none" stroke="#ff6b6b" stroke-width="2" filter="url(#glow)" opacity="0.6">
+                            <animate attributeName="r" from="15" to="25" dur="2s" repeatCount="indefinite"/>
+                            <animate attributeName="opacity" from="0.6" to="0" dur="2s" repeatCount="indefinite"/>
+                        </circle>
+                    </svg>
                 </div>
             </div>
         </section>
 
-        <section class="research-domains">
+        <!-- About Section -->
+        <section class="about" id="about">
+            <h2>About Y2Q</h2>
+            <div class="about-content">
+                <p>
+                    <strong>Y2Q explores how security systems survive long enough for their assumptions to fail.</strong>
+                </p>
+                <p>
+                    Modern security thinking focuses on prevention: build better defenses, patch vulnerabilities, use stronger encryption. 
+                    But prevention alone is insufficient. Systems fail. Assumptions break. Time amplifies risk.
+                </p>
+                <p>
+                    Y2Q research examines:
+                </p>
+                <ul class="about-list">
+                    <li><strong>Time as a security threat</strong> — How systems degrade, assumptions age, and dependencies rot</li>
+                    <li><strong>Assumption failure</strong> — What happens when core beliefs about security become invalid</li>
+                    <li><strong>Systemic cascading failure</strong> — How failures propagate through interconnected systems</li>
+                    <li><strong>Visibility and hidden dependencies</strong> — What we cannot see that threatens us</li>
+                    <li><strong>Survivability</strong> — How systems persist despite failure, not just how they prevent it</li>
+                </ul>
+                <p>
+                    This is research-first thinking. Not marketing. Not sales. Honest analysis of how systems break and survive.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
             <h2>Research Domains</h2>
-            <p class="domains-intro">
-                Y2Q research spans three interconnected domains. Each examines a different aspect of how security systems fail over time.
-            </p>
-            <div class="domains-grid">
-                <div class="domain-card">
-                    <h3><a href="quantum-security.html">Quantum Security</a></h3>
-                    <p>Explores how quantum computing challenges cryptographic assumptions built into systems deployed today. Focuses on long-horizon risk, harvest-now-decrypt-later threats, and the responsibility of securing long-lived data.</p>
+            <p class="services-intro">Y2Q research spans interconnected domains of systemic security.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <filter id="glow2">
+                                    <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                                    <feMerge>
+                                        <feMergeNode in="coloredBlur"/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            <!-- Cyber C-BOM Icon -->
+                            <circle cx="50" cy="50" r="30" fill="none" stroke="#4da6ff" stroke-width="2" filter="url(#glow2)"/>
+                            <circle cx="35" cy="35" r="5" fill="#4da6ff" filter="url(#glow2)"/>
+                            <circle cx="65" cy="35" r="5" fill="#4da6ff" filter="url(#glow2)"/>
+                            <circle cx="50" cy="65" r="5" fill="#ff6b6b" filter="url(#glow2)"/>
+                            <line x1="50" y1="50" x2="35" y2="35" stroke="#666" stroke-width="1" opacity="0.6"/>
+                            <line x1="50" y1="50" x2="65" y2="35" stroke="#666" stroke-width="1" opacity="0.6"/>
+                            <line x1="50" y1="50" x2="50" y2="65" stroke="#cc3333" stroke-width="1" opacity="0.8"/>
+                        </svg>
+                    </div>
+                    <h3>Cyber C-BOM</h3>
+                    <p>Dissect your entire security stack. Understand component dependencies, supply chains, and hidden relationships that create systemic risk.</p>
+                    <a href="c-bom.html" class="service-link">Learn More →</a>
                 </div>
-                <div class="domain-card">
-                    <h3><a href="c-bom.html">C-BOM (Component Bill of Materials)</a></h3>
-                    <p>Examines how component dependencies, supply chains, and hidden relationships create systemic risk. Focuses on visibility, trust relationships, and how failures propagate through interconnected systems.</p>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <filter id="glow3">
+                                    <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                                    <feMerge>
+                                        <feMergeNode in="coloredBlur"/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            <!-- Zero Trust Icon -->
+                            <rect x="30" y="35" width="40" height="30" rx="3" fill="none" stroke="#4da6ff" stroke-width="2" filter="url(#glow3)"/>
+                            <path d="M 50 45 L 50 55" stroke="#4da6ff" stroke-width="2" filter="url(#glow3)"/>
+                            <circle cx="45" cy="50" r="2" fill="#4da6ff" filter="url(#glow3)"/>
+                            <circle cx="55" cy="50" r="2" fill="#4da6ff" filter="url(#glow3)"/>
+                            <text x="50" y="72" text-anchor="middle" font-size="10" fill="#4da6ff" filter="url(#glow3)">TRUST</text>
+                        </svg>
+                    </div>
+                    <h3>Zero Trust Weaponisation</h3>
+                    <p>Assume breach. Contain movement. Understand how zero-trust principles apply when adversaries are already inside the perimeter.</p>
+                    <a href="zero-trust.html" class="service-link">Learn More →</a>
                 </div>
-                <div class="domain-card">
-                    <h3><a href="philosophy.html">Philosophy & Principles</a></h3>
-                    <p>Documents the core thinking behind Y2Q. Articulates what Y2Q refuses to do and why hype-driven security thinking is insufficient for long-horizon problems.</p>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <filter id="glow4">
+                                    <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                                    <feMerge>
+                                        <feMergeNode in="coloredBlur"/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            <!-- Threat Modeling Icon -->
+                            <circle cx="50" cy="50" r="25" fill="none" stroke="#ff6b6b" stroke-width="2" filter="url(#glow4)"/>
+                            <path d="M 50 35 L 60 50 L 50 65 L 40 50 Z" fill="none" stroke="#ff6b6b" stroke-width="2" filter="url(#glow4)"/>
+                            <circle cx="50" cy="50" r="3" fill="#ff6b6b" filter="url(#glow4)"/>
+                        </svg>
+                    </div>
+                    <h3>Threat Modeling</h3>
+                    <p>Think like attackers think. Understand attack surfaces, failure modes, and gaps in your assumptions about how threats evolve.</p>
+                    <a href="threat-modeling.html" class="service-link">Learn More →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <filter id="glow5">
+                                    <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                                    <feMerge>
+                                        <feMergeNode in="coloredBlur"/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            <!-- Post-Quantum Icon -->
+                            <circle cx="50" cy="50" r="20" fill="none" stroke="#4da6ff" stroke-width="2" filter="url(#glow5)"/>
+                            <path d="M 45 40 L 50 45 L 55 40 M 45 50 L 50 55 L 55 50 M 45 60 L 50 65 L 55 60" stroke="#4da6ff" stroke-width="1.5" filter="url(#glow5)"/>
+                        </svg>
+                    </div>
+                    <h3>Post-Quantum Readiness</h3>
+                    <p>Defend against the next era. Understand quantum threats to cryptography and how to prepare systems that must survive for decades.</p>
+                    <a href="quantum-security.html" class="service-link">Learn More →</a>
                 </div>
             </div>
         </section>
 
-        <section class="status">
-            <p class="status-text">
-                <strong>Status:</strong> Research in synthesis phase. This work documents questions and frameworks, not solutions. It is intentionally unfinished because the problems it addresses are not solved.
-            </p>
+        <!-- Maturity Model Section -->
+        <section class="maturity" id="maturity">
+            <h2>The Y2Q Maturity Model</h2>
+            <p class="maturity-subtitle">From blind targets to era-resilient systems.</p>
+            
+            <div class="maturity-timeline">
+                <div class="timeline-stage">
+                    <span class="stage-name">PREY</span>
+                    <span class="arrow">→</span>
+                </div>
+                <div class="timeline-stage">
+                    <span class="stage-name">NOISY</span>
+                    <span class="arrow">→</span>
+                </div>
+                <div class="timeline-stage">
+                    <span class="stage-name">PAPER SHIELD</span>
+                    <span class="arrow">→</span>
+                </div>
+                <div class="timeline-stage">
+                    <span class="stage-name">FORTIFIED</span>
+                    <span class="arrow">→</span>
+                </div>
+                <div class="timeline-stage">
+                    <span class="stage-name">PREDATORY</span>
+                    <span class="arrow">→</span>
+                </div>
+                <div class="timeline-stage">
+                    <span class="stage-name">POST-QUANTUM</span>
+                </div>
+            </div>
+            
+            <p class="maturity-caption">Understanding where your systems are in the journey toward resilience and survivability.</p>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section" id="engage">
+            <div class="cta-content">
+                <h2>You will be breached.</h2>
+                <p>The question is not if, but when. And more importantly: will your systems survive?</p>
+                <button class="cta-button">START YOUR ASSESSMENT</button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <section class="philosophy-footer">
+            <h3>Security That Survives Betrayal</h3>
+            <p>Y2Q research is unfinished. It is honest about uncertainty. It refuses marketing language and hype. It focuses on understanding how systems fail and how they survive.</p>
+            <p class="footer-contact">engage@y2q.security • CONFIDENTIAL RESEARCH</p>
         </section>
     </main>
 
     <footer class="site-footer">
-        <p>&copy; Y2Q Research. This work is unfinished and uncertain.</p>
+        <p>&copy; Y2Q Research. Systems survive through understanding failure.</p>
     </footer>
 </body>
 </html>

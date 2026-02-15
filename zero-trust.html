@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Trust Weaponisation — Y2Q</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav-bar">
+            <a href="index.html" class="logo">Y2Q</a>
+            <ul class="nav-links">
+                <li><a href="index.html#about">ABOUT</a></li>
+                <li><a href="index.html#services">SERVICES</a></li>
+                <li><a href="index.html#maturity">MATURITY MODEL</a></li>
+                <li><a href="index.html#engage" class="cta-link">ENGAGE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Zero Trust Weaponisation</h1>
+            <p class="page-intro">Assume breach. Contain movement. Understand how zero-trust principles apply when adversaries are already inside the perimeter.</p>
+        </section>
+
+        <article class="research-article">
+            <h2>The Problem: Trust Boundaries Fail</h2>
+            <p>
+                Traditional security assumes a clear boundary: inside the network is trusted, outside is not. Deploy firewalls at the edge. Use VPNs for remote access. Trust internal networks.
+            </p>
+            <p>
+                This model has failed repeatedly. Adversaries breach perimeters. They establish footholds. They move laterally through networks, often undetected for months.
+            </p>
+            <p>
+                Zero Trust inverts this assumption: assume breach. Assume no network segment is inherently safe. Verify every connection. Authenticate every access attempt. Monitor continuously.
+            </p>
+        </article>
+
+        <article class="research-article">
+            <h2>Zero Trust as Architecture</h2>
+            <p>
+                Zero Trust is not a tool or product. It is an architectural philosophy. It requires:
+            </p>
+            <ul class="research-list">
+                <li><strong>Identity verification at every layer</strong> — Users, devices, and services must be authenticated before access is granted</li>
+                <li><strong>Continuous monitoring</strong> — Behavior is constantly analyzed. Anomalies trigger investigation and response</li>
+                <li><strong>Least privilege access</strong> — Users and services have only the minimum permissions necessary to perform their function</li>
+                <li><strong>Micro-segmentation</strong> — Networks are divided into small zones to minimize the blast radius of a breach</li>
+                <li><strong>Encrypted communication</strong> — All traffic is encrypted, even within "trusted" networks</li>
+                <li><strong>Rapid detection and response</strong> — Breaches are expected. Systems must detect and respond to intrusions quickly</li>
+            </ul>
+        </article>
+
+        <article class="research-article">
+            <h2>Zero Trust Weaponisation</h2>
+            <p>
+                But Zero Trust has a dark side: attackers exploit it too. Understanding this weaponisation is critical.
+            </p>
+            <p>
+                Once inside the perimeter, attackers face Zero Trust controls: authentication challenges, behavioral monitoring, access restrictions. They must:
+            </p>
+            <ul class="research-list">
+                <li><strong>Bypass authentication</strong> — Steal credentials, exploit MFA weaknesses, compromise identity systems</li>
+                <li><strong>Hide their movements</strong> — Mimic legitimate user behavior, move slowly, avoid detection</li>
+                <li><strong>Escalate privileges</strong> — Move from low-privilege access to high-privilege access through lateral movement</li>
+                <li><strong>Establish persistence</strong> — Create backdoors and alternative access methods to maintain presence</li>
+                <li><strong>Exploit trust relationships</strong> — Use legitimate service-to-service communication to move deeper</li>
+            </ul>
+            <p>
+                Zero Trust Weaponisation is the study of how adversaries navigate, exploit, and evade these controls once they have breached the perimeter.
+            </p>
+        </article>
+
+        <article class="research-article">
+            <h2>The Adversary's Perspective</h2>
+            <p>
+                From the attacker's viewpoint, Zero Trust creates a new attack surface:
+            </p>
+            <ul class="research-list">
+                <li><strong>Identity attacks</strong> — Compromise user credentials to gain legitimate access</li>
+                <li><strong>Credential theft</strong> — Steal authentication tokens, certificates, or keys from systems and services</li>
+                <li><strong>Behavioral evasion</strong> — Move in ways that avoid triggering security alerts</li>
+                <li><strong>Privilege exploitation</strong> — Abuse trusted service accounts or administrative access</li>
+                <li><strong>Supply chain infiltration</strong> — Compromise vendors or partners with privileged access</li>
+                <li><strong>Insider threats</strong> — Leverage legitimate access from compromised or malicious insiders</li>
+            </ul>
+        </article>
+
+        <article class="research-article">
+            <h2>Detection Evasion and Survival</h2>
+            <p>
+                Advanced attackers operate with awareness of Zero Trust controls. They:
+            </p>
+            <ul class="research-list">
+                <li>Move slowly and deliberately, avoiding behavioral alerts</li>
+                <li>Use legitimate credentials and legitimate tools (living off the land)</li>
+                <li>Avoid triggers that would alert monitoring systems</li>
+                <li>Establish multiple persistence mechanisms to survive cleanup efforts</li>
+                <li>Exfiltrate data in ways that blend with normal traffic</li>
+            </ul>
+            <p>
+                The question becomes: how do you detect an adversary who appears legitimate and acts cautiously?
+            </p>
+        </article>
+
+        <article class="research-article">
+            <h2>The Limits of Zero Trust</h2>
+            <p>
+                Zero Trust is powerful but not perfect. It has limitations:
+            </p>
+            <ul class="research-list">
+                <li><strong>Complexity</strong> — Zero Trust architectures are complex and difficult to implement correctly</li>
+                <li><strong>False positives</strong> — Legitimate users may trigger alerts, causing operational friction</li>
+                <li><strong>Insider threats</strong> — An insider with legitimate access has already passed authentication</li>
+                <li><strong>Supply chain compromise</strong> — If a trusted vendor is compromised, their access becomes a liability</li>
+                <li><strong>Detection gaps</strong> — No monitoring is perfect. Attackers find blind spots</li>
+                <li><strong>Cost and complexity</strong> — Zero Trust requires significant infrastructure, expertise, and ongoing maintenance</li>
+            </ul>
+        </article>
+
+        <article class="research-article">
+            <h2>Zero Trust as Part of Survivability</h2>
+            <p>
+                Zero Trust is not about preventing breach. It is about assuming breach and designing systems to survive it.
+            </p>
+            <p>
+                The goal is not to make breach impossible (it is not), but to:
+            </p>
+            <ul class="research-list">
+                <li>Limit what an attacker can do once inside</li>
+                <li>Make lateral movement difficult and slow</li>
+                <li>Enable rapid detection of compromise</li>
+                <li>Allow for quick response and containment</li>
+                <li>Preserve critical systems even when parts are compromised</li>
+            </ul>
+            <p>
+                This is the essence of survivability: the system continues to function, the damage is limited, and recovery is possible.
+            </p>
+        </article>
+
+        <section class="research-status">
+            <p>
+                <strong>Note:</strong> Zero Trust Weaponisation is an emerging research area. Understanding how attackers navigate Zero Trust systems is critical to building defenses that actually work. This research is ongoing and evolving.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; Y2Q Research. Systems survive through understanding failure.</p>
+    </footer>
+</body>
+</html>
