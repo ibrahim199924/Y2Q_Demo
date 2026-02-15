@@ -23,132 +23,194 @@
         <section class="page-header">
             <div class="page-icon">
                 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Represents interconnected components and dependencies -->
-                    <!-- Central node -->
-                    <circle cx="100" cy="100" r="8" fill="#cc3333"/>
-                    <!-- Connected nodes -->
-                    <circle cx="60" cy="70" r="5" fill="#b0b0b0"/>
-                    <circle cx="140" cy="70" r="5" fill="#b0b0b0"/>
-                    <circle cx="60" cy="130" r="5" fill="#b0b0b0"/>
-                    <circle cx="140" cy="130" r="5" fill="#b0b0b0"/>
-                    <!-- Dependency lines -->
-                    <line x1="100" y1="100" x2="60" y2="70" stroke="#666" stroke-width="1.5"/>
-                    <line x1="100" y1="100" x2="140" y2="70" stroke="#666" stroke-width="1.5"/>
-                    <line x1="100" y1="100" x2="60" y2="130" stroke="#666" stroke-width="1.5"/>
-                    <line x1="100" y1="100" x2="140" y2="130" stroke="#666" stroke-width="1.5"/>
-                    <!-- Hidden/dashed dependency (cascade risk) -->
-                    <line x1="60" y1="70" x2="140" y2="70" stroke="#b0b0b0" stroke-width="1" stroke-dasharray="3,3"/>
+                    <!-- Represents cryptographic algorithms and transformations -->
+                    <!-- Central lock -->
+                    <rect x="70" y="80" width="60" height="50" rx="5" fill="none" stroke="#cc3333" stroke-width="2"/>
+                    <path d="M 80 80 Q 80 60 100 60 Q 120 60 120 80" fill="none" stroke="#cc3333" stroke-width="2"/>
+                    <!-- Encryption waves -->
+                    <path d="M 55 120 Q 60 110 65 120" fill="none" stroke="#b0b0b0" stroke-width="1.5"/>
+                    <path d="M 135 120 Q 140 110 145 120" fill="none" stroke="#b0b0b0" stroke-width="1.5"/>
+                    <!-- Key indicator -->
+                    <circle cx="100" cy="105" r="3" fill="#cc3333"/>
                 </svg>
             </div>
             <h1>C-BOM</h1>
-            <p class="page-intro">Component Bill of Materials — the study of how system dependencies, supply chains, and hidden relationships create systemic risk.</p>
+            <p class="page-intro">Cryptographic Bill of Materials — the inventory and analysis of cryptographic algorithms, protocols, and implementations that protect systems and data.</p>
         </section>
 
         <article class="research-article">
-            <h2>What is a C-BOM?</h2>
+            <h2>What is a Cryptographic Bill of Materials?</h2>
             <p>
-                A Bill of Materials (BOM) is an inventory: a list of components and their quantities. A C-BOM (Component Bill of Materials) extends this idea to software and systems. It asks: What are all the components, libraries, dependencies, and suppliers that make up a system?
+                A Cryptographic Bill of Materials (C-BOM) is a comprehensive inventory of all cryptographic algorithms, protocols, key management practices, and implementations used across a system or organization. It answers critical questions: What cryptographic primitives protect our data? Which algorithms are in use? What are their security properties? When do they expire?
             </p>
             <p>
-                But C-BOM research is not about creating perfect inventories. It is about understanding the relationships, trust chains, and hidden dependencies that create risk in complex systems.
+                Unlike generic software BOMs, C-BOM focuses specifically on the cryptographic foundations of security. It recognizes that cryptographic assumptions have lifetimes. Algorithms weaken. Keys degrade. Protocols become obsolete. A C-BOM tracks these temporal dependencies and identifies when migration or replacement is needed.
             </p>
             <p>
-                The core insight is simple: you cannot defend what you cannot see. A system is only as secure as its weakest dependency, and most organizations do not know their weakest dependencies because they do not know what they are.
+                The core insight is critical: you cannot manage what you cannot measure. Without a clear inventory of cryptographic usage, organizations cannot plan for algorithm transitions, assess quantum readiness, or make informed decisions about long-term data protection.
             </p>
         </article>
 
         <article class="research-article">
-            <h2>Visibility and Hidden Dependencies</h2>
+            <h2>What Goes Into a C-BOM?</h2>
             <p>
-                Modern software systems are built in layers. A single application may depend on dozens of libraries, which depend on other libraries, which depend on hardware drivers and system calls. The full dependency tree is often invisible to the developers and organizations that use the software.
-            </p>
-            <p>
-                Some dependencies are explicit (declared in package managers). Many are implicit:
+                A complete C-BOM documents:
             </p>
             <ul class="research-list">
-                <li><strong>Transitive dependencies</strong> — A library depends on another library, but the developer doesn't know about it</li>
-                <li><strong>System dependencies</strong> — Code relies on specific OS behavior or hardware properties</li>
-                <li><strong>Supply chain dependencies</strong> — Components come from vendors, who depend on other vendors</li>
-                <li><strong>Undocumented relationships</strong> — Code patterns that work by accident, not design</li>
-                <li><strong>Organizational dependencies</strong> — Systems depend on knowledge, expertise, or people who may no longer be available</li>
+                <li><strong>Symmetric algorithms</strong> — AES, ChaCha20, DES (legacy), and other bulk encryption methods</li>
+                <li><strong>Asymmetric algorithms</strong> — RSA, ECDSA, ECC, and their key sizes and curves</li>
+                <li><strong>Hash functions</strong> — SHA-256, SHA-3, MD5 (legacy), and their applications</li>
+                <li><strong>Key derivation functions</strong> — PBKDF2, Argon2, bcrypt for password hashing</li>
+                <li><strong>Protocols and standards</strong> — TLS versions, HTTPS configurations, VPN implementations</li>
+                <li><strong>Key management infrastructure</strong> — How keys are generated, stored, rotated, and retired</li>
+                <li><strong>Implementation details</strong> — Libraries used (OpenSSL, BoringSSL, etc.), versions, and known issues</li>
+                <li><strong>Data classifications</strong> — Which algorithms protect which types of data and for what duration</li>
+                <li><strong>Regulatory compliance</strong> — Which algorithms meet FIPS, NSA, or industry-specific standards</li>
             </ul>
             <p>
-                Each hidden dependency is a potential failure point. The larger the system, the more dependencies, the greater the blindness.
-            </p>
-            <p class="uncertainty-note">
-                <strong>Uncertainty:</strong> No organization fully understands its own supply chain. Hidden dependencies exist by definition—if you knew about them, they would not be hidden. We do not know what we don't know.
+                This inventory should be discoverable, maintainable, and continuously updated as systems change.
             </p>
         </article>
 
         <article class="research-article">
-            <h2>Single Points of Failure</h2>
+            <h2>Cryptographic Assumptions and Time Horizons</h2>
             <p>
-                In a complex system, certain components are more critical than others. A single point of failure (SPOF) is a component whose failure brings down the entire system.
+                Every cryptographic algorithm relies on mathematical assumptions about computational difficulty. These assumptions are not eternal. They have time horizons.
             </p>
             <p>
-                Classic examples include:
+                Consider:
             </p>
             <ul class="research-list">
-                <li><strong>OpenSSL</strong> — A security library used by millions of systems, maintained by a small team with limited funding</li>
-                <li><strong>The internet backbone</strong> — A handful of carriers control critical infrastructure</li>
-                <li><strong>Certificate authorities</strong> — A small number of trusted entities that validate the entire HTTPS ecosystem</li>
-                <li><strong>Cloud providers</strong> — Large portions of the internet depend on a few infrastructure companies</li>
-                <li><strong>Individual maintainers</strong> — Critical open-source libraries are often maintained by one or two people</li>
+                <li><strong>RSA-2048</strong> — Believed secure today, but may face attack within 5-10 years if advances in factorization occur</li>
+                <li><strong>SHA-1</strong> — Deprecated due to collision vulnerabilities; should have been retired years ago</li>
+                <li><strong>AES-128</strong> — Secure for most near-term uses, but long-lived data may need AES-256</li>
+                <li><strong>ECC curves</strong> — Some curves (P-256) face questions about NSA influence; others are preferred</li>
+                <li><strong>Quantum risk</strong> — Current RSA and ECC provide zero post-quantum security; migration is essential</li>
             </ul>
             <p>
-                Single points of failure are often invisible until they fail. When they do, the impact is systemic.
+                A C-BOM makes these temporal properties explicit: which algorithms are suitable for how long, and when replacement is needed.
             </p>
         </article>
 
         <article class="research-article">
-            <h2>Vendor and Trust-Chain Risk</h2>
+            <h2>Crypto-Agility and Algorithm Migration</h2>
             <p>
-                Every component in a system has an origin—a vendor, maintainer, or author. Trust in that origin is a risk.
+                A well-designed system does not lock itself into a single cryptographic algorithm forever. It should be crypto-agile: able to support multiple algorithms and transition between them as threats evolve.
             </p>
             <p>
-                Trust-chain risks include:
+                Crypto-agility requires:
             </p>
             <ul class="research-list">
-                <li><strong>Vendor compromise</strong> — A vendor's infrastructure or source code is compromised, affecting all downstream users</li>
-                <li><strong>Vendor abandonment</strong> — A vendor stops maintaining a library, leaving users with unpatched vulnerabilities</li>
-                <li><strong>Vendor incentives</strong> — A vendor prioritizes business goals over security</li>
-                <li><strong>Supply chain attacks</strong> — An attacker infiltrates a vendor to compromise many downstream users at once</li>
-                <li><strong>Nation-state involvement</strong> — Governments pressure vendors or develop backdoors</li>
-                <li><strong>Transitivity of trust</strong> — You trust a library, which trusts another library, which trusts a third party. You have no direct control over that third party.</li>
+                <li><strong>Algorithm abstraction</strong> — Cryptographic operations are abstracted so implementations can be swapped</li>
+                <li><strong>Parallel support</strong> — New algorithms can be deployed alongside legacy ones during transition</li>
+                <li><strong>Migration planning</strong> — Clear processes for deprecating old algorithms and adopting new ones</li>
+                <li><strong>Testing and validation</strong> — New algorithms are thoroughly tested before being trusted with production data</li>
+                <li><strong>Performance monitoring</strong> — Algorithm changes have performance implications that must be understood</li>
             </ul>
             <p>
-                The more dependencies a system has, the larger the trust chain, the more ways trust can be broken.
-            </p>
-            <p class="uncertainty-note">
-                <strong>Uncertainty:</strong> We cannot fully audit all our dependencies. We do not know which vendors are compromised. We do not know the true security posture of our supply chain. Trust is managed through blind faith and incomplete information.
+                Without crypto-agility, systems become brittle. When an algorithm must be abandoned (due to a break or quantum threat), rigid systems face catastrophic transition challenges.
             </p>
         </article>
 
         <article class="research-article">
-            <h2>How Failures Cascade</h2>
+            <h2>Cryptographic Risk and Quantum Threats</h2>
             <p>
-                In a densely connected system, a failure in one component often causes failures in others. This cascading effect is one of the most dangerous patterns in systems security.
+                The most pressing cryptographic threat is quantum computing. Quantum computers will break the mathematical assumptions behind RSA and ECC, rendering current asymmetric cryptography insecure.
             </p>
             <p>
-                A cascade begins when:
-            </p>
-            <ul class="research-list">
-                <li><strong>A critical component fails</strong> (due to vulnerability, bug, or compromise)</li>
-                <li><strong>Dependent systems are suddenly deprived of functionality</strong> they relied on</li>
-                <li><strong>Those systems fail</strong>, which causes systems that depend on them to fail</li>
-                <li><strong>The failure spreads</strong> through the dependency chain, potentially affecting large swaths of infrastructure</li>
-            </ul>
-            <p>
-                Historical examples include:
+                This creates a critical inventory challenge: identifying all data and systems that depend on algorithms vulnerable to quantum attack.
             </p>
             <ul class="research-list">
-                <li><strong>Heartbleed</strong> — A vulnerability in OpenSSL, affecting millions of systems globally</li>
-                <li><strong>Log4Shell</strong> — A vulnerability in a logging library that affected nearly every Java application</li>
-                <li><strong>Cloudflare outages</strong> — When a major infrastructure provider fails, entire sections of the internet become unavailable</li>
-                <li><strong>BGP hijacks</strong> — When routing infrastructure is compromised, traffic can be diverted or blocked</li>
+                <li><strong>Data with long confidentiality requirements</strong> — Medical records, state secrets, long-term contracts must be protected against harvest-now-decrypt-later attacks</li>
+                <li><strong>TLS communications</strong> — HTTPS traffic encrypted today with RSA/ECC becomes vulnerable if quantum computers arrive before data expires</li>
+                <li><strong>Digital signatures</strong> — Signatures created today may lose validity if the signing algorithm becomes quantum-broken</li>
+                <li><strong>Key establishment</strong> — Perfect forward secrecy helps, but historical keys remain at risk</li>
             </ul>
             <p>
-                Cascading failures are hard to predict and hard to contain. The interconnectedness of modern systems amplifies risk.
+                A C-BOM enables organizations to prioritize quantum-safe migration based on data sensitivity and exposure duration.
+            </p>
+        </article>
+
+        <article class="research-article">
+            <h2>Legacy and Deprecated Cryptography</h2>
+            <p>
+                Many systems still use cryptographic algorithms that are known to be weak or deprecated. Understanding where legacy cryptography exists is essential for security.
+            </p>
+            <ul class="research-list">
+                <li><strong>MD5</strong> — Cryptographically broken but still found in legacy systems and legacy protocols</li>
+                <li><strong>DES</strong> — Completely insecure but embedded in legacy hardware, banking systems, and industrial control</li>
+                <li><strong>SHA-1</strong> — Vulnerable to collision attacks; deprecated by NIST but still widespread</li>
+                <li><strong>RC4</strong> — Broken cipher still found in legacy TLS and VPN implementations</li>
+                <li><strong>3DES</strong> — Weak by modern standards but used in PCI-DSS regulated systems</li>
+            </ul>
+            <p>
+                A C-BOM reveals where these weak algorithms hide, enabling targeted replacement efforts. However, some legacy systems may be irreplaceable, requiring compensating controls or isolation.
+            </p>
+        </article>
+
+        <article class="research-article">
+            <h2>Cryptographic Supply Chain and Dependencies</h2>
+            <p>
+                Cryptographic implementations do not exist in isolation. They depend on:
+            </p>
+            <ul class="research-list">
+                <li><strong>Cryptographic libraries</strong> — OpenSSL, BoringSSL, NSS, libsodium; each with different security properties</li>
+                <li><strong>Hardware security modules (HSMs)</strong> — Physical devices that generate and protect keys</li>
+                <li><strong>Key management services</strong> — Cloud KMS, enterprise key vaults, or legacy on-premises solutions</li>
+                <li><strong>Random number generators</strong> — Quality entropy sources are essential for cryptographic security</li>
+                <li><strong>Standards and certifications</strong> — FIPS validation, Common Criteria, or industry-specific standards</li>
+            </ul>
+            <p>
+                Each dependency introduces risk. A C-BOM tracks these dependencies and identifies where single points of failure or vendor risks exist.
+            </p>
+        </article>
+
+        <article class="research-article">
+            <h2>C-BOM as a Compliance and Risk Tool</h2>
+            <p>
+                C-BOM is increasingly required by regulatory frameworks:
+            </p>
+            <ul class="research-list">
+                <li><strong>NIST guidelines</strong> — Recommend cryptographic inventory as part of post-quantum cryptography preparation</li>
+                <li><strong>PCI-DSS</strong> — Requires documented cryptographic protocols for payment card data</li>
+                <li><strong>HIPAA</strong> — Mandates encryption standards for healthcare data</li>
+                <li><strong>EU regulations</strong> — GDPR and upcoming quantum-safe requirements drive C-BOM adoption</li>
+            </ul>
+            <p>
+                Beyond compliance, C-BOM enables organizations to:
+            </p>
+            <ul class="research-list">
+                <li>Plan quantum-safe transitions systematically</li>
+                <li>Identify and retire weak cryptography</li>
+                <li>Reduce cryptographic technical debt</li>
+                <li>Make informed architecture decisions about algorithm selection</li>
+            </ul>
+        </article>
+
+        <article class="research-article">
+            <h2>C-BOM as a Living Inventory</h2>
+            <p>
+                A C-BOM is not a one-time artifact. It must be continuously maintained as:
+            </p>
+            <ul class="research-list">
+                <li>New systems are deployed with new cryptographic choices</li>
+                <li>Algorithms are deprecated or broken, requiring replacement</li>
+                <li>Key rotation and retirement occur</li>
+                <li>Compliance requirements change</li>
+                <li>Quantum-safe algorithms mature and become deployable</li>
+            </ul>
+            <p>
+                Maintaining a living C-BOM requires:
+            </p>
+            <ul class="research-list">
+                <li>Integration with development and deployment processes</li>
+                <li>Automated discovery of cryptographic usage</li>
+                <li>Regular audits and reviews</li>
+                <li>Clear ownership and accountability</li>
+                <li>Tools that track cryptographic inventory across hybrid environments</li>
+            </ul>
+            <p>
+                Organizations that maintain C-BOMs are better positioned to survive cryptographic transitions and adapt to emerging threats.
             </p>
         </article>
 
@@ -216,13 +278,13 @@
 
         <section class="research-status">
             <p>
-                <strong>Note:</strong> C-BOM research is still emerging. There is no universal standard or methodology. Organizations are learning how to do this well. The work is incomplete because the problem is complex and evolving.
+                <strong>Note:</strong> Cryptographic Bill of Materials practice is still evolving. Standards for C-BOM format and content are emerging. Organizations are learning how to implement C-BOM discovery, management, and governance. The field is moving from research to operational practice.
             </p>
         </section>
     </main>
 
     <footer class="site-footer">
-        <p>&copy; Y2Q Research. This work is unfinished and uncertain.</p>
+        <p>&copy; Y2Q Research. Systems survive through understanding failure.</p>
     </footer>
 </body>
 </html>
