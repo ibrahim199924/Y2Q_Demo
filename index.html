@@ -7,266 +7,547 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="site-header">
-        <nav class="nav-bar">
-            <a href="index.html" class="logo">Y2Q</a>
-            <ul class="nav-links">
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#services">SERVICES</a></li>
-                <li><a href="#maturity">MATURITY MODEL</a></li>
-                <li><a href="#engage" class="cta-link">ENGAGE</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <p class="hero-tagline">BUILT FOR BREACH. DESIGNED FOR THE FUTURE.</p>
-                    <h1>Systems survive through understanding failure.</h1>
-                    <p class="hero-subtitle">YEAR — ZERO TRUST — QUANTUM</p>
-                    <p class="hero-description">
-                        Security systems fail predictably. Dependencies break. Assumptions become invalid. Time amplifies risk. 
-                        Y2Q research explores how systems survive long enough for their foundational assumptions to fail.
-                    </p>
-                    <p class="hero-challenge">
-                        <span class="highlight">Will your systems survive?</span>
-                    </p>
-                </div>
-                <div class="hero-visual">
-                    <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" class="hero-graphic">
-                        <defs>
-                            <filter id="glow">
-                                <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-                                <feMerge>
-                                    <feMergeNode in="coloredBlur"/>
-                                    <feMergeNode in="SourceGraphic"/>
-                                </feMerge>
-                            </filter>
-                            <radialGradient id="gradRed" cx="50%" cy="50%" r="50%">
-                                <stop offset="0%" style="stop-color:#ff4444;stop-opacity:0.8"/>
-                                <stop offset="100%" style="stop-color:#cc3333;stop-opacity:0"/>
-                            </radialGradient>
-                        </defs>
-                        
-                        <!-- Central node -->
-                        <circle cx="200" cy="200" r="20" fill="#cc3333" filter="url(#glow)" opacity="0.9"/>
-                        
-                        <!-- Network nodes -->
-                        <circle cx="120" cy="140" r="8" fill="#4da6ff" filter="url(#glow)" opacity="0.7"/>
-                        <circle cx="280" cy="140" r="8" fill="#4da6ff" filter="url(#glow)" opacity="0.7"/>
-                        <circle cx="100" cy="260" r="8" fill="#ff6b6b" filter="url(#glow)" opacity="0.6"/>
-                        <circle cx="300" cy="260" r="8" fill="#ff6b6b" filter="url(#glow)" opacity="0.6"/>
-                        <circle cx="200" cy="320" r="8" fill="#4da6ff" filter="url(#glow)" opacity="0.5"/>
-                        
-                        <!-- Connection lines -->
-                        <line x1="200" y1="200" x2="120" y2="140" stroke="#666" stroke-width="2" opacity="0.5"/>
-                        <line x1="200" y1="200" x2="280" y2="140" stroke="#666" stroke-width="2" opacity="0.5"/>
-                        <line x1="200" y1="200" x2="100" y2="260" stroke="#cc3333" stroke-width="2" opacity="0.6"/>
-                        <line x1="200" y1="200" x2="300" y2="260" stroke="#cc3333" stroke-width="2" opacity="0.6"/>
-                        <line x1="200" y1="200" x2="200" y2="320" stroke="#666" stroke-width="2" opacity="0.5"/>
-                        
-                        <!-- Cascade indicators -->
-                        <circle cx="100" cy="260" r="15" fill="none" stroke="#ff6b6b" stroke-width="2" filter="url(#glow)" opacity="0.6">
-                            <animate attributeName="r" from="15" to="25" dur="2s" repeatCount="indefinite"/>
-                            <animate attributeName="opacity" from="0.6" to="0" dur="2s" repeatCount="indefinite"/>
-                        </circle>
-                        <circle cx="300" cy="260" r="15" fill="none" stroke="#ff6b6b" stroke-width="2" filter="url(#glow)" opacity="0.6">
-                            <animate attributeName="r" from="15" to="25" dur="2s" repeatCount="indefinite"/>
-                            <animate attributeName="opacity" from="0.6" to="0" dur="2s" repeatCount="indefinite"/>
-                        </circle>
-                    </svg>
-                </div>
+<!-- ── HEADER ── -->
+<header class="site-header" id="site-header">
+    <nav class="nav-bar">
+        <a href="index.html" class="logo">Y2Q</a>
+        <ul class="nav-links">
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#maturity">MATURITY MODEL</a></li>
+            <li><a href="c-bom.html">C-BOM TOOL</a></li>
+            <li><a href="#engage" class="cta-link">ENGAGE</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<!-- ── HERO ── -->
+<section class="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-content">
+        <div class="hero-text">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                QUANTUM THREAT WINDOW: ACTIVE
             </div>
-        </section>
-
-        <!-- About Section -->
-        <section class="about" id="about">
-            <h2>About Y2Q</h2>
-            <div class="about-content">
-                <p>
-                    <strong>Y2Q explores how security systems survive long enough for their assumptions to fail.</strong>
-                </p>
-                <p>
-                    Modern security thinking focuses on prevention: build better defenses, patch vulnerabilities, use stronger encryption. 
-                    But prevention alone is insufficient. Systems fail. Assumptions break. Time amplifies risk.
-                </p>
-                <p>
-                    Y2Q research examines:
-                </p>
-                <ul class="about-list">
-                    <li><strong>Time as a security threat</strong> — How systems degrade, assumptions age, and dependencies rot</li>
-                    <li><strong>Assumption failure</strong> — What happens when core beliefs about security become invalid</li>
-                    <li><strong>Systemic cascading failure</strong> — How failures propagate through interconnected systems</li>
-                    <li><strong>Visibility and hidden dependencies</strong> — What we cannot see that threatens us</li>
-                    <li><strong>Survivability</strong> — How systems persist despite failure, not just how they prevent it</li>
-                </ul>
-                <p>
-                    This is research-first thinking. Not marketing. Not sales. Honest analysis of how systems break and survive.
-                </p>
+            <p class="hero-tagline">BUILT FOR BREACH. DESIGNED FOR THE FUTURE.</p>
+            <h1>
+                <span class="glitch-text" data-text="Systems survive through">Systems survive through</span><br>
+                understanding failure.
+            </h1>
+            <p class="hero-subtitle">YEAR &mdash; ZERO TRUST &mdash; QUANTUM</p>
+            <p class="hero-description">
+                Security systems fail predictably. Dependencies break. Assumptions become invalid. Time amplifies risk.
+                Y2Q research explores how systems survive long enough for their foundational assumptions to fail — 
+                and what happens when quantum computing renders today's cryptography obsolete overnight.
+            </p>
+            <p class="hero-challenge"><span class="highlight">Will your systems survive?</span></p>
+            <div class="hero-cta">
+                <a href="#services" class="btn-primary">EXPLORE RESEARCH</a>
+                <a href="c-bom.html" class="btn-secondary">C-BOM TOOL ↗</a>
             </div>
-        </section>
+        </div>
+        <div class="hero-visual">
+            <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" class="hero-graphic">
+                <defs>
+                    <filter id="glow">
+                        <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                        <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                    </filter>
+                    <radialGradient id="gradRed" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" style="stop-color:#ff4444;stop-opacity:0.8"/>
+                        <stop offset="100%" style="stop-color:#c82828;stop-opacity:0"/>
+                    </radialGradient>
+                </defs>
+                <!-- Central node — quantum threat core -->
+                <circle cx="200" cy="200" r="22" fill="#c82828" filter="url(#glow)" opacity="0.9"/>
+                <circle cx="200" cy="200" r="22" fill="none" stroke="#ff5050" stroke-width="1" opacity="0.5">
+                    <animate attributeName="r" from="22" to="45" dur="2.5s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" from="0.5" to="0" dur="2.5s" repeatCount="indefinite"/>
+                </circle>
+                <!-- Network nodes -->
+                <circle cx="120" cy="140" r="9" fill="#4a9eff" filter="url(#glow)" opacity="0.75"/>
+                <circle cx="290" cy="135" r="9" fill="#4a9eff" filter="url(#glow)" opacity="0.75"/>
+                <circle cx="95" cy="265" r="9" fill="#ff5050" filter="url(#glow)" opacity="0.7"/>
+                <circle cx="305" cy="268" r="9" fill="#ff5050" filter="url(#glow)" opacity="0.7"/>
+                <circle cx="200" cy="325" r="9" fill="#4a9eff" filter="url(#glow)" opacity="0.55"/>
+                <circle cx="200" cy="75"  r="7" fill="#4a9eff" filter="url(#glow)" opacity="0.5"/>
+                <!-- Connections -->
+                <line x1="200" y1="200" x2="120" y2="140" stroke="#444" stroke-width="1.5" opacity="0.5"/>
+                <line x1="200" y1="200" x2="290" y2="135" stroke="#444" stroke-width="1.5" opacity="0.5"/>
+                <line x1="200" y1="200" x2="95"  y2="265" stroke="#c82828" stroke-width="2" opacity="0.65"/>
+                <line x1="200" y1="200" x2="305" y2="268" stroke="#c82828" stroke-width="2" opacity="0.65"/>
+                <line x1="200" y1="200" x2="200" y2="325" stroke="#444" stroke-width="1.5" opacity="0.5"/>
+                <line x1="200" y1="200" x2="200" y2="75"  stroke="#444" stroke-width="1.5" opacity="0.4"/>
+                <!-- Cascade threat pulses -->
+                <circle cx="95" cy="265" r="16" fill="none" stroke="#ff5050" stroke-width="1.5" filter="url(#glow)" opacity="0.6">
+                    <animate attributeName="r" from="16" to="30" dur="2s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" from="0.6" to="0" dur="2s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="305" cy="268" r="16" fill="none" stroke="#ff5050" stroke-width="1.5" filter="url(#glow)" opacity="0.6">
+                    <animate attributeName="r" from="16" to="30" dur="2s" begin="0.8s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" from="0.6" to="0" dur="2s" begin="0.8s" repeatCount="indefinite"/>
+                </circle>
+            </svg>
+        </div>
+    </div>
+    <div class="hero-scroll-hint">
+        <span>scroll</span>
+        <div class="scroll-line"></div>
+    </div>
+</section>
 
-        <!-- Services Section -->
-        <section class="services" id="services">
-            <h2>Research Domains</h2>
-            <p class="services-intro">Y2Q research spans interconnected domains of systemic security.</p>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <filter id="glow2">
-                                    <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-                                    <feMerge>
-                                        <feMergeNode in="coloredBlur"/>
-                                        <feMergeNode in="SourceGraphic"/>
-                                    </feMerge>
-                                </filter>
-                            </defs>
-                            <!-- Cyber C-BOM Icon -->
-                            <circle cx="50" cy="50" r="30" fill="none" stroke="#4da6ff" stroke-width="2" filter="url(#glow2)"/>
-                            <circle cx="35" cy="35" r="5" fill="#4da6ff" filter="url(#glow2)"/>
-                            <circle cx="65" cy="35" r="5" fill="#4da6ff" filter="url(#glow2)"/>
-                            <circle cx="50" cy="65" r="5" fill="#ff6b6b" filter="url(#glow2)"/>
-                            <line x1="50" y1="50" x2="35" y2="35" stroke="#666" stroke-width="1" opacity="0.6"/>
-                            <line x1="50" y1="50" x2="65" y2="35" stroke="#666" stroke-width="1" opacity="0.6"/>
-                            <line x1="50" y1="50" x2="50" y2="65" stroke="#cc3333" stroke-width="1" opacity="0.8"/>
-                        </svg>
-                    </div>
-                    <h3>Cyber C-BOM</h3>
-                    <p>Dissect your entire security stack. Understand component dependencies, supply chains, and hidden relationships that create systemic risk.</p>
-                    <a href="c-bom.html" class="service-link">Learn More →</a>
-                </div>
+<!-- ── THREAT TICKER ── -->
+<div class="threat-ticker">
+    <div class="ticker-label">⚠ THREAT INTEL</div>
+    <div class="ticker-wrap">
+        <div class="ticker-move">
+            <span class="ticker-item critical">NIST FIPS 203, 204 &amp; 205 published August 2024 — Start migrating NOW</span>
+            <span class="ticker-sep">◆</span>
+            <span class="ticker-item">Harvest-now-decrypt-later attacks are ongoing — adversaries collecting encrypted data today</span>
+            <span class="ticker-sep">◆</span>
+            <span class="ticker-item critical">RSA and ECC offer ZERO quantum resistance</span>
+            <span class="ticker-sep">◆</span>
+            <span class="ticker-item">NIST will deprecate quantum-vulnerable algorithms by 2035 (NIST IR 8547)</span>
+            <span class="ticker-sep">◆</span>
+            <span class="ticker-item">IBM expects first quantum advantage by late 2026</span>
+            <span class="ticker-sep">◆</span>
+            <span class="ticker-item">Quantum computing projected $1.3 trillion market by 2035 (McKinsey)</span>
+            <span class="ticker-sep">◆</span>
+            <span class="ticker-item critical">IBM roadmap: 200 logical qubits capable of 100M gates by 2029</span>
+            <span class="ticker-sep">◆</span>
+            <span class="ticker-item">Without a Cryptographic BOM, you cannot know what is at risk</span>
+            <span class="ticker-sep">◆</span>
+            <!-- Duplicate for seamless loop -->
+            <span class="ticker-item critical">NIST FIPS 203, 204 &amp; 205 published August 2024 — Start migrating NOW</span>
+            <span class="ticker-sep">◆</span>
+            <span class="ticker-item">Harvest-now-decrypt-later attacks are ongoing — adversaries collecting encrypted data today</span>
+            <span class="ticker-sep">◆</span>
+            <span class="ticker-item critical">RSA and ECC offer ZERO quantum resistance</span>
+            <span class="ticker-sep">◆</span>
+            <span class="ticker-item">NIST will deprecate quantum-vulnerable algorithms by 2035 (NIST IR 8547)</span>
+            <span class="ticker-sep">◆</span>
+            <span class="ticker-item">IBM expects first quantum advantage by late 2026</span>
+            <span class="ticker-sep">◆</span>
+            <span class="ticker-item">Quantum computing projected $1.3 trillion market by 2035 (McKinsey)</span>
+            <span class="ticker-sep">◆</span>
+            <span class="ticker-item critical">IBM roadmap: 200 logical qubits capable of 100M gates by 2029</span>
+            <span class="ticker-sep">◆</span>
+            <span class="ticker-item">Without a Cryptographic BOM, you cannot know what is at risk</span>
+            <span class="ticker-sep">◆</span>
+        </div>
+    </div>
+</div>
 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <filter id="glow3">
-                                    <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-                                    <feMerge>
-                                        <feMergeNode in="coloredBlur"/>
-                                        <feMergeNode in="SourceGraphic"/>
-                                    </feMerge>
-                                </filter>
-                            </defs>
-                            <!-- Zero Trust Icon -->
-                            <rect x="30" y="35" width="40" height="30" rx="3" fill="none" stroke="#4da6ff" stroke-width="2" filter="url(#glow3)"/>
-                            <path d="M 50 45 L 50 55" stroke="#4da6ff" stroke-width="2" filter="url(#glow3)"/>
-                            <circle cx="45" cy="50" r="2" fill="#4da6ff" filter="url(#glow3)"/>
-                            <circle cx="55" cy="50" r="2" fill="#4da6ff" filter="url(#glow3)"/>
-                            <text x="50" y="72" text-anchor="middle" font-size="10" fill="#4da6ff" filter="url(#glow3)">TRUST</text>
-                        </svg>
-                    </div>
-                    <h3>Zero Trust Weaponisation</h3>
-                    <p>Assume breach. Contain movement. Understand how zero-trust principles apply when adversaries are already inside the perimeter.</p>
-                    <a href="zero-trust.html" class="service-link">Learn More →</a>
-                </div>
+<!-- ── QUANTUM STATS ── -->
+<section class="quantum-stats" id="about">
+    <div class="section-header reveal">
+        <span class="section-label">Quantum Threat Intelligence</span>
+        <h2>The Numbers That Define the Crisis</h2>
+        <p>Drawn from NIST, IBM Research, and McKinsey analysis. The quantum clock is not theoretical — it is running.</p>
+    </div>
+    <div class="stats-grid">
+        <div class="stat-card reveal" data-delay="0">
+            <span class="stat-number" data-count="2024">2024</span>
+            <div class="stat-label">NIST PQC Standards Released</div>
+            <p class="stat-desc">FIPS 203, 204 &amp; 205 — the first finalised post-quantum cryptographic standards in history.</p>
+        </div>
+        <div class="stat-card reveal" data-delay="100">
+            <span class="stat-number" data-count="2035">2035</span>
+            <div class="stat-label">NIST Deprecation Deadline</div>
+            <p class="stat-desc">Quantum-vulnerable algorithms (RSA, ECC) removed from all NIST standards. High-risk systems must transition sooner.</p>
+        </div>
+        <div class="stat-card blue reveal" data-delay="200">
+            <span class="stat-number" data-count="2026">2026</span>
+            <div class="stat-label">IBM: First Quantum Advantage</div>
+            <p class="stat-desc">IBM expects to demonstrate the first practical quantum advantage over classical computing by late 2026.</p>
+        </div>
+        <div class="stat-card blue reveal" data-delay="300">
+            <span class="stat-number" data-count="1994">1994</span>
+            <div class="stat-label">Shor's Algorithm Published</div>
+            <p class="stat-desc">Peter Shor proved a quantum computer can factor integers in polynomial time — directly breaking RSA. The attack has been known for 30 years.</p>
+        </div>
+        <div class="stat-card reveal" data-delay="400">
+            <span class="stat-number" data-count="200">200</span>
+            <div class="stat-label">IBM Target: Logical Qubits by 2029</div>
+            <p class="stat-desc">200 logical qubits capable of running 100 million quantum gates. By 2033: 2,000 logical qubits, 1 billion gates.</p>
+        </div>
+        <div class="stat-card blue reveal" data-delay="500">
+            <span class="stat-number" data-count="0">0</span>
+            <div class="stat-label">Quantum Resistance: RSA &amp; ECC</div>
+            <p class="stat-desc">All RSA and elliptic-curve cryptography provides zero protection against a cryptographically relevant quantum computer.</p>
+        </div>
+    </div>
+</section>
 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <filter id="glow4">
-                                    <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-                                    <feMerge>
-                                        <feMergeNode in="coloredBlur"/>
-                                        <feMergeNode in="SourceGraphic"/>
-                                    </feMerge>
-                                </filter>
-                            </defs>
-                            <!-- Threat Modeling Icon -->
-                            <circle cx="50" cy="50" r="25" fill="none" stroke="#ff6b6b" stroke-width="2" filter="url(#glow4)"/>
-                            <path d="M 50 35 L 60 50 L 50 65 L 40 50 Z" fill="none" stroke="#ff6b6b" stroke-width="2" filter="url(#glow4)"/>
-                            <circle cx="50" cy="50" r="3" fill="#ff6b6b" filter="url(#glow4)"/>
-                        </svg>
-                    </div>
-                    <h3>Threat Modeling</h3>
-                    <p>Think like attackers think. Understand attack surfaces, failure modes, and gaps in your assumptions about how threats evolve.</p>
-                    <a href="threat-modeling.html" class="service-link">Learn More →</a>
-                </div>
+<!-- ── ABOUT ── -->
+<section class="about" id="about-detail">
+    <h2>About Y2Q</h2>
+    <div class="about-content reveal">
+        <p>
+            <strong>Y2Q explores how security systems survive long enough for their assumptions to fail.</strong>
+        </p>
+        <p>
+            Modern security thinking focuses on prevention: build better defences, patch vulnerabilities, use stronger encryption.
+            But prevention alone is insufficient. Systems fail. Assumptions break. Time amplifies risk.
+            Quantum computing does not just threaten encryption — it invalidates the mathematical foundations entire security architectures are built upon.
+        </p>
+        <p>Y2Q research examines:</p>
+        <ul class="about-list">
+            <li><strong>Time as a security threat</strong> — How systems degrade, assumptions age, and dependencies rot over years and decades</li>
+            <li><strong>Assumption failure</strong> — What happens when core beliefs about security become computationally invalid</li>
+            <li><strong>Systemic cascading failure</strong> — How failures propagate through interconnected cryptographic dependencies</li>
+            <li><strong>Visibility and hidden dependencies</strong> — What we cannot see that threatens us — the invisible cryptographic attack surface</li>
+            <li><strong>Survivability</strong> — How systems persist despite failure, not just how they prevent it</li>
+            <li><strong>Cryptographic agility</strong> — The capacity to migrate algorithms when the mathematical ground shifts</li>
+        </ul>
+        <p>
+            This is research-first thinking. Not marketing. Not sales. Honest analysis of how systems break and survive when the era changes.
+        </p>
+    </div>
+</section>
 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <filter id="glow5">
-                                    <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-                                    <feMerge>
-                                        <feMergeNode in="coloredBlur"/>
-                                        <feMergeNode in="SourceGraphic"/>
-                                    </feMerge>
-                                </filter>
-                            </defs>
-                            <!-- Post-Quantum Icon -->
-                            <circle cx="50" cy="50" r="20" fill="none" stroke="#4da6ff" stroke-width="2" filter="url(#glow5)"/>
-                            <path d="M 45 40 L 50 45 L 55 40 M 45 50 L 50 55 L 55 50 M 45 60 L 50 65 L 55 60" stroke="#4da6ff" stroke-width="1.5" filter="url(#glow5)"/>
-                        </svg>
-                    </div>
-                    <h3>Post-Quantum Readiness</h3>
-                    <p>Defend against the next era. Understand quantum threats to cryptography and how to prepare systems that must survive for decades.</p>
-                    <a href="quantum-security.html" class="service-link">Learn More →</a>
-                </div>
+<!-- ── SERVICES / RESEARCH DOMAINS ── -->
+<section class="services" id="services">
+    <h2>Research Domains</h2>
+    <p class="services-intro">Y2Q research spans interconnected domains of systemic security in the quantum era.</p>
+    <div class="services-grid">
+        <div class="service-card reveal" data-delay="0">
+            <div class="service-icon">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs><filter id="glow2"><feGaussianBlur stdDeviation="2" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+                    <circle cx="50" cy="50" r="30" fill="none" stroke="#4a9eff" stroke-width="2" filter="url(#glow2)"/>
+                    <circle cx="35" cy="35" r="5" fill="#4a9eff" filter="url(#glow2)"/>
+                    <circle cx="65" cy="35" r="5" fill="#4a9eff" filter="url(#glow2)"/>
+                    <circle cx="50" cy="65" r="5" fill="#ff5050" filter="url(#glow2)"/>
+                    <line x1="50" y1="50" x2="35" y2="35" stroke="#444" stroke-width="1.5" opacity="0.6"/>
+                    <line x1="50" y1="50" x2="65" y2="35" stroke="#444" stroke-width="1.5" opacity="0.6"/>
+                    <line x1="50" y1="50" x2="50" y2="65" stroke="#c82828" stroke-width="1.5" opacity="0.8"/>
+                </svg>
             </div>
-        </section>
-
-        <!-- Maturity Model Section -->
-        <section class="maturity" id="maturity">
-            <h2>The Y2Q Maturity Model</h2>
-            <p class="maturity-subtitle">From blind targets to era-resilient systems.</p>
-            
-            <div class="maturity-timeline">
-                <div class="timeline-stage">
-                    <span class="stage-name">PREY</span>
-                    <span class="arrow">→</span>
-                </div>
-                <div class="timeline-stage">
-                    <span class="stage-name">NOISY</span>
-                    <span class="arrow">→</span>
-                </div>
-                <div class="timeline-stage">
-                    <span class="stage-name">PAPER SHIELD</span>
-                    <span class="arrow">→</span>
-                </div>
-                <div class="timeline-stage">
-                    <span class="stage-name">FORTIFIED</span>
-                    <span class="arrow">→</span>
-                </div>
-                <div class="timeline-stage">
-                    <span class="stage-name">PREDATORY</span>
-                    <span class="arrow">→</span>
-                </div>
-                <div class="timeline-stage">
-                    <span class="stage-name">POST-QUANTUM</span>
-                </div>
+            <h3>Cyber C-BOM</h3>
+            <p>Map your entire cryptographic attack surface. Inventory every algorithm, key, certificate and library. Understand what breaks when quantum arrives.</p>
+            <a href="c-bom.html" class="service-link">Explore C-BOM &amp; Tool →</a>
+        </div>
+        <div class="service-card reveal" data-delay="100">
+            <div class="service-icon">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs><filter id="glow3"><feGaussianBlur stdDeviation="2" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+                    <rect x="28" y="35" width="44" height="32" rx="3" fill="none" stroke="#4a9eff" stroke-width="2" filter="url(#glow3)"/>
+                    <path d="M 50 45 L 50 57" stroke="#4a9eff" stroke-width="2" filter="url(#glow3)"/>
+                    <circle cx="44" cy="51" r="2.5" fill="#4a9eff" filter="url(#glow3)"/>
+                    <circle cx="56" cy="51" r="2.5" fill="#4a9eff" filter="url(#glow3)"/>
+                    <text x="50" y="74" text-anchor="middle" font-size="9" fill="#4a9eff" filter="url(#glow3)" letter-spacing="1">TRUST</text>
+                </svg>
             </div>
-            
-            <p class="maturity-caption">Understanding where your systems are in the journey toward resilience and survivability.</p>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="cta-section" id="engage">
-            <div class="cta-content">
-                <h2>You will be breached.</h2>
-                <p>The question is not if, but when. And more importantly: will your systems survive?</p>
-                <button class="cta-button">START YOUR ASSESSMENT</button>
+            <h3>Zero Trust Weaponisation</h3>
+            <p>Assume breach. Contain movement. Understand how adversaries navigate and exploit zero-trust architectures once they are already inside.</p>
+            <a href="zero-trust.html" class="service-link">Learn More →</a>
+        </div>
+        <div class="service-card reveal" data-delay="200">
+            <div class="service-icon">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs><filter id="glow4"><feGaussianBlur stdDeviation="2" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+                    <circle cx="50" cy="50" r="26" fill="none" stroke="#ff5050" stroke-width="2" filter="url(#glow4)"/>
+                    <path d="M 50 34 L 61 52 L 50 68 L 39 52 Z" fill="none" stroke="#ff5050" stroke-width="2" filter="url(#glow4)"/>
+                    <circle cx="50" cy="50" r="4" fill="#ff5050" filter="url(#glow4)"/>
+                </svg>
             </div>
-        </section>
+            <h3>Threat Modeling</h3>
+            <p>Think like attackers think. Map attack surfaces, failure modes, and the gaps in assumptions about how quantum-era threats will actually evolve.</p>
+            <a href="threat-modeling.html" class="service-link">Learn More →</a>
+        </div>
+        <div class="service-card reveal" data-delay="300">
+            <div class="service-icon">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs><filter id="glow5"><feGaussianBlur stdDeviation="2" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+                    <circle cx="50" cy="50" r="22" fill="none" stroke="#4a9eff" stroke-width="2" filter="url(#glow5)"/>
+                    <circle cx="50" cy="50" r="8" fill="none" stroke="#4a9eff" stroke-width="1.5" filter="url(#glow5)"/>
+                    <path d="M 50 28 L 50 36 M 50 64 L 50 72 M 28 50 L 36 50 M 64 50 L 72 50" stroke="#4a9eff" stroke-width="1.5" filter="url(#glow5)"/>
+                    <path d="M 44 38 L 56 38 L 56 62 L 44 62" stroke="#4a9eff" stroke-width="1" fill="none" opacity="0.5"/>
+                </svg>
+            </div>
+            <h3>Post-Quantum Readiness</h3>
+            <p>Defend against the next era. Understand NIST's ML-KEM, ML-DSA, and SLH-DSA standards. Plan migrations for systems that must survive decades.</p>
+            <a href="quantum-security.html" class="service-link">Learn More →</a>
+        </div>
+    </div>
+</section>
 
-        <!-- Footer -->
-        <section class="philosophy-footer">
-            <h3>Security That Survives Betrayal</h3>
-            <p>Y2Q research is unfinished. It is honest about uncertainty. It refuses marketing language and hype. It focuses on understanding how systems fail and how they survive.</p>
-            <p class="footer-contact">engage@y2q.security • CONFIDENTIAL RESEARCH</p>
-        </section>
-    </main>
+<!-- ── QUANTUM THREAT TIMELINE ── -->
+<section class="quantum-timeline-section">
+    <div style="max-width:1200px;margin:0 auto;">
+        <span class="section-label reveal" style="display:table;margin:0 auto 0.75rem;">Quantum Milestone Timeline</span>
+        <h2 class="reveal" style="text-align:center;color:var(--text-primary);margin-bottom:0.75rem;">How We Got Here. What Comes Next.</h2>
+        <p class="section-sub reveal">Key events in the quantum computing and cryptography timeline, drawn from published research.</p>
+    </div>
+    <div class="qt-inner">
+        <div class="qt-item right reveal">
+            <div class="qt-spacer"></div>
+            <div class="qt-node"></div>
+            <div class="qt-content">
+                <div class="qt-year">1994</div>
+                <h4>Shor's Algorithm</h4>
+                <p>Peter Shor publishes a polynomial-time quantum algorithm for integer factorisation — mathematically breaking RSA, DSA, and ECC. The threat has been known for three decades.</p>
+            </div>
+        </div>
+        <div class="qt-item right reveal" data-delay="100">
+            <div class="qt-spacer"></div>
+            <div class="qt-node"></div>
+            <div class="qt-content">
+                <div class="qt-year">1996</div>
+                <h4>Grover's Algorithm</h4>
+                <p>Lov Grover's search algorithm provides a quadratic speedup, effectively halving the security of symmetric algorithms. AES-128 becomes equivalent to 64-bit under quantum attack.</p>
+            </div>
+        </div>
+        <div class="qt-item right reveal" data-delay="150">
+            <div class="qt-spacer"></div>
+            <div class="qt-node"></div>
+            <div class="qt-content">
+                <div class="qt-year">2016</div>
+                <h4>NIST PQC Standardisation Begins</h4>
+                <p>NIST launches a global competition to evaluate and standardise post-quantum cryptographic algorithms. 82 submissions received from researchers worldwide.</p>
+            </div>
+        </div>
+        <div class="qt-item right reveal" data-delay="200">
+            <div class="qt-spacer"></div>
+            <div class="qt-node"></div>
+            <div class="qt-content">
+                <div class="qt-year">2023</div>
+                <h4>IBM Demonstrates Quantum Utility</h4>
+                <p>IBM demonstrates quantum utility — a quantum computation that provides reliable results for problems beyond brute-force classical simulation. The threshold has been crossed.</p>
+            </div>
+        </div>
+        <div class="qt-item right reveal" data-delay="250">
+            <div class="qt-spacer"></div>
+            <div class="qt-node active"></div>
+            <div class="qt-content">
+                <div class="qt-year">AUG 2024</div>
+                <h4>NIST Releases First PQC Standards</h4>
+                <p>NIST publishes FIPS 203 (ML-KEM), FIPS 204 (ML-DSA), and FIPS 205 (SLH-DSA) — the first finalised post-quantum encryption standards. Organisations must begin migrating now.</p>
+            </div>
+        </div>
+        <div class="qt-item right reveal" data-delay="300">
+            <div class="qt-spacer"></div>
+            <div class="qt-node"></div>
+            <div class="qt-content">
+                <div class="qt-year">LATE 2026</div>
+                <h4>Expected: First Quantum Advantage (IBM)</h4>
+                <p>IBM states it expects to demonstrate the first practical quantum advantage over all known classical methods by late 2026. State-sponsored actors are already positioned.</p>
+            </div>
+        </div>
+        <div class="qt-item right reveal" data-delay="350">
+            <div class="qt-spacer"></div>
+            <div class="qt-node"></div>
+            <div class="qt-content">
+                <div class="qt-year">2029 &rarr; 2033</div>
+                <h4>IBM Quantum Roadmap</h4>
+                <p>200 logical qubits / 100M gates (2029). 2,000 logical qubits / 1B gates (2033). Systems not migrated by then face catastrophic exposure.</p>
+            </div>
+        </div>
+        <div class="qt-item right reveal" data-delay="400">
+            <div class="qt-spacer"></div>
+            <div class="qt-node"></div>
+            <div class="qt-content">
+                <div class="qt-year">2035</div>
+                <h4>NIST Deprecation Deadline</h4>
+                <p>RSA, ECC, and all quantum-vulnerable algorithms removed from NIST standards (NIST IR 8547). High-risk systems must have migrated years earlier. Non-compliant systems are fully exposed.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <footer class="site-footer">
-        <p>&copy; Y2Q Research. Systems survive through understanding failure.</p>
-    </footer>
+<!-- ── MATURITY MODEL ── -->
+<section class="maturity" id="maturity">
+    <h2>The Y2Q Maturity Model</h2>
+    <p class="maturity-subtitle">From blind targets to era-resilient systems.</p>
+    <div class="maturity-timeline">
+        <div class="timeline-stage reveal" data-delay="0">
+            <span class="stage-name">PREY</span>
+            <span class="arrow">→</span>
+        </div>
+        <div class="timeline-stage reveal" data-delay="80">
+            <span class="stage-name">NOISY</span>
+            <span class="arrow">→</span>
+        </div>
+        <div class="timeline-stage reveal" data-delay="160">
+            <span class="stage-name">PAPER SHIELD</span>
+            <span class="arrow">→</span>
+        </div>
+        <div class="timeline-stage reveal" data-delay="240">
+            <span class="stage-name">FORTIFIED</span>
+            <span class="arrow">→</span>
+        </div>
+        <div class="timeline-stage reveal" data-delay="320">
+            <span class="stage-name">PREDATORY</span>
+            <span class="arrow">→</span>
+        </div>
+        <div class="timeline-stage reveal" data-delay="400">
+            <span class="stage-name">POST-QUANTUM</span>
+        </div>
+    </div>
+    <p class="maturity-caption">Understanding where your systems sit in the journey toward quantum-era resilience.</p>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-section" id="engage">
+    <div class="cta-content reveal">
+        <h2>You will be breached.</h2>
+        <p>The question is not if — but when. And more critically: will your cryptographic foundations survive the quantum era? Start with visibility. Start with a C-BOM.</p>
+        <a href="c-bom.html" class="cta-button" style="display:inline-block;text-decoration:none;">ASSESS YOUR CRYPTOGRAPHIC RISK</a>
+    </div>
+</section>
+
+<!-- ── FOOTER SECTION ── -->
+<section class="philosophy-footer reveal">
+    <h3>Security That Survives Betrayal</h3>
+    <p>Y2Q research is unfinished. It is honest about uncertainty. It refuses marketing language and hype. It focuses on one question: how do systems survive when their foundational assumptions fail?</p>
+    <p class="footer-contact">engage@y2q.security &bull; CONFIDENTIAL RESEARCH</p>
+</section>
+
+</main>
+
+<footer class="site-footer">
+    <p>&copy; Y2Q Research. Systems survive through understanding failure.</p>
+</footer>
+
+<script>
+// ── Sticky header shadow ──
+window.addEventListener('scroll', () => {
+    document.getElementById('site-header').classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// ── Canvas Particle System ──
+(function() {
+    const canvas = document.getElementById('hero-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let particles = [], W, H, mouse = { x: null, y: null };
+
+    function resize() {
+        W = canvas.width  = canvas.offsetWidth;
+        H = canvas.height = canvas.offsetHeight;
+    }
+    function createParticles() {
+        particles = [];
+        const count = Math.min(70, Math.floor((W * H) / 14000));
+        for (let i = 0; i < count; i++) {
+            const isThreat = Math.random() < 0.22;
+            particles.push({
+                x: Math.random() * W, y: Math.random() * H,
+                vx: (Math.random() - 0.5) * 0.4,
+                vy: (Math.random() - 0.5) * 0.4,
+                r: isThreat ? 4.5 : 2.5,
+                color: isThreat ? '#c82828' : (Math.random() < 0.5 ? '#3a7fcc' : '#555'),
+                isThreat, pulse: Math.random(), pulseSpeed: 0.015 + Math.random() * 0.018
+            });
+        }
+    }
+    function draw() {
+        ctx.clearRect(0, 0, W, H);
+        for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                const d = Math.sqrt(dx*dx + dy*dy);
+                if (d < 170) {
+                    const alpha = (1 - d / 170) * 0.35;
+                    const threat = particles[i].isThreat || particles[j].isThreat;
+                    ctx.strokeStyle = threat ? `rgba(200,40,40,${alpha})` : `rgba(80,110,160,${alpha})`;
+                    ctx.lineWidth = threat ? 1.2 : 0.8;
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.stroke();
+                }
+            }
+        }
+        for (const p of particles) {
+            if (p.isThreat) {
+                p.pulse += p.pulseSpeed;
+                if (p.pulse > 1) p.pulse = 0;
+                const ring = p.r + p.pulse * 18;
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, ring, 0, Math.PI * 2);
+                ctx.strokeStyle = `rgba(200,40,40,${(1 - p.pulse) * 0.45})`;
+                ctx.lineWidth = 1;
+                ctx.stroke();
+            }
+            const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 4);
+            g.addColorStop(0, p.color);
+            g.addColorStop(1, 'transparent');
+            ctx.globalAlpha = 0.28;
+            ctx.beginPath(); ctx.arc(p.x, p.y, p.r * 4, 0, Math.PI * 2);
+            ctx.fillStyle = g; ctx.fill();
+            ctx.globalAlpha = 1;
+            ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = p.color; ctx.fill();
+        }
+    }
+    function update() {
+        for (const p of particles) {
+            p.x += p.vx; p.y += p.vy;
+            if (p.x < 0 || p.x > W) p.vx *= -1;
+            if (p.y < 0 || p.y > H) p.vy *= -1;
+            if (mouse.x !== null) {
+                const dx = p.x - mouse.x, dy = p.y - mouse.y;
+                const d = Math.sqrt(dx*dx + dy*dy);
+                if (d < 90) { p.x += (dx / d) * 1.5; p.y += (dy / d) * 1.5; }
+            }
+        }
+    }
+    function loop() { draw(); update(); requestAnimationFrame(loop); }
+
+    resize(); createParticles(); loop();
+    window.addEventListener('resize', () => { resize(); createParticles(); });
+    document.getElementById('hero-canvas').addEventListener('mousemove', e => {
+        const r = canvas.getBoundingClientRect();
+        mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top;
+    });
+    document.getElementById('hero-canvas').addEventListener('mouseleave', () => { mouse.x = null; });
+})();
+
+// ── Scroll Reveal ──
+(function() {
+    const items = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                const delay = parseInt(e.target.dataset.delay || 0);
+                setTimeout(() => e.target.classList.add('revealed'), delay);
+                obs.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    items.forEach(el => obs.observe(el));
+})();
+
+// ── Counter Animation ──
+(function() {
+    const counters = document.querySelectorAll('.stat-number[data-count]');
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                const el = e.target;
+                const target = parseInt(el.dataset.count);
+                const duration = 1600;
+                const start = performance.now();
+                function update(t) {
+                    const p = Math.min((t - start) / duration, 1);
+                    const ease = 1 - Math.pow(1 - p, 3);
+                    el.textContent = Math.floor(ease * target).toLocaleString();
+                    if (p < 1) requestAnimationFrame(update);
+                }
+                requestAnimationFrame(update);
+                obs.unobserve(el);
+            }
+        });
+    }, { threshold: 0.5 });
+    counters.forEach(el => obs.observe(el));
+})();
+</script>
 </body>
 </html>

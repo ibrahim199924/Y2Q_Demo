@@ -3,288 +3,610 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C-BOM — Y2Q</title>
+    <title>C-BOM — Cryptographic Bill of Materials — Y2Q</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="site-header">
-        <nav class="nav-bar">
-            <a href="index.html" class="logo">Y2Q</a>
-            <ul class="nav-links">
-                <li><a href="index.html#about">ABOUT</a></li>
-                <li><a href="index.html#services">SERVICES</a></li>
-                <li><a href="index.html#maturity">MATURITY MODEL</a></li>
-                <li><a href="index.html#engage" class="cta-link">ENGAGE</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="page-header">
-            <div class="page-icon">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Represents cryptographic algorithms and transformations -->
-                    <!-- Central lock -->
-                    <rect x="70" y="80" width="60" height="50" rx="5" fill="none" stroke="#cc3333" stroke-width="2"/>
-                    <path d="M 80 80 Q 80 60 100 60 Q 120 60 120 80" fill="none" stroke="#cc3333" stroke-width="2"/>
-                    <!-- Encryption waves -->
-                    <path d="M 55 120 Q 60 110 65 120" fill="none" stroke="#b0b0b0" stroke-width="1.5"/>
-                    <path d="M 135 120 Q 140 110 145 120" fill="none" stroke="#b0b0b0" stroke-width="1.5"/>
-                    <!-- Key indicator -->
-                    <circle cx="100" cy="105" r="3" fill="#cc3333"/>
-                </svg>
+<!-- ── HEADER ── -->
+<header class="site-header" id="site-header">
+    <nav class="nav-bar">
+        <a href="index.html" class="logo">Y2Q</a>
+        <ul class="nav-links">
+            <li><a href="index.html#about">ABOUT</a></li>
+            <li><a href="index.html#services">SERVICES</a></li>
+            <li><a href="index.html#maturity">MATURITY MODEL</a></li>
+            <li><a href="c-bom.html" style="color:var(--accent-light)">C-BOM TOOL</a></li>
+            <li><a href="index.html#engage" class="cta-link">ENGAGE</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero">
+    <div class="page-hero-content">
+        <div class="page-badge">Cryptographic Security</div>
+        <h1>Cryptographic Bill<br>of Materials</h1>
+        <p class="page-intro">
+            Every algorithm has an expiration date. Every certificate has a shelf life. Every key has an adversary.
+            A C-BOM is how you find out what you have — before a quantum computer finds it for you.
+        </p>
+        <div class="page-meta">
+            <span class="meta-tag">C-BOM</span>
+            <span class="meta-tag">POST-QUANTUM</span>
+            <span class="meta-tag">CRYPTO-AGILITY</span>
+            <span class="meta-tag">FIPS 203/204/205</span>
+            <span class="meta-tag">HARVEST-NOW-DECRYPT-LATER</span>
+        </div>
+    </div>
+</section>
+
+<!-- ── THREAT TICKER ── -->
+<div class="threat-ticker">
+    <div class="ticker-label">⚠ THREAT INTEL</div>
+    <div class="ticker-wrap">
+        <div class="ticker-move">
+            <span class="ticker-item critical">Harvest-now-decrypt-later attacks active — adversaries collecting traffic TODAY to decrypt later</span>
+            <span class="ticker-sep">◆</span>
+            <span class="ticker-item">NIST FIPS 203 (ML-KEM), FIPS 204 (ML-DSA), FIPS 205 (SLH-DSA) published August 2024</span>
+            <span class="ticker-sep">◆</span>
+            <span class="ticker-item critical">RSA and ECC: ZERO quantum resistance — begin migration planning immediately</span>
+            <span class="ticker-sep">◆</span>
+            <span class="ticker-item">NIST IR 8547: quantum-vulnerable algorithms deprecated from all standards by 2035</span>
+            <span class="ticker-sep">◆</span>
+            <span class="ticker-item">IBM expects first quantum advantage by late 2026 — Shor's algorithm will run at scale</span>
+            <span class="ticker-sep">◆</span>
+            <span class="ticker-item critical">Without a C-BOM, you cannot know which systems are exposed</span>
+            <span class="ticker-sep">◆</span>
+            <!-- loop -->
+            <span class="ticker-item critical">Harvest-now-decrypt-later attacks active — adversaries collecting traffic TODAY to decrypt later</span>
+            <span class="ticker-sep">◆</span>
+            <span class="ticker-item">NIST FIPS 203 (ML-KEM), FIPS 204 (ML-DSA), FIPS 205 (SLH-DSA) published August 2024</span>
+            <span class="ticker-sep">◆</span>
+            <span class="ticker-item critical">RSA and ECC: ZERO quantum resistance — begin migration planning immediately</span>
+            <span class="ticker-sep">◆</span>
+            <span class="ticker-item">NIST IR 8547: quantum-vulnerable algorithms deprecated from all standards by 2035</span>
+            <span class="ticker-sep">◆</span>
+            <span class="ticker-item">IBM expects first quantum advantage by late 2026 — Shor's algorithm will run at scale</span>
+            <span class="ticker-sep">◆</span>
+            <span class="ticker-item critical">Without a C-BOM, you cannot know which systems are exposed</span>
+            <span class="ticker-sep">◆</span>
+        </div>
+    </div>
+</div>
+
+<!-- ── THREAT ALERT ── -->
+<div class="threat-alert">
+    <div class="alert-inner">
+        <div class="alert-icon">⚠</div>
+        <div class="alert-content">
+            <strong>Harvest-Now-Decrypt-Later Attacks Are Active Right Now</strong>
+            <p>State-sponsored actors are intercepting and storing encrypted network traffic today — targeting data with long-term confidentiality value. When a cryptographically relevant quantum computer exists, this data decrypts instantly. Without a Cryptographic Bill of Materials, you cannot identify which of your systems are affected.</p>
+        </div>
+    </div>
+</div>
+
+<!-- ── WHAT IS C-BOM ── -->
+<article class="research-article reveal">
+    <h2>What Is a Cryptographic Bill of Materials?</h2>
+    <p>
+        A Cryptographic Bill of Materials (C-BOM) is a comprehensive, structured inventory of every cryptographic algorithm, protocol, key, certificate, library, and cipher suite deployed across an organisation's systems. It answers the questions that attackers — and quantum computers — are already asking: What cryptographic assumptions protect your data? What is the weakest link? What breaks first?
+    </p>
+    <p>
+        Unlike a standard software bill of materials (SBOM), a C-BOM focuses specifically on the cryptographic foundations of security — the layer that quantum computing directly attacks. A C-BOM maps not just what algorithms are deployed, but their age, their quantum vulnerability, their data protection scope, and when they require migration.
+    </p>
+    <p>
+        The core insight is stark: <strong>you cannot manage what you cannot measure.</strong> Without a complete cryptographic inventory, organisations have no baseline from which to plan post-quantum migration, no visibility into where harvest-now-decrypt-later attacks have the highest value, and no understanding of their cryptographic technical debt.
+    </p>
+    <div class="uncertainty-note">
+        <strong>The Y2Q Position:</strong> A C-BOM is not a one-time compliance exercise. It is a living asset that becomes increasingly critical as the quantum timeline compresses. Organisations that do not begin now will face emergency migration — the worst possible context for getting cryptography right.
+    </div>
+</article>
+
+<!-- ── QUANTUM RESEARCH SECTION ── -->
+<section class="quantum-research">
+    <div class="quantum-research-inner">
+        <div class="section-header reveal">
+            <span class="section-label">Research Findings</span>
+            <h2 style="color:var(--text-primary);">What the Research Tells Us</h2>
+            <p>Key findings from NIST, IBM Research, and cryptographic literature. The quantum threat is not speculative — it is a measured, timestamped risk with documented milestones.</p>
+        </div>
+        <div class="research-cards">
+            <div class="research-card reveal" data-delay="0">
+                <span class="rc-type critical">Critical Finding</span>
+                <h4>Shor's Algorithm Breaks RSA &amp; ECC — Published 1994</h4>
+                <p>Peter Shor's 1994 algorithm proves that a quantum computer can factorise large integers in polynomial time, directly breaking RSA public-key encryption. It can also solve the discrete logarithm problem, breaking elliptic-curve cryptography. This mathematical fact has been documented for 30 years. The attack is not theoretical — only the hardware is pending.</p>
+                <div class="card-source">Source: Shor, P.W. (1994) — FOCS Proceedings</div>
             </div>
-            <h1>C-BOM</h1>
-            <p class="page-intro">Cryptographic Bill of Materials — the inventory and analysis of cryptographic algorithms, protocols, and implementations that protect systems and data.</p>
-        </section>
+            <div class="research-card reveal" data-delay="80">
+                <span class="rc-type critical">Active Threat</span>
+                <h4>Harvest-Now, Decrypt-Later (HNDL) Is Ongoing</h4>
+                <p>State-sponsored threat actors are actively harvesting encrypted communications today, storing ciphertext for decryption when quantum capability arrives. Intelligence agencies have characterised this as an active, persistent collection strategy. Data encrypted with RSA or ECC today has zero long-term confidentiality against a quantum-capable adversary.</p>
+                <div class="card-source">Source: NSA, CISA — Post-Quantum Guidance</div>
+            </div>
+            <div class="research-card reveal" data-delay="160">
+                <span class="rc-type milestone">NIST Standard</span>
+                <h4>FIPS 203, 204 &amp; 205 Released: August 2024</h4>
+                <p>NIST published three finalised post-quantum cryptographic standards: FIPS 203 (ML-KEM, key encapsulation), FIPS 204 (ML-DSA, digital signatures), and FIPS 205 (SLH-DSA, hash-based signatures). These are based on mathematical problems believed to resist both classical and quantum attacks. Deployment should begin now.</p>
+                <div class="card-source">Source: NIST CSRC — August 2024</div>
+            </div>
+            <div class="research-card reveal" data-delay="240">
+                <span class="rc-type warning">Critical Deadline</span>
+                <h4>NIST Deprecates Quantum-Vulnerable Algorithms by 2035</h4>
+                <p>NIST IR 8547 establishes the transition timeline: quantum-vulnerable algorithms including RSA, DSA, ECDSA, and ECDH will be deprecated from all NIST standards by 2035. High-risk systems — those protecting long-lived sensitive data — must transition significantly earlier. Non-compliant systems will be fully exposed.</p>
+                <div class="card-source">Source: NIST IR 8547 — 2024</div>
+            </div>
+            <div class="research-card reveal" data-delay="320">
+                <span class="rc-type info">IBM Roadmap</span>
+                <h4>IBM Expects Quantum Advantage by Late 2026</h4>
+                <p>IBM states it expects to realise the first quantum advantages by late 2026, provided quantum and high-performance computing communities work in concert. IBM's roadmap targets 200 logical qubits capable of running 100 million quantum gates by 2029, scaling to 2,000 logical qubits and 1 billion gates by 2033.</p>
+                <div class="card-source">Source: IBM Quantum — 2024</div>
+            </div>
+            <div class="research-card reveal" data-delay="400">
+                <span class="rc-type warning">Grover's Algorithm</span>
+                <h4>Symmetric Encryption Weakened — Not Broken</h4>
+                <p>Grover's algorithm provides a quadratic speedup for unstructured search problems. Effect: AES-128 becomes effectively 64-bit against a quantum adversary. AES-256 retains ~128-bit post-quantum security. Implication: symmetric encryption requires key-size upgrades; it does not require replacing entirely. This contrasts with RSA and ECC which are broken outright.</p>
+                <div class="card-source">Source: Grover, L.K. (1996) — Bell Labs</div>
+            </div>
+            <div class="research-card reveal" data-delay="480">
+                <span class="rc-type milestone">IBM Breakthrough</span>
+                <h4>New Error-Correcting Code: 10× More Efficient</h4>
+                <p>In 2024, IBM announced a new landmark quantum error-correcting code approximately 10 times more efficient than prior methods. This points toward running quantum circuits with a billion logic gates or more — a critical step toward cryptographically relevant scale. The engineering challenges are shrinking on a documented timeline.</p>
+                <div class="card-source">Source: IBM Quantum — Nature, 2024</div>
+            </div>
+            <div class="research-card reveal" data-delay="560">
+                <span class="rc-type critical">Market Scale</span>
+                <h4>$1.3 Trillion Quantum Computing Market by 2035</h4>
+                <p>Quantum computing is projected to become a $1.3 trillion industry by 2035, driven by pharmaceutical, financial, logistics, and defence applications. State and corporate investment in quantum hardware is accelerating rapidly. The infrastructure to run Shor's algorithm at scale is being built now — funded and incentivised at national levels.</p>
+                <div class="card-source">Source: McKinsey Global Institute — 2023</div>
+            </div>
+        </div>
+    </div>
+</section>
 
-        <article class="research-article">
-            <h2>What is a Cryptographic Bill of Materials?</h2>
-            <p>
-                A Cryptographic Bill of Materials (C-BOM) is a comprehensive inventory of all cryptographic algorithms, protocols, key management practices, and implementations used across a system or organization. It answers critical questions: What cryptographic primitives protect our data? Which algorithms are in use? What are their security properties? When do they expire?
-            </p>
-            <p>
-                Unlike generic software BOMs, C-BOM focuses specifically on the cryptographic foundations of security. It recognizes that cryptographic assumptions have lifetimes. Algorithms weaken. Keys degrade. Protocols become obsolete. A C-BOM tracks these temporal dependencies and identifies when migration or replacement is needed.
-            </p>
-            <p>
-                The core insight is critical: you cannot manage what you cannot measure. Without a clear inventory of cryptographic usage, organizations cannot plan for algorithm transitions, assess quantum readiness, or make informed decisions about long-term data protection.
-            </p>
-        </article>
+<!-- ── ALGORITHM VULNERABILITY TABLE ── -->
+<section class="algo-table-section">
+    <div class="algo-table-inner">
+        <div class="section-header reveal">
+            <span class="section-label">Algorithm Risk Assessment</span>
+            <h2 style="color:var(--text-primary);">Cryptographic Algorithm Status Under Quantum Attack</h2>
+            <p>Current quantum risk posture for widely deployed algorithms. This is what a C-BOM must capture and track.</p>
+        </div>
+        <div class="table-wrapper reveal">
+            <table class="algo-table">
+                <thead>
+                    <tr>
+                        <th>Algorithm</th>
+                        <th>Type</th>
+                        <th>Quantum Risk</th>
+                        <th>Attack Vector</th>
+                        <th>Recommended Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>RSA-2048 / RSA-4096</td>
+                        <td>Asymmetric</td>
+                        <td><span class="threat-badge critical">⬛ CRITICAL</span></td>
+                        <td>Shor's Algorithm — fully broken</td>
+                        <td>Migrate to ML-KEM (FIPS 203) immediately</td>
+                    </tr>
+                    <tr>
+                        <td>ECDSA / ECDH (P-256, P-384)</td>
+                        <td>Asymmetric / Key Exchange</td>
+                        <td><span class="threat-badge critical">⬛ CRITICAL</span></td>
+                        <td>Shor's Algorithm — discrete log solved</td>
+                        <td>Migrate to ML-DSA (FIPS 204) for signatures</td>
+                    </tr>
+                    <tr>
+                        <td>DSA</td>
+                        <td>Digital Signature</td>
+                        <td><span class="threat-badge critical">⬛ CRITICAL</span></td>
+                        <td>Discrete logarithm via Shor</td>
+                        <td>Migrate to ML-DSA or SLH-DSA (FIPS 205)</td>
+                    </tr>
+                    <tr>
+                        <td>AES-128</td>
+                        <td>Symmetric</td>
+                        <td><span class="threat-badge high">▲ HIGH</span></td>
+                        <td>Grover's Algorithm — effective 64-bit</td>
+                        <td>Upgrade to AES-256 for long-lived data</td>
+                    </tr>
+                    <tr>
+                        <td>AES-256</td>
+                        <td>Symmetric</td>
+                        <td><span class="threat-badge safe">✓ SAFE</span></td>
+                        <td>Grover halves to ~128-bit: acceptable</td>
+                        <td>Retain; no migration required</td>
+                    </tr>
+                    <tr>
+                        <td>SHA-256 / SHA-384</td>
+                        <td>Hash</td>
+                        <td><span class="threat-badge medium">◎ MEDIUM</span></td>
+                        <td>Grover halves preimage resistance</td>
+                        <td>SHA-384 preferred; SHA-256 acceptable for most</td>
+                    </tr>
+                    <tr>
+                        <td>SHA-3 (SHA3-256/512)</td>
+                        <td>Hash</td>
+                        <td><span class="threat-badge safe">✓ SAFE</span></td>
+                        <td>Minimal Grover impact at 256+ bits</td>
+                        <td>Retain; post-quantum safe</td>
+                    </tr>
+                    <tr>
+                        <td>TLS 1.3 with RSA/ECDHE</td>
+                        <td>Protocol</td>
+                        <td><span class="threat-badge critical">⬛ CRITICAL</span></td>
+                        <td>Key exchange layer broken by Shor</td>
+                        <td>Migrate to hybrid PQC TLS (FIPS 203 key exchange)</td>
+                    </tr>
+                    <tr>
+                        <td>ML-KEM (FIPS 203)</td>
+                        <td>Key Encapsulation</td>
+                        <td><span class="threat-badge safe">✓ SAFE</span></td>
+                        <td>Module-lattice — no known quantum attack</td>
+                        <td>Adopt now for key establishment</td>
+                    </tr>
+                    <tr>
+                        <td>ML-DSA (FIPS 204)</td>
+                        <td>Digital Signature</td>
+                        <td><span class="threat-badge safe">✓ SAFE</span></td>
+                        <td>Module-lattice — no known quantum attack</td>
+                        <td>Adopt now; replaces RSA/ECDSA signatures</td>
+                    </tr>
+                    <tr>
+                        <td>SLH-DSA (FIPS 205)</td>
+                        <td>Digital Signature</td>
+                        <td><span class="threat-badge safe">✓ SAFE</span></td>
+                        <td>Stateless hash-based — conservative security</td>
+                        <td>Adopt now; strong backup to ML-DSA</td>
+                    </tr>
+                    <tr>
+                        <td>MD5 / SHA-1</td>
+                        <td>Hash (Legacy)</td>
+                        <td><span class="threat-badge critical">⬛ CRITICAL</span></td>
+                        <td>Classically broken already (collisions)</td>
+                        <td>Eliminate immediately; classically compromised</td>
+                    </tr>
+                    <tr>
+                        <td>3DES / DES / RC4</td>
+                        <td>Symmetric (Legacy)</td>
+                        <td><span class="threat-badge critical">⬛ CRITICAL</span></td>
+                        <td>Classically weak + quantum further reduces</td>
+                        <td>Eliminate immediately; no compliant use case</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
 
-        <article class="research-article">
-            <h2>What Goes Into a C-BOM?</h2>
+<!-- ── Y2Q C-BOM TOOL SHOWCASE ── -->
+<section class="tool-showcase" id="tool">
+    <div class="tool-showcase-inner">
+        <div class="tool-header reveal">
+            <div class="tool-badges">
+                <span class="tool-badge enterprise">Enterprise</span>
+                <span class="tool-badge python">Python 3.7+</span>
+                <span class="tool-badge version">v2.0.0 — Cryptographic Focus</span>
+            </div>
+            <h2>The Y2Q C-BOM Tool</h2>
             <p>
-                A complete C-BOM documents:
+                A professional Cryptographic Bill of Materials management platform built by Y2Q to operationalise post-quantum migration at enterprise scale.
+                Track every algorithm, key, certificate, library, and cipher suite across your organisation.
+                Assess quantum vulnerability. Enforce compliance standards. Generate security posture scores.
+                Know what you have — before an adversary exploits what you cannot see.
             </p>
-            <ul class="research-list">
-                <li><strong>Symmetric algorithms</strong> — AES, ChaCha20, DES (legacy), and other bulk encryption methods</li>
-                <li><strong>Asymmetric algorithms</strong> — RSA, ECDSA, ECC, and their key sizes and curves</li>
-                <li><strong>Hash functions</strong> — SHA-256, SHA-3, MD5 (legacy), and their applications</li>
-                <li><strong>Key derivation functions</strong> — PBKDF2, Argon2, bcrypt for password hashing</li>
-                <li><strong>Protocols and standards</strong> — TLS versions, HTTPS configurations, VPN implementations</li>
-                <li><strong>Key management infrastructure</strong> — How keys are generated, stored, rotated, and retired</li>
-                <li><strong>Implementation details</strong> — Libraries used (OpenSSL, BoringSSL, etc.), versions, and known issues</li>
-                <li><strong>Data classifications</strong> — Which algorithms protect which types of data and for what duration</li>
-                <li><strong>Regulatory compliance</strong> — Which algorithms meet FIPS, NSA, or industry-specific standards</li>
-            </ul>
-            <p>
-                This inventory should be discoverable, maintainable, and continuously updated as systems change.
-            </p>
-        </article>
+            <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem;">
+                <a href="index.html#engage" class="btn-primary" style="text-decoration:none;font-size:0.85rem;">SCHEDULE A DEMO</a>
+                <a href="index.html#engage" class="btn-secondary" style="text-decoration:none;font-size:0.85rem;">CONTACT FOR LICENSING &#8599;</a>
+            </div>
+        </div>
 
-        <article class="research-article">
-            <h2>Cryptographic Assumptions and Time Horizons</h2>
-            <p>
-                Every cryptographic algorithm relies on mathematical assumptions about computational difficulty. These assumptions are not eternal. They have time horizons.
-            </p>
-            <p>
-                Consider:
-            </p>
-            <ul class="research-list">
-                <li><strong>RSA-2048</strong> — Believed secure today, but may face attack within 5-10 years if advances in factorization occur</li>
-                <li><strong>SHA-1</strong> — Deprecated due to collision vulnerabilities; should have been retired years ago</li>
-                <li><strong>AES-128</strong> — Secure for most near-term uses, but long-lived data may need AES-256</li>
-                <li><strong>ECC curves</strong> — Some curves (P-256) face questions about NSA influence; others are preferred</li>
-                <li><strong>Quantum risk</strong> — Current RSA and ECC provide zero post-quantum security; migration is essential</li>
-            </ul>
-            <p>
-                A C-BOM makes these temporal properties explicit: which algorithms are suitable for how long, and when replacement is needed.
-            </p>
-        </article>
+        <!-- Feature Cards -->
+        <div class="features-grid">
+            <div class="feature-card reveal" data-delay="0">
+                <div class="feature-icon">🔐</div>
+                <div class="feature-text">
+                    <h4>Cryptographic Asset Management</h4>
+                    <p>Track algorithms, keys, certificates, libraries, and cipher suites with full lifecycle management including rotation schedules and expiration alerts.</p>
+                </div>
+            </div>
+            <div class="feature-card reveal" data-delay="60">
+                <div class="feature-icon">🛡️</div>
+                <div class="feature-text">
+                    <h4>Vulnerability Scanning</h4>
+                    <p>Detect known CVEs against cryptographic components. CVSS score tracking and automatic risk assessment against both classical and quantum attack vectors.</p>
+                </div>
+            </div>
+            <div class="feature-card reveal" data-delay="120">
+                <div class="feature-icon">✅</div>
+                <div class="feature-text">
+                    <h4>Compliance Checking</h4>
+                    <p>Automated validation against FIPS 140-2, PCI DSS, HIPAA, and SOC 2. Instant compliance status reports with actionable remediation guidance.</p>
+                </div>
+            </div>
+            <div class="feature-card reveal" data-delay="180">
+                <div class="feature-icon">📊</div>
+                <div class="feature-text">
+                    <h4>Security Posture Score</h4>
+                    <p>0–100 risk scoring model. Identifies critical, high, medium, and low risk assets. Drives prioritised remediation based on quantum exposure and data sensitivity.</p>
+                </div>
+            </div>
+            <div class="feature-card reveal" data-delay="240">
+                <div class="feature-icon">🕒</div>
+                <div class="feature-text">
+                    <h4>Version Control &amp; Audit Trail</h4>
+                    <p>Snapshot-based version control with full change history. Compare versions to identify drift. Audit logging with timestamps, users, and change details.</p>
+                </div>
+            </div>
+            <div class="feature-card reveal" data-delay="300">
+                <div class="feature-icon">🌐</div>
+                <div class="feature-text">
+                    <h4>Hierarchical BOM Support</h4>
+                    <p>Model complex multi-system environments with parent–child BOM hierarchies. Cost rollup, dependency tracking, and tree visualisation across the full cryptographic stack.</p>
+                </div>
+            </div>
+            <div class="feature-card reveal" data-delay="360">
+                <div class="feature-icon">📤</div>
+                <div class="feature-text">
+                    <h4>JSON &amp; CSV Export</h4>
+                    <p>Export full C-BOM inventories and audit logs in JSON for version control integration and CSV for spreadsheet analysis or compliance reporting.</p>
+                </div>
+            </div>
+            <div class="feature-card reveal" data-delay="420">
+                <div class="feature-icon">💡</div>
+                <div class="feature-text">
+                    <h4>Recommendations Engine</h4>
+                    <p>Automated recommendations based on detected vulnerabilities, compliance gaps, and quantum readiness posture. Prioritised by risk severity and migration urgency.</p>
+                </div>
+            </div>
+        </div>
 
-        <article class="research-article">
-            <h2>Crypto-Agility and Algorithm Migration</h2>
-            <p>
-                A well-designed system does not lock itself into a single cryptographic algorithm forever. It should be crypto-agile: able to support multiple algorithms and transition between them as threats evolve.
-            </p>
-            <p>
-                Crypto-agility requires:
-            </p>
-            <ul class="research-list">
-                <li><strong>Algorithm abstraction</strong> — Cryptographic operations are abstracted so implementations can be swapped</li>
-                <li><strong>Parallel support</strong> — New algorithms can be deployed alongside legacy ones during transition</li>
-                <li><strong>Migration planning</strong> — Clear processes for deprecating old algorithms and adopting new ones</li>
-                <li><strong>Testing and validation</strong> — New algorithms are thoroughly tested before being trusted with production data</li>
-                <li><strong>Performance monitoring</strong> — Algorithm changes have performance implications that must be understood</li>
-            </ul>
-            <p>
-                Without crypto-agility, systems become brittle. When an algorithm must be abandoned (due to a break or quantum threat), rigid systems face catastrophic transition challenges.
-            </p>
-        </article>
+        <!-- Interface Modes -->
+        <h3 class="reveal" style="font-size:0.85rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--text-secondary);margin-bottom:1.25rem;">Three Interface Modes</h3>
+        <div class="interfaces-grid">
+            <div class="interface-card reveal" data-delay="0">
+                <div class="if-icon">⌨️</div>
+                <h4>CLI Mode</h4>
+                <p>Command-line interface for scripting, automation, and CI/CD pipeline integration. Full access to all C-BOM operations via flags and arguments.</p>
+                <code class="if-cmd">python main.py --cli</code>
+            </div>
+            <div class="interface-card reveal" data-delay="100">
+                <div class="if-icon">🖥️</div>
+                <h4>GUI Mode</h4>
+                <p>Desktop application built on tkinter. Visual component editor, cost analysis dashboard, validation tools, audit log viewer, and version history browser.</p>
+                <code class="if-cmd">python main.py</code>
+            </div>
+            <div class="interface-card reveal" data-delay="200">
+                <div class="if-icon">🌐</div>
+                <h4>Web Interface</h4>
+                <p>Browser-based interface powered by Flask. Access your C-BOM from any device. View dashboards, manage assets, run compliance checks, and export reports.</p>
+                <code class="if-cmd">python main.py --web</code>
+            </div>
+        </div>
 
-        <article class="research-article">
-            <h2>Cryptographic Risk and Quantum Threats</h2>
-            <p>
-                The most pressing cryptographic threat is quantum computing. Quantum computers will break the mathematical assumptions behind RSA and ECC, rendering current asymmetric cryptography insecure.
-            </p>
-            <p>
-                This creates a critical inventory challenge: identifying all data and systems that depend on algorithms vulnerable to quantum attack.
-            </p>
-            <ul class="research-list">
-                <li><strong>Data with long confidentiality requirements</strong> — Medical records, state secrets, long-term contracts must be protected against harvest-now-decrypt-later attacks</li>
-                <li><strong>TLS communications</strong> — HTTPS traffic encrypted today with RSA/ECC becomes vulnerable if quantum computers arrive before data expires</li>
-                <li><strong>Digital signatures</strong> — Signatures created today may lose validity if the signing algorithm becomes quantum-broken</li>
-                <li><strong>Key establishment</strong> — Perfect forward secrecy helps, but historical keys remain at risk</li>
-            </ul>
-            <p>
-                A C-BOM enables organizations to prioritize quantum-safe migration based on data sensitivity and exposure duration.
-            </p>
-        </article>
+        <!-- Code Example -->
+        <div class="code-block-section reveal">
+            <h3>Quick Start — Cryptographic Asset Inventory</h3>
+            <div class="code-terminal">
+                <div class="terminal-bar">
+                    <span class="term-dot r"></span>
+                    <span class="term-dot y"></span>
+                    <span class="term-dot g"></span>
+                    <span class="terminal-title">cbom_example.py — Y2Q C-BOM Tool v2.0.0</span>
+                </div>
+                <div class="terminal-body">
+<span class="kw">from</span> <span class="fn">cbom</span> <span class="kw">import</span> CryptoAsset, CryptoBOM<br>
+<span class="kw">from</span> <span class="fn">cbom.validator</span> <span class="kw">import</span> CryptoBOMValidator<br>
+<br>
+<span class="cmt"># Create a new cryptographic BOM for your organisation</span><br>
+bom = <span class="fn">CryptoBOM</span>(<span class="str">"Organisation Name"</span>, <span class="str">"Annual cryptographic inventory"</span>)<br>
+<br>
+<span class="cmt"># Add your RSA key — immediately flagged as quantum-vulnerable</span><br>
+rsa_key = <span class="fn">CryptoAsset</span>(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id=<span class="str">"RSA-TLS-01"</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;name=<span class="str">"TLS Certificate Key"</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;asset_type=<span class="str">"key"</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;algorithm=<span class="str">"RSA-2048"</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;key_length=<span class="num">2048</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;purpose=<span class="str">"TLS key exchange"</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;status=<span class="str">"active"</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;compliance=[<span class="str">"PCI-DSS"</span>],<br>
+&nbsp;&nbsp;&nbsp;&nbsp;rotation_schedule=<span class="str">"365 days"</span><br>
+)<br>
+bom.<span class="fn">add_asset</span>(rsa_key)<br>
+<br>
+<span class="cmt"># Add a compliant post-quantum algorithm</span><br>
+mlkem = <span class="fn">CryptoAsset</span>(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id=<span class="str">"ML-KEM-01"</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;name=<span class="str">"Post-Quantum Key Encapsulation"</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;asset_type=<span class="str">"algorithm"</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;algorithm=<span class="str">"ML-KEM-768"</span>,      <span class="cmt"># NIST FIPS 203</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;purpose=<span class="str">"quantum-safe key exchange"</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;compliance=[<span class="str">"FIPS 203"</span>, <span class="str">"FIPS 140-2"</span>],<br>
+&nbsp;&nbsp;&nbsp;&nbsp;status=<span class="str">"active"</span><br>
+)<br>
+bom.<span class="fn">add_asset</span>(mlkem)<br>
+<br>
+<span class="cmt"># Assess security posture — quantum readiness score</span><br>
+posture = CryptoBOMValidator.<span class="fn">get_security_posture</span>(bom)<br>
+<span class="fn">print</span>(<span class="str">f"Security Score: {posture['security_score']}/100"</span>)<br>
+<br>
+<span class="cmt"># Get prioritised quantum migration recommendations</span><br>
+recs = CryptoBOMValidator.<span class="fn">get_bom_recommendations</span>(bom)<br>
+<span class="kw">for</span> r <span class="kw">in</span> recs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">print</span>(<span class="str">f"  → {r}"</span>)<br>
+<br>
+<span class="cmt"># Export for reporting and version control</span><br>
+bom.<span class="fn">export_json</span>(<span class="str">"crypto_inventory.json"</span>)<br>
+bom.<span class="fn">export_csv</span>(<span class="str">"crypto_inventory.csv"</span>)<br>
+<br>
+<span class="cmt"># ── Output ──────────────────────────────────────────────</span><br>
+<span class="out">Security Score: 62/100</span><br>
+<span class="out">  → CRITICAL: RSA-2048 (RSA-TLS-01) provides zero post-quantum resistance</span><br>
+<span class="out">  → ACTION: Migrate TLS key exchange to ML-KEM-768 (FIPS 203)</span><br>
+<span class="out">  → Deadline: NIST deprecation 2035 — high-risk systems must migrate earlier</span><br>
+<span class="out">Exported: crypto_inventory.json | crypto_inventory.csv</span>
+                </div>
+            </div>
+        </div>
 
-        <article class="research-article">
-            <h2>Legacy and Deprecated Cryptography</h2>
-            <p>
-                Many systems still use cryptographic algorithms that are known to be weak or deprecated. Understanding where legacy cryptography exists is essential for security.
-            </p>
-            <ul class="research-list">
-                <li><strong>MD5</strong> — Cryptographically broken but still found in legacy systems and legacy protocols</li>
-                <li><strong>DES</strong> — Completely insecure but embedded in legacy hardware, banking systems, and industrial control</li>
-                <li><strong>SHA-1</strong> — Vulnerable to collision attacks; deprecated by NIST but still widespread</li>
-                <li><strong>RC4</strong> — Broken cipher still found in legacy TLS and VPN implementations</li>
-                <li><strong>3DES</strong> — Weak by modern standards but used in PCI-DSS regulated systems</li>
-            </ul>
-            <p>
-                A C-BOM reveals where these weak algorithms hide, enabling targeted replacement efforts. However, some legacy systems may be irreplaceable, requiring compensating controls or isolation.
-            </p>
-        </article>
+        <!-- Risk Levels -->
+        <div class="risk-section reveal">
+            <h3>Risk Level Classification</h3>
+            <div class="risk-grid">
+                <div class="risk-card critical">
+                    <div class="risk-icon">🔴</div>
+                    <h4>Critical</h4>
+                    <p>Expired assets, algorithms with known quantum breaks (RSA, ECC), active CVEs, classically broken ciphers (MD5, DES, SHA-1).</p>
+                </div>
+                <div class="risk-card high">
+                    <div class="risk-icon">🟠</div>
+                    <h4>High</h4>
+                    <p>CVSS 7.0+, weak key lengths (AES-128, RSA-1024), deprecated standards, algorithms lacking post-quantum consideration.</p>
+                </div>
+                <div class="risk-card medium">
+                    <div class="risk-icon">🟡</div>
+                    <h4>Medium</h4>
+                    <p>CVSS 4.0–6.9, suboptimal key lengths, algorithms with limited remaining lifespan, missing compliance tagging.</p>
+                </div>
+                <div class="risk-card low">
+                    <div class="risk-icon">🟢</div>
+                    <h4>Low</h4>
+                    <p>Strong current algorithms (AES-256, SHA-3, ML-KEM, ML-DSA), current compliance status, valid key rotation schedules in place.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-        <article class="research-article">
-            <h2>Cryptographic Supply Chain and Dependencies</h2>
-            <p>
-                Cryptographic implementations do not exist in isolation. They depend on:
-            </p>
-            <ul class="research-list">
-                <li><strong>Cryptographic libraries</strong> — OpenSSL, BoringSSL, NSS, libsodium; each with different security properties</li>
-                <li><strong>Hardware security modules (HSMs)</strong> — Physical devices that generate and protect keys</li>
-                <li><strong>Key management services</strong> — Cloud KMS, enterprise key vaults, or legacy on-premises solutions</li>
-                <li><strong>Random number generators</strong> — Quality entropy sources are essential for cryptographic security</li>
-                <li><strong>Standards and certifications</strong> — FIPS validation, Common Criteria, or industry-specific standards</li>
-            </ul>
-            <p>
-                Each dependency introduces risk. A C-BOM tracks these dependencies and identifies where single points of failure or vendor risks exist.
-            </p>
-        </article>
+<!-- ── WHAT GOES INTO A C-BOM ── -->
+<article class="research-article reveal">
+    <h2>What Goes Into a Complete C-BOM?</h2>
+    <p>A complete C-BOM documents every cryptographic component across the full stack:</p>
+    <ul class="research-list">
+        <li><strong>Symmetric algorithms</strong> — AES (128/192/256), ChaCha20, DES (legacy), 3DES, RC4; mode of operation (GCM, CBC, CTR)</li>
+        <li><strong>Asymmetric algorithms</strong> — RSA (all key sizes), ECDSA, ECDH, DH; key length, curve name, usage purpose</li>
+        <li><strong>Hash functions</strong> — SHA-256, SHA-384, SHA-512, SHA-3, MD5 (legacy), SHA-1 (deprecated); where each is used and why</li>
+        <li><strong>Key derivation functions</strong> — PBKDF2, Argon2, bcrypt, scrypt; iteration counts and salt management</li>
+        <li><strong>Protocols and cipher suites</strong> — TLS versions and configured cipher suites, SSH algorithm negotiation, VPN configurations</li>
+        <li><strong>Certificates</strong> — X.509 certificate inventory, expiration dates, signing algorithms, certificate authority chains</li>
+        <li><strong>Key management infrastructure</strong> — Generation, storage (HSM, software, cloud KMS), rotation schedules, retirement procedures</li>
+        <li><strong>Cryptographic libraries</strong> — OpenSSL, BoringSSL, NSS, libsodium, Bouncy Castle; versions and known CVEs</li>
+        <li><strong>Post-quantum migration status</strong> — Which components are migrated, in planning, or unaddressed</li>
+        <li><strong>Data classifications and lifetimes</strong> — What data each algorithm protects and for how long confidentiality is required</li>
+    </ul>
+</article>
 
-        <article class="research-article">
-            <h2>C-BOM as a Compliance and Risk Tool</h2>
-            <p>
-                C-BOM is increasingly required by regulatory frameworks:
-            </p>
-            <ul class="research-list">
-                <li><strong>NIST guidelines</strong> — Recommend cryptographic inventory as part of post-quantum cryptography preparation</li>
-                <li><strong>PCI-DSS</strong> — Requires documented cryptographic protocols for payment card data</li>
-                <li><strong>HIPAA</strong> — Mandates encryption standards for healthcare data</li>
-                <li><strong>EU regulations</strong> — GDPR and upcoming quantum-safe requirements drive C-BOM adoption</li>
-            </ul>
-            <p>
-                Beyond compliance, C-BOM enables organizations to:
-            </p>
-            <ul class="research-list">
-                <li>Plan quantum-safe transitions systematically</li>
-                <li>Identify and retire weak cryptography</li>
-                <li>Reduce cryptographic technical debt</li>
-                <li>Make informed architecture decisions about algorithm selection</li>
-            </ul>
-        </article>
+<!-- ── CRYPTO AGILITY ── -->
+<article class="research-article reveal">
+    <h2>Crypto-Agility: The Architecture Requirement</h2>
+    <p>
+        A C-BOM is not useful if the systems it inventories cannot be changed. Crypto-agility — the ability to swap cryptographic algorithms without redesigning entire systems — is the architectural property that makes a C-BOM actionable.
+    </p>
+    <p>Crypto-agility requires:</p>
+    <ul class="research-list">
+        <li><strong>Algorithm abstraction</strong> — Cryptographic operations are encapsulated behind interfaces; implementations are swappable without touching application logic</li>
+        <li><strong>Parallel protocol support</strong> — New algorithms (ML-KEM, ML-DSA) can be deployed alongside legacy ones during transition windows</li>
+        <li><strong>Migration planning</strong> — Defined processes for deprecating old algorithms and adopting new ones on documented timelines</li>
+        <li><strong>Performance impact assessment</strong> — Post-quantum algorithms have different performance characteristics; latency and throughput must be re-evaluated</li>
+        <li><strong>Hybrid key exchange</strong> — Combining classical and post-quantum algorithms during transition ensures protection against both attack classes</li>
+    </ul>
+    <p>
+        Without crypto-agility, discovery via C-BOM produces a list of problems with no path to resolution. NIST's Migration to Post-Quantum Project at the NCCoE specifically prioritises identifying and fixing crypto-rigid systems before the 2035 deadline.
+    </p>
+</article>
 
-        <article class="research-article">
-            <h2>C-BOM as a Living Inventory</h2>
-            <p>
-                A C-BOM is not a one-time artifact. It must be continuously maintained as:
-            </p>
-            <ul class="research-list">
-                <li>New systems are deployed with new cryptographic choices</li>
-                <li>Algorithms are deprecated or broken, requiring replacement</li>
-                <li>Key rotation and retirement occur</li>
-                <li>Compliance requirements change</li>
-                <li>Quantum-safe algorithms mature and become deployable</li>
-            </ul>
-            <p>
-                Maintaining a living C-BOM requires:
-            </p>
-            <ul class="research-list">
-                <li>Integration with development and deployment processes</li>
-                <li>Automated discovery of cryptographic usage</li>
-                <li>Regular audits and reviews</li>
-                <li>Clear ownership and accountability</li>
-                <li>Tools that track cryptographic inventory across hybrid environments</li>
-            </ul>
-            <p>
-                Organizations that maintain C-BOMs are better positioned to survive cryptographic transitions and adapt to emerging threats.
-            </p>
-        </article>
+<!-- ── QUANTUM RISK AND C-BOM ── -->
+<article class="research-article reveal">
+    <h2>C-BOM and the Quantum Risk Intersection</h2>
+    <p>
+        The quantum risk in a C-BOM inventory is not uniform. Prioritisation depends on the intersection of algorithm vulnerability and data lifetime:
+    </p>
+    <ul class="research-list">
+        <li><strong>Long-lifetime sensitive data + quantum-vulnerable algorithm = Critical</strong> — State secrets, medical records, legal documents, intellectual property. These are harvest targets today. Replace encryption immediately or accept that eventual exposure is certain.</li>
+        <li><strong>Short-lifetime data + quantum-vulnerable algorithm = Medium</strong> — Transient session data, ephemeral tokens. The confidentiality window may close before quantum computers are available — but this depends on timelines that are accelerating.</li>
+        <li><strong>Long-lifetime data + quantum-safe algorithm = Low</strong> — If you have already migrated to AES-256, ML-KEM, or ML-DSA, the long-term risk is substantially reduced.</li>
+        <li><strong>Digital signatures + quantum-vulnerable algorithm = High</strong> — Signatures validated in the future (legal documents, software updates, certificates) lose integrity if the signing algorithm is quantum-broken. Non-repudiation and authenticity fail.</li>
+    </ul>
+    <div class="uncertainty-note">
+        <strong>The Harvest-Now-Decrypt-Later Problem:</strong> For confidentiality, the threat exists NOW. Adversaries do not need quantum computers to collect data — only to store it. Your C-BOM must identify data with multi-year confidentiality requirements and flag it for immediate encryption upgrade, regardless of when quantum computers actually arrive.
+    </div>
+</article>
 
-        <article class="research-article">
-            <h2>Component Relationships and Trust Networks</h2>
-            <p>
-                C-BOM is fundamentally about understanding relationships, not just inventories. The question is not "what components do we have?" but "how do these components depend on and trust each other?"
-            </p>
-            <p>
-                A trust network in a system includes:
-            </p>
-            <ul class="research-list">
-                <li><strong>Direct dependencies</strong> — Code that a system calls directly</li>
-                <li><strong>Indirect dependencies</strong> — Code that dependencies call on behalf of your system</li>
-                <li><strong>Implicit trust</strong> — Components that are assumed to be safe or trustworthy without active verification</li>
-                <li><strong>Lateral trust</strong> — Components that do not directly depend on each other but share underlying infrastructure</li>
-                <li><strong>Organizational trust</strong> — Teams and people who maintain or operate systems</li>
-            </ul>
-            <p>
-                The topology of this trust network determines how resilient the system is to failure, compromise, or degradation.
-            </p>
-        </article>
+<!-- ── C-BOM AS COMPLIANCE TOOL ── -->
+<article class="research-article reveal">
+    <h2>C-BOM as Compliance and Governance Infrastructure</h2>
+    <p>C-BOM is increasingly required by or directly referenced in regulatory frameworks:</p>
+    <ul class="research-list">
+        <li><strong>NIST IR 8547 and PQC Migration</strong> — Explicitly recommends cryptographic inventory as the foundation of post-quantum migration planning. Without a C-BOM, compliance with the 2035 deadline is not achievable in a structured way.</li>
+        <li><strong>NIST Cybersecurity Framework (CSF 2.0)</strong> — The IDENTIFY function requires asset inventory including cryptographic assets.</li>
+        <li><strong>PCI-DSS v4.0</strong> — Requires documented cryptographic protocols for payment card data protection and management of cryptographic key lifecycles.</li>
+        <li><strong>HIPAA</strong> — Mandates encryption standards for protected health information, requiring knowledge of what algorithms are deployed.</li>
+        <li><strong>EU Cyber Resilience Act</strong> — Emerging requirements around software and hardware cybersecurity will increasingly drive C-BOM-style inventories.</li>
+        <li><strong>NSA CNSA 2.0</strong> — NSA's Commercial National Security Algorithm Suite 2.0 mandates post-quantum algorithms for National Security Systems and sets migration timelines.</li>
+    </ul>
+</article>
 
-        <article class="research-article">
-            <h2>From Inventory to Understanding</h2>
-            <p>
-                Creating a C-BOM inventory (listing all components) is a start. But the real value comes from understanding:
-            </p>
-            <ul class="research-list">
-                <li>Which components are critical?</li>
-                <li>What happens if each component fails?</li>
-                <li>Which components have single points of failure?</li>
-                <li>How would a failure cascade through the system?</li>
-                <li>Where are the trust boundaries?</li>
-                <li>Where is visibility lacking?</li>
-                <li>How do organizational constraints affect system security?</li>
-            </ul>
-            <p>
-                This understanding allows for better decision-making about risk management, mitigation, and survivability.
-            </p>
-            <p class="uncertainty-note">
-                <strong>Uncertainty:</strong> Complete understanding of a complex system is not possible. Emergent behaviors appear at scale. Interdependencies are discovered incrementally. The map is never complete.
-            </p>
-        </article>
+<!-- ── LIVING DOCUMENT ── -->
+<article class="research-article reveal">
+    <h2>C-BOM as a Living System</h2>
+    <p>
+        A C-BOM that is not continuously maintained becomes a liability. Systems change. Dependencies are updated. New CVEs are published. Quantum timelines compress. An outdated C-BOM creates false confidence.
+    </p>
+    <p>Maintaining a living C-BOM requires:</p>
+    <ul class="research-list">
+        <li>Integration with development and deployment pipelines — cryptographic changes trigger automatic C-BOM updates</li>
+        <li>Automated discovery tooling — scanners that identify cryptographic usage across codebases, configurations, and network traffic</li>
+        <li>Regular review cycles — at minimum quarterly; more frequently for high-risk environments</li>
+        <li>Change ownership — defined accountability for each cryptographic component and its migration status</li>
+        <li>Incident trigger integration — cryptographic vulnerability disclosures automatically cross-referenced with the inventory</li>
+    </ul>
+    <p>
+        The Y2Q C-BOM Tool provides the version control, audit logging, and automated assessment infrastructure required to keep a C-BOM alive and actionable across organisational time horizons.
+    </p>
+    <div class="uncertainty-note">
+        <strong>Honest Note:</strong> A C-BOM is not a solution to quantum risk. It is a prerequisite for developing one. Without knowing what you have, you cannot plan what to change. The tool makes the inventory manageable — the migration decisions remain yours.
+    </div>
+</article>
 
-        <article class="research-article">
-            <h2>C-BOM as a Living Document</h2>
-            <p>
-                A C-BOM is not a one-time artifact. Systems change constantly. Dependencies are updated, removed, or added. New vulnerabilities are discovered. Vendors change. Organizations restructure.
-            </p>
-            <p>
-                A static C-BOM becomes obsolete immediately. A living C-BOM requires:
-            </p>
-            <ul class="research-list">
-                <li>Continuous monitoring and updating</li>
-                <li>Regular review and re-assessment</li>
-                <li>Integration with development and operational practices</li>
-                <li>Visibility into changes and their implications</li>
-                <li>Documentation of why decisions were made</li>
-            </ul>
-            <p>
-                The effort required to maintain a true understanding of system dependencies is substantial and ongoing.
-            </p>
-        </article>
+<!-- ── RESEARCH STATUS ── -->
+<section class="research-status reveal">
+    <p>
+        <strong>Product Status:</strong> The Y2Q C-BOM Tool (v2.0.0) is a professional enterprise platform for cryptographic asset management and post-quantum migration planning. NIST, NSA, and major technology organisations now treat C-BOM as baseline due diligence for post-quantum compliance. The tool supports CLI, GUI, and Web interfaces with full compliance checking, vulnerability scanning, and quantum risk scoring. Available under professional licensing — contact Y2Q to discuss deployment and implementation support.
+    </p>
+</section>
 
-        <section class="research-status">
-            <p>
-                <strong>Note:</strong> Cryptographic Bill of Materials practice is still evolving. Standards for C-BOM format and content are emerging. Organizations are learning how to implement C-BOM discovery, management, and governance. The field is moving from research to operational practice.
-            </p>
-        </section>
-    </main>
+</main>
 
-    <footer class="site-footer">
-        <p>&copy; Y2Q Research. Systems survive through understanding failure.</p>
-    </footer>
+<footer class="site-footer">
+    <p>&copy; Y2Q Research. Systems survive through understanding failure.</p>
+</footer>
+
+<script>
+// Sticky header
+window.addEventListener('scroll', () => {
+    document.getElementById('site-header').classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// Scroll Reveal
+(function() {
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                const delay = parseInt(e.target.dataset.delay || 0);
+                setTimeout(() => e.target.classList.add('revealed'), delay);
+                obs.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => obs.observe(el));
+})();
+</script>
 </body>
+
+
 </html>

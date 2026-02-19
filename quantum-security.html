@@ -1,184 +1,263 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quantum Security — Y2Q</title>
+    <title>Quantum Security  Y2Q</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="site-header">
-        <nav class="nav-bar">
-            <a href="index.html" class="logo">Y2Q</a>
-            <ul class="nav-links">
-                <li><a href="index.html#about">ABOUT</a></li>
-                <li><a href="index.html#services">SERVICES</a></li>
-                <li><a href="index.html#maturity">MATURITY MODEL</a></li>
-                <li><a href="index.html#engage" class="cta-link">ENGAGE</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="page-header">
-            <div class="page-icon">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Represents encryption, time, and quantum uncertainty -->
-                    <!-- Lock symbol -->
-                    <rect x="70" y="80" width="60" height="50" rx="5" fill="none" stroke="#cc3333" stroke-width="2"/>
-                    <path d="M 80 80 Q 80 60 100 60 Q 120 60 120 80" fill="none" stroke="#cc3333" stroke-width="2"/>
-                    <!-- Time indicator (arrow) -->
-                    <path d="M 140 120 L 160 120" stroke="#b0b0b0" stroke-width="2" marker-end="url(#arrowhead)"/>
-                    <!-- Quantum uncertainty (dots) -->
-                    <circle cx="170" cy="110" r="2" fill="#b0b0b0"/>
-                    <circle cx="175" cy="120" r="2" fill="#b0b0b0"/>
-                    <circle cx="170" cy="130" r="2" fill="#b0b0b0"/>
-                    <!-- Arrow marker definition -->
-                    <defs>
-                        <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-                            <polygon points="0 0, 10 5, 0 10" fill="#b0b0b0"/>
-                        </marker>
-                    </defs>
-                </svg>
+<header class="site-header" id="site-header">
+    <nav class="nav-bar">
+        <a href="index.html" class="logo">Y2Q</a>
+        <ul class="nav-links">
+            <li><a href="index.html#about">ABOUT</a></li>
+            <li><a href="index.html#services">SERVICES</a></li>
+            <li><a href="index.html#maturity">MATURITY MODEL</a></li>
+            <li><a href="c-bom.html">C-BOM TOOL</a></li>
+            <li><a href="index.html#engage" class="cta-link">ENGAGE</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<section class="page-hero">
+    <div class="page-hero-content">
+        <div class="page-badge">Post-Quantum Cryptography</div>
+        <h1>Quantum Security</h1>
+        <p class="page-intro">Quantum computing does not just threaten encryption  it invalidates the mathematical foundations that entire security architectures are built upon. NIST has finalised the standards. The migration window is open. State actors are already collecting.</p>
+        <div class="page-meta">
+            <span class="meta-tag">SHOR'S ALGORITHM</span>
+            <span class="meta-tag">GROVER'S ALGORITHM</span>
+            <span class="meta-tag">NIST FIPS 203/204/205</span>
+            <span class="meta-tag">ML-KEM / ML-DSA</span>
+            <span class="meta-tag">CRYPTO-AGILITY</span>
+        </div>
+    </div>
+</section>
+
+<div class="threat-ticker">
+    <div class="ticker-label">&#9888; THREAT INTEL</div>
+    <div class="ticker-wrap">
+        <div class="ticker-move">
+            <span class="ticker-item critical">NIST FIPS 203, 204, 205 published August 2024  post-quantum migration is a current obligation</span>
+            <span class="ticker-sep">&#9670;</span>
+            <span class="ticker-item">Shor's algorithm (1994): polynomial-time quantum factorisation breaks all RSA and ECC regardless of key length</span>
+            <span class="ticker-sep">&#9670;</span>
+            <span class="ticker-item critical">Every RSA-encrypted communication transmitted today can be stored and decrypted when quantum hardware arrives</span>
+            <span class="ticker-sep">&#9670;</span>
+            <span class="ticker-item">IBM 2024: new error-correcting code 10x more efficient than prior methods  quantum at scale is accelerating</span>
+            <span class="ticker-sep">&#9670;</span>
+            <span class="ticker-item critical">NIST IR 8547: all quantum-vulnerable algorithms deprecated from all standards by 2035</span>
+            <span class="ticker-sep">&#9670;</span>
+            <span class="ticker-item">AES-128 provides only 64-bit effective security under Grover's algorithm  upgrade to AES-256 for long-lived data</span>
+            <span class="ticker-sep">&#9670;</span>
+            <span class="ticker-item critical">NIST FIPS 203, 204, 205 published August 2024  post-quantum migration is a current obligation</span>
+            <span class="ticker-sep">&#9670;</span>
+            <span class="ticker-item">Shor's algorithm (1994): polynomial-time quantum factorisation breaks all RSA and ECC regardless of key length</span>
+            <span class="ticker-sep">&#9670;</span>
+            <span class="ticker-item critical">Every RSA-encrypted communication transmitted today can be stored and decrypted when quantum hardware arrives</span>
+            <span class="ticker-sep">&#9670;</span>
+            <span class="ticker-item">IBM 2024: new error-correcting code 10x more efficient than prior methods  quantum at scale is accelerating</span>
+            <span class="ticker-sep">&#9670;</span>
+            <span class="ticker-item critical">NIST IR 8547: all quantum-vulnerable algorithms deprecated from all standards by 2035</span>
+            <span class="ticker-sep">&#9670;</span>
+            <span class="ticker-item">AES-128 provides only 64-bit effective security under Grover's algorithm  upgrade to AES-256 for long-lived data</span>
+            <span class="ticker-sep">&#9670;</span>
+        </div>
+    </div>
+</div>
+
+<section class="quantum-stats">
+    <div class="section-header reveal">
+        <span class="section-label">Documented Timeline</span>
+        <h2>Key Milestones in the Quantum Threat</h2>
+        <p>These are not projections. They are documented events, published standards, and announced roadmaps from NIST and IBM.</p>
+    </div>
+    <div class="stats-grid">
+        <div class="stat-card reveal" data-delay="0">
+            <span class="stat-number" data-count="1994">1994</span>
+            <div class="stat-label">Shor's Algorithm Published</div>
+            <p class="stat-desc">Mathematical proof that quantum computers break RSA and ECC. The threat has been known for 30 years. The hardware is what has been pending.</p>
+        </div>
+        <div class="stat-card blue reveal" data-delay="100">
+            <span class="stat-number" data-count="2024">2024</span>
+            <div class="stat-label">NIST PQC Standards Finalised</div>
+            <p class="stat-desc">FIPS 203, 204, 205 published in August. Post-quantum migration is now an obligation with standards to migrate to, not a research question.</p>
+        </div>
+        <div class="stat-card reveal" data-delay="200">
+            <span class="stat-number" data-count="2026">2026</span>
+            <div class="stat-label">IBM: Quantum Advantage Forecast</div>
+            <p class="stat-desc">IBM expects first practical quantum advantage over all classical methods by late 2026. The engineering roadmap is precise and funded.</p>
+        </div>
+        <div class="stat-card blue reveal" data-delay="300">
+            <span class="stat-number" data-count="2035">2035</span>
+            <div class="stat-label">NIST Deprecation Deadline</div>
+            <p class="stat-desc">RSA, DSA, ECDSA, ECDH removed from all NIST standards (NIST IR 8547). High-risk systems protecting long-lived data must migrate years earlier.</p>
+        </div>
+        <div class="stat-card reveal" data-delay="400">
+            <span class="stat-number" data-count="64">64</span>
+            <div class="stat-label">Effective Bits: AES-128 Under Quantum</div>
+            <p class="stat-desc">Grover's algorithm halves symmetric key strength. AES-128 becomes equivalent to 64-bit security under quantum attack. AES-256 retains ~128-bit.</p>
+        </div>
+        <div class="stat-card blue reveal" data-delay="500">
+            <span class="stat-number" data-count="0">0</span>
+            <div class="stat-label">Quantum Resistance of RSA &amp; ECC</div>
+            <p class="stat-desc">All RSA and elliptic-curve cryptography provides zero protection against Shor's algorithm. There is no key length that provides quantum resistance.</p>
+        </div>
+    </div>
+</section>
+
+<section class="quantum-research">
+    <div class="quantum-research-inner">
+        <div class="section-header reveal">
+            <span class="section-label">The Quantum Threat Explained</span>
+            <h2 style="color:var(--text-primary);">How Quantum Computing Breaks Modern Cryptography</h2>
+            <p>Two algorithms  published in 1994 and 1996  define the entire quantum threat landscape. Understanding them precisely is the foundation of any quantum security program.</p>
+        </div>
+        <div class="research-cards">
+            <div class="research-card reveal" data-delay="0">
+                <span class="rc-type critical">Shor 1994</span>
+                <h4>Integer Factorisation in Polynomial Time  RSA Is Broken</h4>
+                <p>RSA security rests on the computational hardness of factoring large integers. Classically, factoring a 2048-bit number would take longer than the age of the universe. Shor's algorithm (1994) factors the same number in polynomial time on a quantum computer. There is no RSA key length that provides quantum resistance  RSA-4096 is as broken as RSA-1024.</p>
+                <div class="card-source">Source: Shor, P.W. (1994)  FOCS Proceedings, Bell Labs</div>
             </div>
-            <h1>Quantum Security</h1>
-            <p class="page-intro">How quantum computing challenges cryptographic assumptions embedded in security systems deployed today.</p>
-        </section>
+            <div class="research-card reveal" data-delay="80">
+                <span class="rc-type critical">Shor 1994</span>
+                <h4>Discrete Logarithm Solved  All ECC Is Broken</h4>
+                <p>Elliptic-curve cryptography (ECDSA, ECDH, P-256, P-384, Curve25519, secp256k1) relies on the hardness of the elliptic curve discrete logarithm problem. Shor's algorithm also solves this in polynomial time. All ECC is broken. This affects HTTPS, TLS 1.3 key exchange, SSH, code signing, Bitcoin, and every system using elliptic-curve primitives.</p>
+                <div class="card-source">Source: Shor, P.W. (1994); NIST SP 800-186</div>
+            </div>
+            <div class="research-card reveal" data-delay="160">
+                <span class="rc-type warning">Grover 1996</span>
+                <h4>Symmetric Key Strength Halved  Not Eliminated</h4>
+                <p>Grover's algorithm provides quadratic speedup for unstructured search. Impact: AES-128 becomes equivalent to ~64-bit security; AES-256 retains ~128-bit (still adequate). SHA-256 preimage resistance reduced to ~128-bit. Symmetric cryptography is weakened, not broken outright. Symmetric key sizes must increase for long-lived sensitive data.</p>
+                <div class="card-source">Source: Grover, L.K. (1996)  STOC, Bell Labs</div>
+            </div>
+            <div class="research-card reveal" data-delay="240">
+                <span class="rc-type milestone">FIPS 203</span>
+                <h4>ML-KEM: The Post-Quantum Key Encapsulation Standard</h4>
+                <p>Module-Lattice Key Encapsulation Mechanism (ML-KEM, formerly CRYSTALS-Kyber), published as NIST FIPS 203 in August 2024. Replaces RSA and ECDH for key exchange. Based on the Module-LWE hardness problem with no known quantum attack. Three security levels: ML-KEM-512, ML-KEM-768 (recommended), ML-KEM-1024. Deploy immediately for TLS key exchange.</p>
+                <div class="card-source">Source: NIST FIPS 203  August 2024</div>
+            </div>
+            <div class="research-card reveal" data-delay="320">
+                <span class="rc-type milestone">FIPS 204 &amp; 205</span>
+                <h4>ML-DSA and SLH-DSA: Post-Quantum Signature Standards</h4>
+                <p>FIPS 204 (ML-DSA / CRYSTALS-Dilithium) replaces RSA-PSS and ECDSA for digital signatures using lattice problems. FIPS 205 (SLH-DSA / SPHINCS+) provides hash-based signatures with conservative, lattice-independent security assumptions. Both published August 2024. Deploying both provides hedged security against different future cryptanalytic advances.</p>
+                <div class="card-source">Source: NIST FIPS 204, 205  August 2024</div>
+            </div>
+            <div class="research-card reveal" data-delay="400">
+                <span class="rc-type critical">Active Threat</span>
+                <h4>Harvest-Now-Decrypt-Later: The Present Threat</h4>
+                <p>Shor's algorithm does not need to run today. NSA and CISA characterise harvest-now-decrypt-later as an active state-sponsored collection strategy. Adversaries intercept and archive encrypted communications for future decryption. Every RSA-encrypted TLS session transmitted today has zero long-term confidentiality against a quantum-capable adversary. The collection is ongoing now.</p>
+                <div class="card-source">Source: NSA CNSA 2.0; CISA Post-Quantum Guidance</div>
+            </div>
+        </div>
+    </div>
+</section>
 
-        <article class="research-article">
-            <h2>The Problem Space</h2>
-            <p>
-                Quantum computing is not simply "faster cryptography breaking." It is a fundamental shift in computational capability that renders certain mathematical assumptions invalid. Systems built on the assumption that certain problems are computationally infeasible will face a change in their threat model.
-            </p>
-            <p>
-                The question is not whether quantum computing will exist. It will. The question is when, with what capabilities, against what targets, and with what consequences for systems built with today's cryptographic assumptions.
-            </p>
-            <p>
-                This is inherently a problem of time. The security properties of many systems today depend on assumptions that have a finite lifetime. Quantum computing is not the only way those assumptions can break, but it is a well-understood, predictable way they eventually will.
-            </p>
-        </article>
+<article class="research-article reveal">
+    <h2>The Problem Space</h2>
+    <p>Quantum computing is not simply "faster cryptography breaking." It is a fundamental shift in computational capability that renders certain mathematical problems  and the entire security architecture built upon them  invalid. Systems designed with the assumption that large integer factorisation is computationally infeasible face a direct, documented change in their threat model.</p>
+    <p>The question is not whether cryptographically relevant quantum computers will exist. IBM's roadmap, documented error-correction advances, and sustained national-scale investment make the trajectory clear. The question is the planning horizon  and for data with multi-year confidentiality requirements, that planning horizon is already past.</p>
+    <div class="uncertainty-note"><strong>Y2Q Assessment:</strong> The 2035 NIST deprecation deadline is not the risk threshold  it is the regulatory final deadline. High-risk systems protecting long-lived sensitive data face harvest-now-decrypt-later exposure today. The effective migration deadline for those systems is now.</div>
+</article>
 
-        <article class="research-article">
-            <h2>Cryptographic Assumptions Over Long Time Horizons</h2>
-            <p>
-                Modern cryptographic systems are designed with assumptions about computational difficulty. These assumptions are:
-            </p>
-            <ul class="research-list">
-                <li><strong>Historically valid.</strong> The mathematical problems we rely on have been tested and are believed to be hard to solve.</li>
-                <li><strong>Temporally contingent.</strong> They remain valid only as long as no computational capability breaks them.</li>
-                <li><strong>Largely untested at scale.</strong> We have not run these systems for 50 or 100 years. We do not fully know what failure modes emerge at long timescales.</li>
-            </ul>
-            <p>
-                When we encrypt data today with the assumption that it will remain confidential for decades, we are making a bet about the future of computation. That bet may fail.
-            </p>
-        </article>
+<article class="research-article reveal">
+    <h2>The NIST Post-Quantum Standards</h2>
+    <p>NIST completed its seven-year post-quantum cryptography standardisation process in August 2024. The published standards are:</p>
+    <ul class="research-list">
+        <li><strong>FIPS 203 (ML-KEM)</strong>  Key encapsulation mechanism replacing RSA and ECDH. Based on the Module-LWE hardness problem. Three parameter sets for different security levels. This is the primary algorithm for quantum-safe key exchange in TLS and other protocols.</li>
+        <li><strong>FIPS 204 (ML-DSA)</strong>  Digital signature algorithm replacing RSA-PSS and ECDSA. Based on Module-LWE and Module-SIS. Deterministic signing, fast verification. This is the primary algorithm for quantum-safe digital signatures.</li>
+        <li><strong>FIPS 205 (SLH-DSA)</strong>  Stateless hash-based signature algorithm. Security based only on hash function properties  entirely independent of lattice assumptions. Larger signatures, more conservative security basis. Recommended as a hedge alongside ML-DSA.</li>
+        <li><strong>FN-DSA (FIPS 206, in progress)</strong>  NTRU lattice-based signature algorithm (FALCON). Compact signatures suitable for constrained environments. Standardisation ongoing.</li>
+    </ul>
+    <p>NIST guidance: begin deploying ML-KEM for key exchange immediately. Plan ML-DSA and SLH-DSA migration for signing applications. NSA CNSA 2.0 sets specific timelines for National Security System migration.</p>
+</article>
 
-        <article class="research-article">
-            <h2>Harvest Now, Decrypt Later</h2>
-            <p>
-                One concrete threat is "harvest now, decrypt later"—the practice of collecting encrypted data today, knowing that future computational capability (quantum or otherwise) may make it decryptable.
-            </p>
-            <p>
-                This threat is significant for data with a long-term confidentiality requirement:
-            </p>
-            <ul class="research-list">
-                <li><strong>State secrets</strong> — Information valuable to state actors for decades</li>
-                <li><strong>Medical records</strong> — Sensitive health information with a lifetime of relevance</li>
-                <li><strong>Financial and legal records</strong> — Information with multi-decade compliance requirements</li>
-                <li><strong>Intellectual property</strong> — Trade secrets and proprietary designs</li>
-                <li><strong>Personal data</strong> — Information that retains sensitivity over a lifetime or longer</li>
-            </ul>
-            <p>
-                The attacker does not need to break the encryption today. They only need to preserve the encrypted data and wait.
-            </p>
-            <p class="uncertainty-note">
-                <strong>Uncertainty:</strong> We do not know with precision when quantum computers of relevant capability will exist. We do not know which data has been harvested. We do not know the actual value or risk of historical encrypted data.
-            </p>
-        </article>
+<article class="research-article reveal">
+    <h2>Harvest-Now-Decrypt-Later: Why the Threat Is Present</h2>
+    <p>The most important and most misunderstood aspect of quantum security is the harvest-now-decrypt-later threat vector. It changes the threat model in a fundamental way:</p>
+    <ul class="research-list">
+        <li><strong>The collection does not require quantum capability</strong>  Adversaries need only the ability to intercept and store encrypted traffic, which they already have</li>
+        <li><strong>Long-lived sensitive data is the primary target</strong>  State secrets, intellectual property, legal and financial records, diplomatic communications, and medical data with multi-decade sensitivity</li>
+        <li><strong>The attack is retroactive</strong>  Data encrypted years or decades ago becomes decryptable when quantum hardware arrives. There is no patching of historical communications.</li>
+        <li><strong>Nation-state actors have the infrastructure and patience</strong>  NSA and CISA have explicitly characterised HNDL as an active collection strategy by state-sponsored adversaries</li>
+        <li><strong>The effective breach has already occurred for high-risk data</strong>  If this data was transmitted using classical cryptography and could have been intercepted, it should be treated as potentially compromised against a future quantum-capable adversary</li>
+    </ul>
+</article>
 
-        <article class="research-article">
-            <h2>Silent and Delayed Failure</h2>
-            <p>
-                Cryptographic failure in quantum security scenarios often involves silent failure—the system appears to work, but its security properties have been compromised without detection.
-            </p>
-            <p>
-                This differs from many other security failures, which are often noisy and visible. When an attacker succeeds in decrypting harvested data decades later, the original encrypted transmission is long forgotten. The failure is delayed, invisible, and only becomes apparent if discovered during forensic investigation.
-            </p>
-            <p>
-                Silent failure is particularly dangerous because:
-            </p>
-            <ul class="research-list">
-                <li>Detection may occur only by accident</li>
-                <li>The compromise may remain unknown indefinitely</li>
-                <li>Remediation is impossible—the data was exposed years ago</li>
-                <li>Systems and organizations may not exist to respond</li>
-            </ul>
-            <p class="uncertainty-note">
-                <strong>Uncertainty:</strong> How many systems have failed silently? How would we know? Cryptographic failures may go undiscovered for decades or indefinitely.
-            </p>
-        </article>
+<article class="research-article reveal">
+    <h2>Migration Uncertainty and the Crypto-Agility Imperative</h2>
+    <p>Post-quantum cryptography carries its own uncertainties that responsible analysis must acknowledge:</p>
+    <ul class="research-list">
+        <li><strong>Unproven at enterprise scale</strong>  Post-quantum algorithms have not been deployed at the scale of RSA/ECC; implementation vulnerabilities remain possible</li>
+        <li><strong>Potential future cryptanalysis</strong>  Mathematical techniques could weaken lattice-based algorithms; this is why multiple distinct algorithm families (lattice, hash-based) have been standardised</li>
+        <li><strong>Performance and protocol impact</strong>  ML-KEM ciphertexts and ML-DSA signatures are larger than classical equivalents; protocol-level changes and performance testing are required</li>
+        <li><strong>Transition period exposure</strong>  During hybrid classical/PQC deployment, systems must handle both; hybrid key exchange mitigates exposure during this window</li>
+        <li><strong>Migration complexity at scale</strong>  Enterprise cryptographic migration requires a complete C-BOM as the starting inventory; without it, migration is ungoverned and incomplete</li>
+    </ul>
+    <div class="uncertainty-note"><strong>Crypto-Agility:</strong> Design cryptographic systems so algorithms can be replaced without architectural redesign. The quantum transition will not be the last forced migration. Systems built for crypto-agility today will be far less costly to maintain across future cryptographic transitions.</div>
+</article>
 
-        <article class="research-article">
-            <h2>Long-Lived Data and Responsibility</h2>
-            <p>
-                The quantum security problem is fundamentally a problem of long-lived data. If data needs to remain confidential for only 5 years, the quantum threat is less pressing. If it needs to remain confidential for 50 years, the problem becomes critical.
-            </p>
-            <p>
-                This creates a responsibility problem: Who is responsible for data encrypted today that may be exposed decades later?
-            </p>
-            <ul class="research-list">
-                <li><strong>The encryptor</strong> — Should have used algorithms expected to remain secure</li>
-                <li><strong>The organization</strong> — Should have maintained and migrated systems as threats evolved</li>
-                <li><strong>The standard-setter</strong> — Should have anticipated quantum threats and issued guidance</li>
-                <li><strong>The user/subject</strong> — Whose data was encrypted, but may have no control over how long it remains protected</li>
-            </ul>
-            <p>
-                The mismatch between the lifetime of encrypted data and the lifetime of organizations that created it is itself a risk.
-            </p>
-        </article>
+<section class="cta-section" style="padding:4rem 2rem;background:var(--bg-secondary);border-top:1px solid var(--border);text-align:center;">
+    <div class="cta-content reveal">
+        <h2 style="font-size:clamp(1.5rem,3vw,2.2rem);font-weight:900;margin-bottom:1rem;">Know your quantum exposure before the window closes.</h2>
+        <p style="color:var(--text-secondary);max-width:560px;margin:0 auto 2rem;line-height:1.7;">The Y2Q C-BOM Tool gives you a complete inventory of quantum-vulnerable cryptographic assets, NIST-aligned risk scores, and prioritised migration recommendations.</p>
+        <a href="c-bom.html" class="cta-button" style="display:inline-block;text-decoration:none;">ASSESS YOUR QUANTUM READINESS</a>
+    </div>
+</section>
 
-        <article class="research-article">
-            <h2>Post-Quantum Cryptography and Uncertainty</h2>
-            <p>
-                The response to quantum threats is "post-quantum cryptography"—algorithms believed to resist quantum attacks. But this solution carries its own uncertainties:
-            </p>
-            <ul class="research-list">
-                <li><strong>Unproven at scale.</strong> New algorithms have not been tested in real systems for decades.</li>
-                <li><strong>Potential future breaks.</strong> New mathematical techniques could break algorithms we think are safe.</li>
-                <li><strong>Implementation risk.</strong> New algorithms introduce new software and hardware dependencies that may themselves fail.</li>
-                <li><strong>Migration risk.</strong> Transitioning billions of systems to new cryptography is complex and error-prone.</li>
-                <li><strong>Backward compatibility.</strong> Older systems and data remain vulnerable during transition periods.</li>
-            </ul>
-            <p>
-                Post-quantum cryptography is necessary but not a complete solution. It shifts the timeline and the nature of the threat, but does not eliminate uncertainty about long-term security.
-            </p>
-            <p class="uncertainty-note">
-                <strong>Uncertainty:</strong> We do not know if post-quantum algorithms will remain secure. We do not know the full cost or timeline of migration. We do not know how many systems will fail to migrate. We do not know what threats we are not yet aware of.
-            </p>
-        </article>
+<section class="research-status reveal">
+    <p><strong>Research Status:</strong> Post-quantum cryptography has transitioned from standardisation to deployment. NIST FIPS 203, 204, and 205 are final standards. NSA CNSA 2.0 sets migration timelines for National Security Systems. NIST NCCoE is publishing migration guides for specific deployment scenarios. The standards are ready. The challenge is enterprise-scale inventory, prioritisation, and execution  which is exactly what the Y2Q C-BOM Tool addresses.</p>
+</section>
 
-        <article class="research-article">
-            <h2>The Broader Question</h2>
-            <p>
-                Quantum security is not just about quantum computers. It is about a broader pattern: security assumptions have expiration dates. We build systems with assumptions that are valid today but may become invalid over long time horizons.
-            </p>
-            <p>
-                Quantum computing is simply one well-understood example of an assumption breaking. Other examples exist and will continue to emerge: hardware vulnerabilities, protocol weaknesses, supply chain compromises, knowledge loss, organizational failure.
-            </p>
-            <p>
-                The question quantum security raises is: How do we design systems that survive when their core assumptions break?
-            </p>
-        </article>
+</main>
 
-        <section class="research-status">
-            <p>
-                <strong>Note:</strong> Quantum security research is active and evolving. This page captures current thinking but is not comprehensive. The field moves quickly, and understanding improves constantly. Uncertainty here is intentional and honest.
-            </p>
-        </section>
-    </main>
+<footer class="site-footer">
+    <p>&copy; Y2Q. Systems survive through understanding failure.</p>
+</footer>
 
-    <footer class="site-footer">
-        <p>&copy; Y2Q Research. This work is unfinished and uncertain.</p>
-    </footer>
+<script>
+window.addEventListener('scroll', () => {
+    document.getElementById('site-header').classList.toggle('scrolled', window.scrollY > 40);
+});
+(function() {
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                const delay = parseInt(e.target.dataset.delay || 0);
+                setTimeout(() => e.target.classList.add('revealed'), delay);
+                obs.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => obs.observe(el));
+})();
+(function() {
+    const counters = document.querySelectorAll('.stat-number[data-count]');
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                const el = e.target;
+                const target = parseInt(el.dataset.count);
+                const duration = 1600;
+                const start = performance.now();
+                function update(t) {
+                    const p = Math.min((t - start) / duration, 1);
+                    const ease = 1 - Math.pow(1 - p, 3);
+                    el.textContent = Math.floor(ease * target).toLocaleString();
+                    if (p < 1) requestAnimationFrame(update);
+                }
+                requestAnimationFrame(update);
+                obs.unobserve(el);
+            }
+        });
+    }, { threshold: 0.5 });
+    counters.forEach(el => obs.observe(el));
+})();
+</script>
 </body>
 </html>

@@ -1,212 +1,168 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Philosophy — Y2Q</title>
+    <title>Philosophy  Y2Q</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="site-header">
-        <nav class="nav-bar">
-            <a href="index.html" class="logo">Y2Q</a>
-            <ul class="nav-links">
-                <li><a href="index.html#about">ABOUT</a></li>
-                <li><a href="index.html#services">SERVICES</a></li>
-                <li><a href="index.html#maturity">MATURITY MODEL</a></li>
-                <li><a href="index.html#engage" class="cta-link">ENGAGE</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="page-header">
-            <div class="page-icon">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Represents thinking, uncertainty, and systems -->
-                    <!-- Central sphere (core concept) -->
-                    <circle cx="100" cy="100" r="12" fill="none" stroke="#cc3333" stroke-width="2"/>
-                    <!-- Concentric circles (layers of understanding) -->
-                    <circle cx="100" cy="100" r="25" fill="none" stroke="#b0b0b0" stroke-width="1"/>
-                    <circle cx="100" cy="100" r="40" fill="none" stroke="#666" stroke-width="1" stroke-dasharray="3,3"/>
-                    <!-- Nodes on outer ring (connected ideas) -->
-                    <circle cx="140" cy="100" r="3" fill="#b0b0b0"/>
-                    <circle cx="60" cy="100" r="3" fill="#b0b0b0"/>
-                    <circle cx="100" cy="60" r="3" fill="#b0b0b0"/>
-                    <circle cx="100" cy="140" r="3" fill="#b0b0b0"/>
-                    <!-- Connecting lines -->
-                    <line x1="100" y1="100" x2="140" y2="100" stroke="#666" stroke-width="1"/>
-                    <line x1="100" y1="100" x2="60" y2="100" stroke="#666" stroke-width="1"/>
-                    <line x1="100" y1="100" x2="100" y2="60" stroke="#666" stroke-width="1"/>
-                    <line x1="100" y1="100" x2="100" y2="140" stroke="#666" stroke-width="1"/>
-                </svg>
-            </div>
-            <h1>Philosophy</h1>
-            <p class="page-intro">What Y2Q is and what it refuses to be.</p>
-        </section>
+<header class="site-header" id="site-header">
+    <nav class="nav-bar">
+        <a href="index.html" class="logo">Y2Q</a>
+        <ul class="nav-links">
+            <li><a href="index.html#about">ABOUT</a></li>
+            <li><a href="index.html#services">SERVICES</a></li>
+            <li><a href="index.html#maturity">MATURITY MODEL</a></li>
+            <li><a href="c-bom.html">C-BOM TOOL</a></li>
+            <li><a href="index.html#engage" class="cta-link">ENGAGE</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <article class="philosophy-article">
-            <h2>Core Principles</h2>
-            <p>
-                Y2Q is built on a set of foundational beliefs about security, systems, and failure:
-            </p>
-            <ul class="philosophy-list">
-                <li>
-                    <strong>Assumptions are attack surfaces.</strong> Every system encodes assumptions. Those assumptions can fail. When they do, systems fail. Security is not about preventing all failures but about understanding which assumptions are most fragile and why.
-                </li>
-                <li>
-                    <strong>Security fails systemically, not individually.</strong> A single vulnerability is manageable. The problem emerges when vulnerabilities, dependencies, failures, and human limitations combine. Systems fail as wholes, not as parts.
-                </li>
-                <li>
-                    <strong>Time amplifies risk.</strong> What is safe today may not be safe in five years, ten years, or fifty years. Security is not a static property but a temporal one. Systems must be designed with the knowledge that they will age, degrade, and face threats we do not yet anticipate.
-                </li>
-                <li>
-                    <strong>Survivability matters more than prevention.</strong> Perfect prevention is impossible. The question is not "how do we prevent all failure?" but "how do we survive failure?" Resilience, recovery, and adaptation are more valuable than fragile perfection.
-                </li>
-                <li>
-                    <strong>Visibility precedes control.</strong> You cannot defend what you cannot see. You cannot improve what you cannot measure. Transparency and understanding come before security. Systems should be designed to be knowable.
-                </li>
-                <li>
-                    <strong>Uncertainty is honest; certainty is suspect.</strong> Anyone claiming to have perfect security solutions is either naive or dishonest. Real problems are complex and unsolved. It is better to admit uncertainty than to pretend to certainty we do not have.
-                </li>
-            </ul>
-        </article>
+<main>
 
-        <article class="philosophy-article">
-            <h2>What Y2Q Explicitly Refuses</h2>
-            <ul class="refuses-list">
-                <li>
-                    <strong>Marketing and promotional language.</strong> We do not use words like "innovative," "cutting-edge," "next-generation," or "disruptive." We do not make claims designed to appeal to buyers rather than truth. Marketing language obscures reality.
-                </li>
-                <li>
-                    <strong>Sales, consulting, or service claims.</strong> There are no CTAs ("get started," "contact us," "book a demo"). We are not selling services. We are not building a business. We do not have clients, customers, or revenue targets.
-                </li>
-                <li>
-                    <strong>False authority and expertise claims.</strong> We do not claim certification, expertise, or authority we do not have. We do not pretend that our understanding is complete or that we have solved the problems we study. We are researchers, not authorities.
-                </li>
-                <li>
-                    <strong>Solutions obsession and quick fixes.</strong> We do not rush to propose solutions. Most "security solutions" are marketing wrapped around partial answers to complex problems. Understanding the problem is more important than fast solutions.
-                </li>
-                <li>
-                    <strong>Prevention mythology.</strong> We reject the false narrative that security is about preventing all bad outcomes. Some failures are inevitable. Some threats cannot be stopped. The question is not how to prevent everything but how to survive when failures occur.
-                </li>
-                <li>
-                    <strong>Hype cycles and trend-following.</strong> We do not claim that new technologies solve old problems. We do not follow security fads. Trends come and go. Fundamental problems remain. We focus on the latter.
-                </li>
-                <li>
-                    <strong>Certainty and false completion.</strong> We intentionally leave this work unfinished because the questions it addresses are not resolved. Pretending otherwise would be dishonest. Incomplete understanding is more honest than false confidence.
-                </li>
-                <li>
-                    <strong>Fear-based arguments.</strong> We do not use fear, panic, or dread to motivate action. Fear-based arguments distort thinking and lead to poor decisions. Clear thinking about risk is harder but better.
-                </li>
-            </ul>
-        </article>
+<section class="page-hero">
+    <div class="page-hero-content">
+        <div class="page-badge">Y2Q Principles</div>
+        <h1>The Y2Q<br>Philosophy</h1>
+        <p class="page-intro">Honest analysis of how security systems fail produces better outcomes than confident marketing of perfect solutions. The quantum threat is real, documented, and active. Y2Q builds tools that reflect that reality  not tools that obscure it.</p>
+        <div class="page-meta">
+            <span class="meta-tag">INTELLECTUAL HONESTY</span>
+            <span class="meta-tag">SURVIVABILITY</span>
+            <span class="meta-tag">ASSUMPTION ANALYSIS</span>
+            <span class="meta-tag">RESEARCH-DRIVEN</span>
+        </div>
+    </div>
+</section>
 
-        <article class="philosophy-article">
-            <h2>Why Prevention-Only Thinking Fails</h2>
-            <p>
-                Modern security thinking is dominated by prevention narratives: build better firewalls, patch vulnerabilities, use stronger encryption, assume that sufficient prevention equals safety.
-            </p>
-            <p>
-                This approach is fundamentally insufficient:
-            </p>
-            <ul class="philosophy-reasons">
-                <li>
-                    <strong>You cannot prevent what you cannot predict.</strong> Threat models are always incomplete. New attack classes emerge. Zero-day exploits exist by definition. The future is not an extension of the past, and threats today are not the threats of tomorrow.
-                </li>
-                <li>
-                    <strong>You cannot prevent all failure.</strong> Complex systems have emergent behaviors that no one fully understands. Cascading failures occur through unexpected paths. Some problems have no clean technical solution. Complexity itself is a threat.
-                </li>
-                <li>
-                    <strong>You cannot prevent human error and organizational failure.</strong> Keys are lost. Configurations are misunderstood. Documentation becomes obsolete. People forget why decisions were made. Organizations dissolve or lose institutional knowledge. Human factors are often the weak point.
-                </li>
-                <li>
-                    <strong>You cannot prevent decay and assumption failure.</strong> Systems age. Cryptographic assumptions become invalid. Dependencies rot. Hardware degrades. What protected a system for a decade may expose it in the next. Time is a threat that prevention cannot address.
-                </li>
-                <li>
-                    <strong>You cannot prevent compromises in the supply chain.</strong> Dependencies introduce risks you do not control. Vendors get compromised. Maintainers disappear. Trust chains break. The larger the system, the larger the attack surface across the entire supply chain.
-                </li>
-            </ul>
-            <p>
-                Prevention is necessary. But it is not sufficient. If your security strategy is "prevent all bad things from happening," you will fail.
-            </p>
-        </article>
+<article class="philosophy-article reveal">
+    <h2>Core Principles</h2>
+    <p>Y2Q is built on foundational beliefs about security, systems, and failure that shape everything we research and every tool we build:</p>
+    <ul class="philosophy-list">
+        <li>
+            <strong>Assumptions are attack surfaces.</strong> Every system encodes assumptions. Those assumptions can fail. When they do, systems fail. Security is not about preventing all failures  it is about understanding which assumptions are most fragile, most consequential, and closest to expiring. RSA's assumption that factoring is computationally hard is expiring on a documented timeline.
+        </li>
+        <li>
+            <strong>Security fails systemically, not individually.</strong> A single vulnerable algorithm is manageable. The problem emerges when algorithm vulnerabilities, dependency chains, migration complexity, and organisational inertia combine. Cryptographic systems fail as interconnected architectures, not as isolated components. The C-BOM maps that architecture.
+        </li>
+        <li>
+            <strong>Time amplifies risk.</strong> What is computationally secure today becomes insecure when computational capability changes. Harvest-now-decrypt-later means the risk of today's encryption failure lands in the future  but the collection is happening now. Security must be designed with the knowledge that its mathematical foundations have expiration dates.
+        </li>
+        <li>
+            <strong>Survivability matters more than prevention alone.</strong> Perfect prevention is impossible. The quantum threat cannot be prevented  it can only be prepared for. Cryptographic migration, crypto-agile architecture, and a complete C-BOM inventory are survivability tools, not prevention tools.
+        </li>
+        <li>
+            <strong>Visibility precedes control.</strong> You cannot defend what you cannot see. You cannot migrate what you have not inventoried. The C-BOM Tool exists because visibility over the cryptographic attack surface is the prerequisite for every subsequent quantum security decision.
+        </li>
+        <li>
+            <strong>Tools must match the honest assessment.</strong> Y2Q does not produce research and leave organisations without a path to act on it. The C-BOM Tool operationalises the core insight directly: inventory, assess, prioritise, migrate. Research that produces only conclusions without tools serves the researcher, not the problem.
+        </li>
+    </ul>
+</article>
 
-        <article class="philosophy-article">
-            <h2>Survivability as an Alternative Framework</h2>
-            <p>
-                If prevention alone is insufficient, the alternative is survivability: designing systems to persist despite failure, to detect and recover from compromise, and to remain functional when assumptions break.
-            </p>
-            <p>
-                Survivability-focused design includes:
-            </p>
-            <ul class="philosophy-reasons">
-                <li>
-                    <strong>Expecting failure.</strong> Assume things will break. Design redundancy, failover mechanisms, and graceful degradation. Do not assume the system will work perfectly; design for how it will work when things fail.
-                </li>
-                <li>
-                    <strong>Making failures visible.</strong> Build comprehensive monitoring, logging, and alerting. Make it possible to detect when something is wrong. Silent failures are worse than noisy ones. Visibility is a prerequisite for response.
-                </li>
-                <li>
-                    <strong>Enabling rapid recovery.</strong> When failures occur, systems must be recoverable. Plan for backup, restore, and rebuild procedures. Test them regularly. Know how to restart from scratch.
-                </li>
-                <li>
-                    <strong>Understanding and mapping dependencies.</strong> Identify all critical dependencies (technical and human). Map single points of failure. Understand how failures cascade. Work to reduce dependency density where possible.
-                </li>
-                <li>
-                    <strong>Preserving and transmitting knowledge.</strong> Document why decisions were made, not just what was done. Preserve institutional memory. Make systems understandable to future teams. Knowledge preservation is a form of security.
-                </li>
-                <li>
-                    <strong>Thinking in long time horizons.</strong> Ask what will break in 5 years, 10 years, 50 years. Design for systems that must remain secure or functional across organizational lifespans. Test assumptions against long timescales.
-                </li>
-                <li>
-                    <strong>Building for change.</strong> Assume that threats will evolve, technologies will shift, and assumptions will change. Design systems to be updateable, migrateable, and adaptable over long periods.
-                </li>
-            </ul>
-            <p>
-                This is systems thinking: understanding not isolated components but how components interact, depend on each other, and fail across time.
-            </p>
-        </article>
+<article class="philosophy-article reveal">
+    <h2>Why Y2Q Builds Real Products</h2>
+    <p>The quantum threat is not a research hypothesis. It is documented, timestamped, and active:</p>
+    <ul class="philosophy-list">
+        <li>Shor's algorithm has been published for 30 years. The mathematical proof is settled.</li>
+        <li>NIST published finalised post-quantum standards in August 2024. Migration targets exist.</li>
+        <li>State-sponsored actors are running harvest-now-decrypt-later collection operations today.</li>
+        <li>IBM has a funded, precisely documented roadmap to quantum advantage by 2026.</li>
+        <li>NIST has set a 2035 deprecation deadline for all quantum-vulnerable algorithms.</li>
+    </ul>
+    <p>Research that identifies a documented risk and stops at publication is incomplete. Y2Q builds the C-BOM Tool because organisations need more than awareness  they need the capability to act. The tool provides cryptographic inventory, quantum vulnerability assessment, compliance checking, and migration prioritisation in a single professional platform.</p>
+    <p>The tool reflects Y2Q principles: no false confidence in the risk scores, complete visibility over the cryptographic surface, actionable output aligned to NIST guidance, and version-controlled living inventory that stays accurate as systems change.</p>
+</article>
 
-        <article class="philosophy-article">
-            <h2>Intellectual Honesty and Living with Uncertainty</h2>
-            <p>
-                Y2Q operates from a principle of radical honesty about what we do not know.
-            </p>
-            <p>
-                We do not claim to have solved the problems we study. We do not promise that understanding these concepts will prevent all failures. We do not pretend to predict the future with confidence. We do not claim that our frameworks are complete or universally applicable.
-            </p>
-            <p>
-                Instead, we:
-            </p>
-            <ul class="philosophy-reasons">
-                <li><strong>Acknowledge uncertainty explicitly.</strong> Where we do not know, we say so. We identify open questions, not just answered ones.</li>
-                <li><strong>Propose frameworks for thinking,</strong> not answers to memorize. Frameworks can evolve. Answers can become dogma.</li>
-                <li><strong>Distinguish between what is known, what is believed, and what is unknown.</strong> Each has different weight and different implications.</li>
-                <li><strong>Resist the pressure to be confident.</strong> Organizations and people want certainty. Markets reward confident claims. But false confidence is worse than honest uncertainty.</li>
-                <li><strong>Remain open to being wrong.</strong> Our understanding evolves. New information changes our thinking. We do not defend ideas beyond their utility.</li>
-            </ul>
-            <p>
-                This approach is uncomfortable. It does not sell products, consulting services, or training. It does not provide the false reassurance people often want. It is harder to act on honesty about uncertainty than on false confidence.
-            </p>
-            <p>
-                But it is more aligned with reality. Security and systems thinking are genuinely hard problems. Pretending otherwise serves no one.
-            </p>
-        </article>
+<article class="philosophy-article reveal">
+    <h2>What Y2Q Refuses to Do</h2>
+    <ul class="refuses-list">
+        <li>
+            <strong>Use marketing language that obscures rather than informs.</strong> We do not use words like "innovative," "cutting-edge," "next-generation," or "transformative." These words describe emotional responses to products, not the products themselves. We describe what the tool does and what the risk is.
+        </li>
+        <li>
+            <strong>Claim authority we do not have.</strong> We do not claim to have solved the quantum problem. We claim to provide the cryptographic inventory and assessment methodology that is the prerequisite for managing it. These are precise and different claims. The difference matters.
+        </li>
+        <li>
+            <strong>Prioritise solution selling over problem understanding.</strong> Most "quantum-safe security solutions" are incomplete answers wrapped in comprehensive marketing. Understanding the full problem  algorithm distribution, data lifetime mapping, migration sequencing, cryptographic dependency chains  is what makes any solution effective.
+        </li>
+        <li>
+            <strong>Use fear disproportionate to the evidence.</strong> The quantum threat is serious enough on the documented facts. HNDL attacks are active. NIST standards are published. IBM roadmaps are precise. Fear beyond the evidence distorts decision-making. Clear, cited risk analysis produces better outcomes than dread.
+        </li>
+        <li>
+            <strong>Pretend we have certainty we do not possess.</strong> We do not know exactly when cryptographically relevant quantum computers will be broadly accessible. We do not know how much data has been harvested. We are honest about these uncertainties. We simply do not allow uncertainty to become a justification for inaction when the documented evidence supports action now.
+        </li>
+    </ul>
+</article>
 
-        <article class="philosophy-article">
-            <h2>Why This Matters</h2>
-            <p>
-                The world does not need more confident claims about security. It needs clearer thinking about risk, better understanding of failure modes, and more honesty about uncertainty.
-            </p>
-            <p>
-                Y2Q is an attempt to contribute to that clearer thinking. It is not finished because the problems are not solved. It may never be finished. That is intentional and, in its way, the most honest thing a research project can do.
-            </p>
-        </article>
-    </main>
+<article class="philosophy-article reveal">
+    <h2>Why Prevention-Only Security Strategies Fail</h2>
+    <p>Most enterprise security programs are structured primarily around prevention: stronger firewalls, aggressive patching, better encryption, compliance certification. Prevention is necessary  but it is not sufficient:</p>
+    <ul class="philosophy-reasons">
+        <li>
+            <strong>You cannot prevent harvest-now-decrypt-later.</strong> The collection is happening whether or not you strengthen your current encryption. The response is to eliminate the future value of current ciphertext by migrating to post-quantum algorithms  not to prevent collection that is already in progress.
+        </li>
+        <li>
+            <strong>You cannot prevent cryptographic assumption failure through patching.</strong> RSA is not vulnerable because of a software flaw. It is vulnerable because the mathematical problem underlying it will become quantum-tractable. This is not a CVE. It cannot be patched. It requires migration.
+        </li>
+        <li>
+            <strong>You cannot prevent complexity from widening your attack surface.</strong> Every dependency you add, every cryptographic library you upgrade, every system you deploy adds to the cryptographic attack surface. Without a C-BOM, that surface grows invisibly. Prevention requires visibility first.
+        </li>
+        <li>
+            <strong>You cannot prevent organisational knowledge loss.</strong> The engineers who chose your current cryptographic algorithms may have left. The documentation may be incomplete. The dependencies may be undocumented. The C-BOM is how you reconstruct that knowledge before it becomes critical.
+        </li>
+    </ul>
+    <p>Survivability  designing systems to function despite failure, to migrate when assumptions expire, and to recover when compromise occurs  is the framework that fills the gaps prevention leaves open.</p>
+</article>
 
-    <footer class="site-footer">
-        <p>&copy; Y2Q Research. This work is unfinished and uncertain.</p>
-    </footer>
+<article class="philosophy-article reveal">
+    <h2>Survivability as the Right Framework for Quantum Risk</h2>
+    <p>For the quantum transition specifically, survivability means:</p>
+    <ul class="philosophy-reasons">
+        <li><strong>Inventory before migration.</strong> You cannot migrate what you have not inventoried. A C-BOM is the first survivability step  without exception.</li>
+        <li><strong>Prioritise by actual risk, not theoretical risk.</strong> Data with long-term confidentiality requirements faces HNDL exposure today. Systems managing that data should migrate first  independent of the 2035 regulatory deadline.</li>
+        <li><strong>Build for crypto-agility.</strong> Design cryptographic systems so algorithms can be replaced without architectural redesign. The quantum transition is one forced migration; it will not be the last.</li>
+        <li><strong>Test migration paths before you need them.</strong> The time to discover that your TLS migration breaks a critical dependency is during a planned exercise  not during an emergency remediation under the 2035 deadline.</li>
+        <li><strong>Preserve and document cryptographic knowledge.</strong> Which algorithms are deployed, why, what depends on them, and what the migration path is  this institutional knowledge is a security asset. Losing it is a security risk.</li>
+    </ul>
+</article>
+
+<article class="philosophy-article reveal">
+    <h2>Intellectual Honesty About What the C-BOM Tool Does and Does Not Do</h2>
+    <p>Y2Q applies the same intellectual honesty to its own products that it applies to risk assessment:</p>
+    <ul class="philosophy-reasons">
+        <li><strong>The C-BOM Tool does not solve the quantum threat.</strong> It solves the visibility and inventory problem. What you do with that visibility  the migration engineering, protocol updates, compliance remediation  is additional work the tool supports and prioritises but cannot perform for you.</li>
+        <li><strong>The risk scores are structured assessments, not verdicts.</strong> They are based on NIST guidance, documented CVE data, and quantum attack vectors from published research. They are useful starting points for prioritisation. They are not the final word on organisational risk.</li>
+        <li><strong>The 2035 deadline is a regulatory floor, not a risk horizon.</strong> For high-risk systems protecting long-lived sensitive data, the C-BOM Tool will correctly flag those systems for earlier migration. The deadline in the tool output reflects data sensitivity and HNDL exposure, not regulatory compliance date.</li>
+        <li><strong>Post-quantum algorithms are the best available, not permanently safe.</strong> ML-KEM and ML-DSA are NIST-standardised based on extensive evaluation. They are not proven immune to future cryptanalytic advances. This is why crypto-agility and C-BOM-based monitoring matter beyond the initial migration.</li>
+    </ul>
+    <p>This honesty is not a weakness in our product positioning. It is the only approach consistent with the problem we are actually solving.</p>
+</article>
+
+</main>
+
+<footer class="site-footer">
+    <p>&copy; Y2Q. Systems survive through understanding failure.</p>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+    document.getElementById('site-header').classList.toggle('scrolled', window.scrollY > 40);
+});
+(function() {
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                const delay = parseInt(e.target.dataset.delay || 0);
+                setTimeout(() => e.target.classList.add('revealed'), delay);
+                obs.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => obs.observe(el));
+})();
+</script>
 </body>
 </html>

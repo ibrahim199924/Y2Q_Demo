@@ -1,174 +1,209 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Threat Modeling — Y2Q</title>
+    <title>Threat Modeling  Y2Q</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="site-header">
-        <nav class="nav-bar">
-            <a href="index.html" class="logo">Y2Q</a>
-            <ul class="nav-links">
-                <li><a href="index.html#about">ABOUT</a></li>
-                <li><a href="index.html#services">SERVICES</a></li>
-                <li><a href="index.html#maturity">MATURITY MODEL</a></li>
-                <li><a href="index.html#engage" class="cta-link">ENGAGE</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="page-header">
-            <h1>Threat Modeling</h1>
-            <p class="page-intro">Think like attackers think. Understand attack surfaces, failure modes, and gaps in your assumptions about how threats evolve.</p>
-        </section>
+<header class="site-header" id="site-header">
+    <nav class="nav-bar">
+        <a href="index.html" class="logo">Y2Q</a>
+        <ul class="nav-links">
+            <li><a href="index.html#about">ABOUT</a></li>
+            <li><a href="index.html#services">SERVICES</a></li>
+            <li><a href="index.html#maturity">MATURITY MODEL</a></li>
+            <li><a href="c-bom.html">C-BOM TOOL</a></li>
+            <li><a href="index.html#engage" class="cta-link">ENGAGE</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <article class="research-article">
-            <h2>What is Threat Modeling?</h2>
-            <p>
-                Threat modeling is the systematic process of identifying, analyzing, and prioritizing potential threats to a system. It answers a fundamental question: what could go wrong, and what would an adversary do about it?
-            </p>
-            <p>
-                Unlike vulnerability scanning (which looks for known flaws), threat modeling examines the system holistically. It considers the adversary's goals, capabilities, and constraints. It maps attack paths. It identifies assumptions that could be broken.
-            </p>
-            <p>
-                Good threat modeling is not about defending against everything. It is about understanding where risk concentrates and where defenses matter most.
-            </p>
-        </article>
+<main>
 
-        <article class="research-article">
-            <h2>Attack Surfaces</h2>
-            <p>
-                An attack surface is the set of ways an adversary can interact with and potentially compromise a system. It includes:
-            </p>
-            <ul class="research-list">
-                <li><strong>Network interfaces</strong> — Ports, protocols, and services exposed to networks</li>
-                <li><strong>Authentication mechanisms</strong> — How users and systems prove identity (credentials, tokens, keys)</li>
-                <li><strong>APIs and integrations</strong> — Connections to external systems and services</li>
-                <li><strong>Data storage</strong> — Databases, files, and caches containing sensitive information</li>
-                <li><strong>Supply chain dependencies</strong> — Third-party libraries, services, and vendors</li>
-                <li><strong>Human interactions</strong> — Social engineering, phishing, insider threats</li>
-                <li><strong>Physical access</strong> — Servers, networks, and hardware that can be physically accessed</li>
-                <li><strong>Implicit trust relationships</strong> — Undocumented connections and assumptions</li>
-            </ul>
-            <p>
-                Most organizations do not understand their full attack surface. Hidden dependencies and implicit trust create blind spots.
-            </p>
-        </article>
+<section class="page-hero">
+    <div class="page-hero-content">
+        <div class="page-badge">Adversarial Thinking</div>
+        <h1>Threat Modeling<br>in the Quantum Era</h1>
+        <p class="page-intro">You cannot defend what you have not modeled. Systematic identification of attack surfaces, adversary capabilities, and the assumptions that break when quantum computing changes the rules.</p>
+        <div class="page-meta">
+            <span class="meta-tag">ATTACK SURFACE</span>
+            <span class="meta-tag">ADVERSARY MODEL</span>
+            <span class="meta-tag">STRIDE</span>
+            <span class="meta-tag">KILL CHAIN</span>
+            <span class="meta-tag">QUANTUM THREATS</span>
+        </div>
+    </div>
+</section>
 
-        <article class="research-article">
-            <h2>Adversary Models</h2>
-            <p>
-                Threat modeling requires understanding who might attack you and what they want. Different adversaries have different capabilities and goals:
-            </p>
-            <ul class="research-list">
-                <li><strong>Script kiddies</strong> — Limited technical skill, using publicly available tools, opportunistic targets</li>
-                <li><strong>Organized cybercriminals</strong> — Sophisticated, profit-motivated, targeting valuable assets</li>
-                <li><strong>Hacktivists</strong> — Ideologically motivated, targeting specific organizations or industries</li>
-                <li><strong>Nation-state actors</strong> — High resources, advanced capabilities, long-term persistence, geopolitical motivations</li>
-                <li><strong>Insider threats</strong> — Legitimate access, intimate knowledge of systems, varied motivations (revenge, profit, espionage)</li>
-                <li><strong>Competitors</strong> — Motivated by intellectual property and market advantage</li>
-            </ul>
-            <p>
-                The adversary model determines what threats are credible and what defenses matter. Defending against script kiddies is different from defending against nation-state attackers.
-            </p>
-        </article>
+<div class="threat-ticker">
+    <div class="ticker-label">&#9888; THREAT INTEL</div>
+    <div class="ticker-wrap">
+        <div class="ticker-move">
+            <span class="ticker-item critical">Nation-state actors are actively mapping cryptographic dependencies in critical infrastructure</span>
+            <span class="ticker-sep">&#9670;</span>
+            <span class="ticker-item">MITRE ATT&amp;CK documents 14 tactics and 200+ techniques across the full attack lifecycle</span>
+            <span class="ticker-sep">&#9670;</span>
+            <span class="ticker-item critical">Harvest-now-decrypt-later changes the threat model: interception is the attack, decryption comes later</span>
+            <span class="ticker-sep">&#9670;</span>
+            <span class="ticker-item">Most threat models assume classical computational limits  that assumption expires in the quantum era</span>
+            <span class="ticker-sep">&#9670;</span>
+            <span class="ticker-item critical">Supply chain attacks on cryptographic libraries are escalating  XZ Utils, SolarWinds, Log4j</span>
+            <span class="ticker-sep">&#9670;</span>
+            <span class="ticker-item">Without a C-BOM, your threat model has a blind spot: the entire cryptographic attack surface</span>
+            <span class="ticker-sep">&#9670;</span>
+            <span class="ticker-item critical">Nation-state actors are actively mapping cryptographic dependencies in critical infrastructure</span>
+            <span class="ticker-sep">&#9670;</span>
+            <span class="ticker-item">MITRE ATT&amp;CK documents 14 tactics and 200+ techniques across the full attack lifecycle</span>
+            <span class="ticker-sep">&#9670;</span>
+            <span class="ticker-item critical">Harvest-now-decrypt-later changes the threat model: interception is the attack, decryption comes later</span>
+            <span class="ticker-sep">&#9670;</span>
+            <span class="ticker-item">Most threat models assume classical computational limits  that assumption expires in the quantum era</span>
+            <span class="ticker-sep">&#9670;</span>
+            <span class="ticker-item critical">Supply chain attacks on cryptographic libraries are escalating  XZ Utils, SolarWinds, Log4j</span>
+            <span class="ticker-sep">&#9670;</span>
+            <span class="ticker-item">Without a C-BOM, your threat model has a blind spot: the entire cryptographic attack surface</span>
+            <span class="ticker-sep">&#9670;</span>
+        </div>
+    </div>
+</div>
 
-        <article class="research-article">
-            <h2>STRIDE and Other Frameworks</h2>
-            <p>
-                Several frameworks help structure threat modeling:
-            </p>
-            <ul class="research-list">
-                <li><strong>STRIDE</strong> — Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege</li>
-                <li><strong>PASTA</strong> — Process for Attack Simulation and Threat Analysis</li>
-                <li><strong>Trike</strong> — Focuses on risk and compliance</li>
-                <li><strong>CVSS</strong> — Common Vulnerability Scoring System (for prioritizing known vulnerabilities)</li>
-                <li><strong>Attack trees</strong> — Visual representation of how attacks can combine to achieve a goal</li>
-                <li><strong>Kill chain analysis</strong> — Understanding attacker progression from initial compromise to objective</li>
-            </ul>
-            <p>
-                No single framework is perfect. Effective threat modeling often combines multiple approaches.
-            </p>
-        </article>
+<section class="quantum-research">
+    <div class="quantum-research-inner">
+        <div class="section-header reveal">
+            <span class="section-label">Core Concepts</span>
+            <h2 style="color:var(--text-primary);">The Building Blocks of Threat Modeling</h2>
+            <p>Threat modeling provides a structured lens for understanding what can go wrong  before it does. These are the concepts that matter most in the quantum era.</p>
+        </div>
+        <div class="research-cards">
+            <div class="research-card reveal" data-delay="0">
+                <span class="rc-type critical">Foundational</span>
+                <h4>The Core Question: What Could Go Wrong?</h4>
+                <p>Threat modeling is the systematic process of identifying, analyzing, and prioritizing potential threats. Unlike vulnerability scanning, it examines the system holistically  including assumptions that may never have been written down and dependencies that were never formally documented.</p>
+            </div>
+            <div class="research-card reveal" data-delay="80">
+                <span class="rc-type critical">Quantum Threat</span>
+                <h4>Classical Threat Models Assume Classical Limits</h4>
+                <p>Every existing threat model embeds an assumption: adversaries are constrained by classical computational capability. RSA-2048 is "secure" because no classical computer can factor it in useful time. Quantum computing invalidates this assumption completely  not as a distant risk, but as a closing planning horizon.</p>
+            </div>
+            <div class="research-card reveal" data-delay="160">
+                <span class="rc-type warning">Active Now</span>
+                <h4>Harvest-Now-Decrypt-Later: The Threat Model Has Already Changed</h4>
+                <p>HNDL attacks mean the adversary does not need quantum capability today  only to intercept and store encrypted traffic. The effective breach has already occurred for any data with long-term confidentiality requirements. Threat models that ignore HNDL are already incomplete.</p>
+            </div>
+            <div class="research-card reveal" data-delay="240">
+                <span class="rc-type info">Framework</span>
+                <h4>STRIDE Applied to Quantum Attack Vectors</h4>
+                <p>STRIDE (Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege) maps directly to quantum threats. Shor's algorithm simultaneously enables S (forged signatures), T (tampered authenticity via broken PKI), and I (decrypted ciphertext). All three collapse together.</p>
+            </div>
+            <div class="research-card reveal" data-delay="320">
+                <span class="rc-type warning">Supply Chain</span>
+                <h4>Cryptographic Supply Chain Is an Attack Surface</h4>
+                <p>Libraries like OpenSSL, BoringSSL, and cloud provider cryptographic modules are dependencies you trust implicitly. XZ Utils (2024) demonstrated that a single compromised maintainer can introduce backdoors into core cryptographic infrastructure. Your threat model must include the supply chain beneath your algorithms.</p>
+            </div>
+            <div class="research-card reveal" data-delay="400">
+                <span class="rc-type milestone">Prerequisite</span>
+                <h4>Threat Modeling Requires Cryptographic Inventory First</h4>
+                <p>You cannot model threats to assets you do not know exist. A Cryptographic Bill of Materials is the prerequisite for quantum-aware threat modeling  it reveals the attack surface, maps the algorithm dependencies, and quantifies where classical and quantum threats converge into highest-priority risk.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-        <article class="research-article">
-            <h2>Failure Modes and Assumptions</h2>
-            <p>
-                Threat modeling often reveals false assumptions. Examples include:
-            </p>
-            <ul class="research-list">
-                <li><strong>"Our encryption is secure"</strong> — What if cryptographic algorithms are broken? What if keys are compromised? What if implementation is flawed?</li>
-                <li><strong>"Our vendor is trustworthy"</strong> — What if the vendor is compromised? What if their supply chain is attacked? What if they go out of business?</li>
-                <li><strong>"Our employees won't betray us"</strong> — What if an employee is compromised, blackmailed, or disgruntled? What if credentials are stolen?</li>
-                <li><strong>"Our network is isolated"</strong> — What if isolation assumptions are wrong? What if someone gains physical access? What if supply chain introduces backdoors?</li>
-                <li><strong>"We can detect all attacks"</strong> — What if attackers are more sophisticated than anticipated? What if they evade detection mechanisms?</li>
-            </ul>
-            <p>
-                Good threat modeling makes these assumptions explicit and tests them.
-            </p>
-        </article>
+<article class="research-article reveal">
+    <h2>What Is Threat Modeling?</h2>
+    <p>Threat modeling is the systematic process of identifying, analyzing, and prioritizing potential threats to a system. It answers a fundamental question: what could go wrong, and what would an adversary do about it?</p>
+    <p>Unlike vulnerability scanning (which looks for known flaws), threat modeling examines the system holistically. It considers the adversary's goals, capabilities, and constraints. It maps attack paths. It identifies assumptions that could be broken  including assumptions so foundational that they were never written down as assumptions at all.</p>
+    <p>Good threat modeling is not about defending against everything. It is about understanding where risk concentrates, where defenses matter most, and which assumptions cannot afford to break.</p>
+    <div class="uncertainty-note"><strong>Y2Q Position:</strong> Most existing threat models are quantum-blind. They assume classical computational limits for the adversary. This assumption has a documented expiration date that is visible on the horizon  and for data with long-term confidentiality requirements, that horizon is now.</div>
+</article>
 
-        <article class="research-article">
-            <h2>Threat Modeling as a Practice</h2>
-            <p>
-                Effective threat modeling is not a one-time exercise. It should be:
-            </p>
-            <ul class="research-list">
-                <li><strong>Continuous</strong> — As systems change, new threats emerge</li>
-                <li><strong>Collaborative</strong> — Threat modeling should involve architects, developers, security specialists, and operations teams</li>
-                <li><strong>Grounded in reality</strong> — Threat models should be tested against real incidents and evolving attacker capabilities</li>
-                <li><strong>Prioritized</strong> — Not all threats are equal. Focus on the ones that matter most</li>
-                <li><strong>Actionable</strong> — Threat modeling should lead to concrete security decisions and mitigations</li>
-                <li><strong>Living</strong> — Models should be updated as understanding improves</li>
-            </ul>
-        </article>
+<article class="research-article reveal">
+    <h2>Attack Surfaces in the Quantum Era</h2>
+    <p>An attack surface is the set of ways an adversary can interact with and compromise a system. The quantum era adds a new dimension: the cryptographic layer itself becomes an attack surface when its underlying mathematical assumptions expire.</p>
+    <ul class="research-list">
+        <li><strong>Network interfaces and TLS sessions</strong>  All connections encrypted with RSA or ECDHE are retroactively attackable via harvest-now-decrypt-later collection</li>
+        <li><strong>Authentication mechanisms</strong>  RSA and ECDSA digital signatures enable identity spoofing once Shor's algorithm runs at scale</li>
+        <li><strong>Key management infrastructure</strong>  RSA-wrapped symmetric keys, ECDH key exchange  both broken by Shor's algorithm regardless of key length</li>
+        <li><strong>Certificate and PKI infrastructure</strong>  X.509 certificate chains signed with RSA or ECDSA algorithms will require complete reissuance</li>
+        <li><strong>Cryptographic library supply chain</strong>  OpenSSL, NSS, BouncyCastle and their distribution mechanisms are attack surfaces</li>
+        <li><strong>Long-lived encrypted archives</strong>  Stored ciphertext with multi-year sensitivity is the primary HNDL target; its attack surface is the algorithm that protects it, not any operational system</li>
+    </ul>
+</article>
 
-        <article class="research-article">
-            <h2>The Limits of Threat Modeling</h2>
-            <p>
-                Threat modeling is powerful but incomplete. It has limitations:
-            </p>
-            <ul class="research-list">
-                <li><strong>Incomplete knowledge</strong> — You cannot anticipate all threats, especially novel attacks</li>
-                <li><strong>Assumption brittleness</strong> — Models are only as good as the assumptions they embed</li>
-                <li><strong>Resource constraints</strong> — Perfect defense is impossible. Trade-offs must be made</li>
-                <li><strong>Evolving threats</strong> — The threat landscape changes constantly. Models become stale</li>
-                <li><strong>Complexity</strong> — Large systems have complex threat models that are difficult to fully understand</li>
-            </ul>
-            <p>
-                Threat modeling does not provide certainty. It provides clarity about where risk exists and where defenses matter most.
-            </p>
-        </article>
+<article class="research-article reveal">
+    <h2>Adversary Models for the Quantum Era</h2>
+    <p>Threat modeling requires understanding who might attack and what they want. The quantum era adds a new adversary tier:</p>
+    <ul class="research-list">
+        <li><strong>Script kiddies</strong>  Opportunistic, using available tools. Classical threat. Low quantum relevance.</li>
+        <li><strong>Organized cybercriminals</strong>  Profit-motivated, sophisticated. Classical threat today; will acquire quantum access when commercially available.</li>
+        <li><strong>Nation-state actors</strong>  High resources, long-term persistence, geopolitical motivations. <strong>Already running HNDL collection operations.</strong> Primary quantum threat today.</li>
+        <li><strong>Quantum-capable adversaries (2026 onward)</strong>  Will have access to cryptographically relevant quantum computers capable of running Shor's algorithm at scale. This adversary will exist within the current planning horizon.</li>
+        <li><strong>Insider threats</strong>  May facilitate HNDL exfiltration or key compromise. Less directly affected by quantum but remain critical in any model.</li>
+    </ul>
+    <div class="uncertainty-note"><strong>Key Insight:</strong> Nation-state actors are the primary quantum-era threat today because they already have the infrastructure to collect data and the patience to store it for future decryption. Your threat model must account for an adversary who may already hold copies of your historically encrypted communications.</div>
+</article>
 
-        <article class="research-article">
-            <h2>Threat Modeling and Survivability</h2>
-            <p>
-                Threat modeling informs survivability design. It answers questions like:
-            </p>
-            <ul class="research-list">
-                <li>If this component fails or is compromised, what is the impact?</li>
-                <li>How can we detect this attack?</li>
-                <li>How can we respond and recover?</li>
-                <li>What assumptions can we not afford to have broken?</li>
-                <li>Where should we invest in redundancy and defense?</li>
-            </ul>
-            <p>
-                Survivability is not about preventing all attacks. It is about understanding which attacks matter most and designing systems to survive them.
-            </p>
-        </article>
+<article class="research-article reveal">
+    <h2>Failure Modes and Broken Assumptions</h2>
+    <p>Threat modeling reveals false assumptions. Quantum-era examples that must be corrected in every active threat model:</p>
+    <ul class="research-list">
+        <li><strong>"Our RSA-2048 is secure"</strong>  Shor's algorithm breaks RSA regardless of key size. There is no RSA key length that provides quantum resistance.</li>
+        <li><strong>"Our TLS 1.3 is quantum-safe"</strong>  TLS 1.3 uses ECDHE for key exchange, broken by Shor's algorithm. Hybrid PQC key exchange (ML-KEM) is required.</li>
+        <li><strong>"We will upgrade when quantum computers arrive"</strong>  HNDL attacks make the effective threat horizon NOW for sensitive long-lived data. Cryptographic migration takes years.</li>
+        <li><strong>"Post-quantum migration is simple"</strong>  Large-scale migration requires cryptographic inventory, dependency mapping, protocol testing, and coordinated rollout. Without a C-BOM, the starting point does not exist.</li>
+        <li><strong>"Our VPN protects our communications"</strong>  VPN traffic encrypted with classical algorithms is an active HNDL target. Quantum-safe VPN configurations must be deployed.</li>
+    </ul>
+</article>
 
-        <section class="research-status">
-            <p>
-                <strong>Note:</strong> Threat modeling is both art and science. There is no perfect methodology. Effective threat modeling requires experience, creativity, and deep understanding of how systems work and how attackers think. This is an evolving field.
-            </p>
-        </section>
-    </main>
+<article class="research-article reveal">
+    <h2>Threat Modeling as an Ongoing Practice</h2>
+    <p>Effective threat modeling is not a one-time exercise. It must be:</p>
+    <ul class="research-list">
+        <li><strong>Continuous</strong>  As systems change and quantum timelines compress, threat models become stale if not maintained</li>
+        <li><strong>Collaborative</strong>  Architecture, development, security, and operations teams each see different parts of the attack surface</li>
+        <li><strong>Grounded in inventory</strong>  Threat modeling against an incomplete asset inventory produces an incomplete threat model</li>
+        <li><strong>Prioritised by impact</strong>  Not all threats are equal. Data lifetime, algorithm vulnerability, and adversary model together determine priority</li>
+        <li><strong>Actionable</strong>  Threat modeling must produce concrete decisions: migrate this algorithm, rotate this key, replace this library</li>
+    </ul>
+</article>
 
-    <footer class="site-footer">
-        <p>&copy; Y2Q Research. Systems survive through understanding failure.</p>
-    </footer>
+<section class="cta-section" style="padding:4rem 2rem;background:var(--bg-secondary);border-top:1px solid var(--border);text-align:center;">
+    <div class="cta-content reveal">
+        <h2 style="font-size:clamp(1.5rem,3vw,2.2rem);font-weight:900;margin-bottom:1rem;">Your threat model has a cryptographic blind spot.</h2>
+        <p style="color:var(--text-secondary);max-width:560px;margin:0 auto 2rem;line-height:1.7;">The Y2Q C-BOM Tool gives you the cryptographic inventory that quantum-era threat modeling requires  every algorithm, key, certificate, and library, with quantum risk scoring.</p>
+        <a href="c-bom.html" class="cta-button" style="display:inline-block;text-decoration:none;">INVENTORY YOUR CRYPTOGRAPHIC SURFACE</a>
+    </div>
+</section>
+
+<section class="research-status reveal">
+    <p><strong>Research Status:</strong> Threat modeling frameworks are actively being updated for the quantum era. NIST NCCoE Post-Quantum Cryptography Migration Project provides guidance on integrating post-quantum risk into existing threat models and enterprise security programs. Y2Q applies these principles with focus on cryptographic attack surfaces, adversary model evolution, and the survivability of systems across the quantum transition.</p>
+</section>
+
+</main>
+
+<footer class="site-footer">
+    <p>&copy; Y2Q. Systems survive through understanding failure.</p>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+    document.getElementById('site-header').classList.toggle('scrolled', window.scrollY > 40);
+});
+(function() {
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                const delay = parseInt(e.target.dataset.delay || 0);
+                setTimeout(() => e.target.classList.add('revealed'), delay);
+                obs.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => obs.observe(el));
+})();
+</script>
 </body>
 </html>
